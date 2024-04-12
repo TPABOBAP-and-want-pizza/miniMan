@@ -20,8 +20,6 @@ public class Movement : MonoBehaviour
     float xInput;
     float yInput;
 
-
-    // Update is called once per frame
     void Update()
     {
         CheckInput();
