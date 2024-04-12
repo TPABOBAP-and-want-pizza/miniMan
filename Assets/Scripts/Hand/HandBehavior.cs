@@ -10,16 +10,18 @@ public class HandBehavior : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        if (!hasCollided) // Проверяем, не столкнулась ли рука уже
+        if (collider.CompareTag("Player"))
+        {
+            // Тряска камеры, но рука продолжает движение
+            Camera.main.GetComponent<CameraShake>().DefaultShake();
+        }
+        else if (!hasCollided) // Столкновение с любым другим объектом, кроме игрока
         {
             // Зафиксировать позицию руки
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
             hasCollided = true;
-
-            // Вызов метода Shake из скрипта CameraShake на камере
-            Camera.main.GetComponent<CameraShake>().DefaultShake();
         }
     }
 }

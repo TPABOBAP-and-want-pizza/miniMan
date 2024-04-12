@@ -21,7 +21,7 @@ public class CameraShake : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.J))
         {
             //StartCoroutine(Shake(shakeDuration, shakeMagnitude));
-            DefaultShake();
+            //DefaultShake();
 
             HandSpawner.SpawnHand(transform.localPosition + new Vector3(0, 5, 11), 10);
 
