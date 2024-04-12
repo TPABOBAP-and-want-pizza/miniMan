@@ -23,8 +23,8 @@ public class CameraShake : MonoBehaviour
             //StartCoroutine(Shake(shakeDuration, shakeMagnitude));
             //DefaultShake();
 
-            HandSpawner.SpawnHand(transform.localPosition + new Vector3(0, 5, 11), 10);
-
+            //HandSpawner.SpawnHand(transform.localPosition + new Vector3(0, 5, 11), 10);
+            //NoiseLevel.IncreaseNoise(10f);
 
         }
     }

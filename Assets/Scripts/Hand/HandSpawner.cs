@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public static class HandSpawner
 {
@@ -27,5 +28,14 @@ public static class HandSpawner
         {
             Debug.LogError("HandPrefab missing Rigidbody2D component!");
         }
+    }
+
+    public static void SpawnHandDefault(Vector3 spawnPos)
+    {
+        
+        Vector3 spawnPosition = (spawnPos + new Vector3(0, 20, 11));
+
+
+        SpawnHand(spawnPosition, 10);
     }
 }
