@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UIElements;
 
 public class CameraShake : MonoBehaviour
 {
@@ -19,8 +20,18 @@ public class CameraShake : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.J))
         {
-            StartCoroutine(Shake(shakeDuration, shakeMagnitude));
+            //StartCoroutine(Shake(shakeDuration, shakeMagnitude));
+            DefaultShake();
+
+            HandSpawner.SpawnHand(transform.localPosition + new Vector3(0, 5, 11), 10);
+
+
         }
+    }
+
+    public void DefaultShake()
+    {
+        StartCoroutine(Shake(0.2f, 0.2f));
     }
 
     public IEnumerator Shake(float duration, float magnitude)
@@ -40,5 +51,9 @@ public class CameraShake : MonoBehaviour
         }
 
         transform.localPosition = originalPos;
+    }
+    public void TriggerShake(float duration, float magnitude)
+    {
+        StartCoroutine(Shake(duration, magnitude));
     }
 }
