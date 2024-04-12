@@ -3,16 +3,16 @@ using UnityEngine;
 
 public class PressurePlate : MonoBehaviour, Transmitter
 {
-    public event Action OnSetActive;
-    public event Action OnSetUnactive;
+    public event Action OnActivate;
+    public event Action OnDeactivate;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        OnSetActive?.Invoke();
+        OnActivate?.Invoke();
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        OnSetUnactive?.Invoke();
+        OnDeactivate?.Invoke();
     }
 }

@@ -2,6 +2,6 @@ using System;
 
 public interface Transmitter
 {
-    public event Action OnSetActive;
-    public event Action OnSetUnactive;
+    public event Action OnActivate;
+    public event Action OnDeactivate;
 }
