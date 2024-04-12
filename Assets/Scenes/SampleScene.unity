@@ -222,13 +222,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectTransform: {fileID: 926014229}
   objectTag: 
-  movingSpeed: 1
+  movingSpeed: 5
   arena: 0
+--- !u!1 &800523898 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6238147785076498333, guid: 00ca6caf25f7ef94083238e0e329ebeb, type: 3}
+  m_PrefabInstance: {fileID: 6238147785966617741}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &926014229 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6238147785076498328, guid: 00ca6caf25f7ef94083238e0e329ebeb, type: 3}
   m_PrefabInstance: {fileID: 6238147785966617741}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &926014230
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800523898}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1352750623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -593,6 +618,22 @@ PrefabInstance:
     - target: {fileID: 6238147785076498328, guid: 00ca6caf25f7ef94083238e0e329ebeb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238147785076498331, guid: 00ca6caf25f7ef94083238e0e329ebeb, type: 3}
+      propertyPath: jumpSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238147785076498331, guid: 00ca6caf25f7ef94083238e0e329ebeb, type: 3}
+      propertyPath: maxXSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238147785076498331, guid: 00ca6caf25f7ef94083238e0e329ebeb, type: 3}
+      propertyPath: groundDecay
+      value: 0.016
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238147785076498331, guid: 00ca6caf25f7ef94083238e0e329ebeb, type: 3}
+      propertyPath: acceleration
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6238147785076498333, guid: 00ca6caf25f7ef94083238e0e329ebeb, type: 3}
       propertyPath: m_Name

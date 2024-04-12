@@ -1,7 +1,14 @@
+using System;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    enum PlayerState { Idle, Running, Airborne }
+    PlayerState state;
+    bool stateComplete;
+
+    [SerializeField] Animator animator;
+
     //scene instanced objects
     public Rigidbody2D body;
     public BoxCollider2D groundCheck;
@@ -24,6 +31,12 @@ public class Movement : MonoBehaviour
     {
         CheckInput();
         HandleJump();
+
+        if (stateComplete)
+        {
+            SelectState();
+        }
+        UpdateState();
     }
 
     void FixedUpdate()
@@ -31,6 +44,73 @@ public class Movement : MonoBehaviour
         CheckGround();
         HandleXMovement();
         ApplyFriction();
+    }
+
+    private void SelectState()
+    {
+        stateComplete = false;
+        if (grounded)
+        {
+            if (xInput == 0)
+            {
+                state = PlayerState.Idle;
+            }
+            else
+            {
+                state = PlayerState.Running;
+            }
+        }
+        else state = PlayerState.Airborne;
+    }
+
+    private void UpdateState()
+    {
+        switch (state)
+        {
+            case PlayerState.Idle:
+                UpdateIdle();
+                break;
+            case PlayerState.Running:
+                UpdateRun();
+                break;
+            case PlayerState.Airborne:
+                UpdateAirborne();
+                break;
+
+        }
+    }
+
+    private void UpdateIdle()
+    {
+        //animator.Play("Idle");
+        if (xInput != 0 || !grounded)
+        {
+            stateComplete = true;
+        }
+    }
+
+    private void UpdateRun()
+    {
+        float velx = body.velocity.x;
+        animator.speed = MathF.Abs(velx) / maxXSpeed;
+
+        //animator.Play("Run");
+        if (MathF.Abs(velx) < 0.1f || !grounded)
+        {
+            stateComplete = true;
+        }
+    }
+
+    private void UpdateAirborne()
+    {
+        float time = Map(body.velocity.y, jumpSpeed, -jumpSpeed, 0, 1, true);
+        //animator.Play("Jump", 0, time);
+        animator.speed = 0;
+
+        if (grounded)
+        {
+            stateComplete = true;
+        }
     }
 
     void CheckInput()
@@ -74,10 +154,15 @@ public class Movement : MonoBehaviour
 
     void ApplyFriction()
     {
-        if (grounded && xInput == 0 && body.velocity.y <= 0)
+        if (grounded && xInput == 0)
         {
-            body.velocity *= groundDecay;
+            body.velocity = new Vector2(body.velocity.x * groundDecay, body.velocity.y);
         }
     }
 
+    public static float Map(float value, float min1, float max1, float min2, float max2, bool clamp = false)
+    {
+        float val = min2 + (max2 - min2) * ((value - min1) / (max1 - min1));
+        return clamp ? Mathf.Clamp(val, Mathf.Min(min2, max2), Mathf.Max(min2, max2)) : val;
+    }
 }
