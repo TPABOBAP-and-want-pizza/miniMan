@@ -5,7 +5,7 @@ public class Movement : MonoBehaviour
 {
     enum PlayerState { Idle, Running, Airborne }
     PlayerState state;
-    bool stateComplete;
+    bool stateComplete = true;
 
     [SerializeField] Animator animator;
 
@@ -66,7 +66,7 @@ public class Movement : MonoBehaviour
         }
         if (MathF.Abs(body.velocity.x) < maxXSpeed && grounded)
         {
-            body.velocity = new Vector2(_horizontalInput * maxXSpeed * 100 * Time.deltaTime, body.velocity.y);
+            body.velocity = new Vector2(_horizontalInput * maxXSpeed * 50 * Time.deltaTime, body.velocity.y);
         }
         else if (_horizontalInput > 0 && body.velocity.x < maxXSpeed)
         {
@@ -87,6 +87,7 @@ public class Movement : MonoBehaviour
             if (xInput == 0)
             {
                 state = PlayerState.Idle;
+                animator.Play("Idle");
             }
             else
             {
@@ -115,7 +116,6 @@ public class Movement : MonoBehaviour
 
     private void UpdateIdle()
     {
-        //animator.Play("Idle");
         if (xInput != 0 || !grounded)
         {
             stateComplete = true;
@@ -125,10 +125,9 @@ public class Movement : MonoBehaviour
     private void UpdateRun()
     {
         float velx = body.velocity.x;
-        animator.speed = MathF.Abs(velx) / maxXSpeed;
 
-        //animator.Play("Run");
-        if (MathF.Abs(velx) < 0.1f || !grounded)
+        animator.Play("Run");
+        if (xInput == 0 || !grounded)
         {
             stateComplete = true;
         }
@@ -137,8 +136,7 @@ public class Movement : MonoBehaviour
     private void UpdateAirborne()
     {
         float time = Map(body.velocity.y, jumpSpeed, -jumpSpeed, 0, 1, true);
-        //animator.Play("Jump", 0, time);
-        animator.speed = 0;
+        animator.Play("Jump", 0, time);
 
         if (grounded)
         {
