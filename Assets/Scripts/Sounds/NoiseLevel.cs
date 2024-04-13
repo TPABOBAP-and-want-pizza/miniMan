@@ -1,14 +1,27 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
-using System.Collections.Generic;
 
 public class NoiseLevel : MonoBehaviour
 {
+    public static NoiseLevel Instance { get; private set; }
+
     [SerializeField] Transform objectTransform;
     private float VolumeIndicator = 0f;
     public float maxNoiseLevel = 100f;
     public Image Bar;
+
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject);  // Это делает объект постоянным при загрузке новых сцен.
+        }
+    }
 
     void Start()
     {
@@ -27,11 +40,13 @@ public class NoiseLevel : MonoBehaviour
         VolumeIndicator = Mathf.Max(VolumeIndicator - amount, 0);
         UpdateNoiseLevel();
     }
+
     void UpdateNoiseLevel()
     {
-        if (VolumeIndicator >= 100f)
+        if (VolumeIndicator >= maxNoiseLevel)
         {
-            HandSpawner.SpawnHandDefault(objectTransform.position);
+            // Здесь вызовите метод SpawnHand, передавая необходимую позицию
+            HandSpawner.SpawnHandDefault(objectTransform.position); // Пример, предполагает наличие такого метода.
         }
 
         Bar.fillAmount = VolumeIndicator / maxNoiseLevel;
@@ -41,12 +56,12 @@ public class NoiseLevel : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.J))
         {
+            //IncreaseNoise(10f);  
+            // Теперь этот вызов корректен и будет работать с любой точки игры
             //StartCoroutine(Shake(shakeDuration, shakeMagnitude));
             //DefaultShake();
-
             //HandSpawner.SpawnHand(transform.localPosition + new Vector3(0, 5, 11), 10);
             //IncreaseNoise(10f);
-
         }
     }
 }
