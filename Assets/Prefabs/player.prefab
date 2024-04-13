@@ -174,9 +174,8 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 8
-  acceleration: 0.5
-  groundDecay: 0.207
   maxXSpeed: 3
+  airSpeed: 2
   jumpSpeed: 5
   grounded: 0
 --- !u!1 &6238147785537261217

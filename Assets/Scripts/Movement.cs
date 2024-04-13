@@ -13,12 +13,11 @@ public class Movement : MonoBehaviour
     public Rigidbody2D body;
     public BoxCollider2D groundCheck;
     public LayerMask groundMask;
+    private Vector2 boxCollider2DSize;
 
     //movement properties
-    public float acceleration;
-    [Range(0f, 1f)]
-    public float groundDecay;
     public float maxXSpeed;
+    [SerializeField] float airSpeed;
 
     public float jumpSpeed;
 
@@ -26,6 +25,12 @@ public class Movement : MonoBehaviour
     public bool grounded;
     float xInput;
     float yInput;
+
+    private void Start()
+    {
+        boxCollider2DSize = transform.GetComponent<BoxCollider2D>().size;
+        boxCollider2DSize = new Vector2(boxCollider2DSize.x - 0.02f, boxCollider2DSize.y - 0.02f);
+    }
 
     void Update()
     {
@@ -42,8 +47,36 @@ public class Movement : MonoBehaviour
     void FixedUpdate()
     {
         CheckGround();
-        HandleXMovement();
-        ApplyFriction();
+        Move();
+    }
+
+    private void Move()
+    {
+        if (xInput == 0)
+            return;
+
+        float _horizontalInput = xInput;
+
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position, boxCollider2DSize, 0f, Vector2.right * Mathf.Sign(_horizontalInput), 0.02f, groundMask);
+        //Debug.Log($"hit collider - {hit.collider.gameObject}");
+
+        if (hit.collider != null)
+        {
+            _horizontalInput = 0f;
+        }
+        if (MathF.Abs(body.velocity.x) < maxXSpeed && grounded)
+        {
+            body.velocity = new Vector2(_horizontalInput * maxXSpeed * 100 * Time.deltaTime, body.velocity.y);
+        }
+        else if (_horizontalInput > 0 && body.velocity.x < maxXSpeed)
+        {
+            body.velocity += new Vector2(_horizontalInput * airSpeed * 10 * Time.deltaTime, 0);
+        }
+        else if (_horizontalInput < 0 && body.velocity.x > -maxXSpeed)
+        {
+            body.velocity += new Vector2(_horizontalInput * airSpeed * 10 * Time.deltaTime, 0);
+        }
+        FaceInput();
     }
 
     private void SelectState()
@@ -119,20 +152,6 @@ public class Movement : MonoBehaviour
         yInput = Input.GetAxis("Vertical");
     }
 
-    void HandleXMovement()
-    {
-        if (Mathf.Abs(xInput) > 0)
-        {
-
-            //increment velocity by our accelleration, then clamp within max
-            float increment = xInput * acceleration;
-            float newSpeed = Mathf.Clamp(body.velocity.x + increment, -maxXSpeed, maxXSpeed);
-            body.velocity = new Vector2(newSpeed, body.velocity.y);
-
-            FaceInput();
-        }
-    }
-
     void FaceInput()
     {
         float direction = Mathf.Sign(xInput);
@@ -150,14 +169,6 @@ public class Movement : MonoBehaviour
     void CheckGround()
     {
         grounded = Physics2D.OverlapAreaAll(groundCheck.bounds.min, groundCheck.bounds.max, groundMask).Length > 0;
-    }
-
-    void ApplyFriction()
-    {
-        if (grounded && xInput == 0)
-        {
-            body.velocity = new Vector2(body.velocity.x * groundDecay, body.velocity.y);
-        }
     }
 
     public static float Map(float value, float min1, float max1, float min2, float max2, bool clamp = false)
