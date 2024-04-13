@@ -10,6 +10,7 @@ public class NoiseLevel : MonoBehaviour
     private float VolumeIndicator = 0f;
     public float maxNoiseLevel = 100f;
     public Image Bar;
+    public Image[] noisePoints;
 
     void Awake()
     {
@@ -47,19 +48,27 @@ public class NoiseLevel : MonoBehaviour
     {
         if (VolumeIndicator >= maxNoiseLevel)
         {
-            HandSpawner.SpawnHandDefault(objectTransform.position); 
+            HandSpawner.SpawnHandDefault(transform.localPosition);
+            // HandSpawner.SpawnHand(transform.localPosition + new Vector3(0, 5, 11), 10);
+            DecreaseNoise(50f);
         }
 
         // случайное колебание
-        float noiseFluctuation = Random.Range(-1.5f, 1f);
+        float noiseFluctuation = Random.Range(-2f, 2f);
 
         // показатель для Bar.fillAmount с учетом колебания
         float displayVolume = VolumeIndicator + noiseFluctuation;
         displayVolume = Mathf.Clamp(displayVolume, 0, maxNoiseLevel); // Обеспечиваем, чтобы значение не вышло за пределы допустимых
 
         Bar.fillAmount = displayVolume / maxNoiseLevel;
+        
+        for(int i = 0; i < noisePoints.Length; i++)
+        {
+            noisePoints[i].enabled = !DisplayNoisePoint(displayVolume, i);
+        }
 
         //Bar.fillAmount = VolumeIndicator / maxNoiseLevel; старый статичный смособ отображения шума без помех
+        Debug.Log(Bar.fillAmount);
     }
 
     IEnumerator UpdateNoiseLevelEverySecond()
@@ -68,6 +77,12 @@ public class NoiseLevel : MonoBehaviour
         {
             UpdateNoiseLevel(); // Вызываем функцию обновления уровня шума
             yield return new WaitForSeconds(0.1f); // Ожидаем одну секунду
+            Debug.Log(VolumeIndicator);
         }
     }
+    bool DisplayNoisePoint(float _health, int pointNumber)
+    {
+        return ((pointNumber * 2) >= _health);
+    }
+
 }
