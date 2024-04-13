@@ -45,7 +45,7 @@ public class NoiseLevel : MonoBehaviour
             //DefaultShake();
 
             //HandSpawner.SpawnHand(transform.localPosition + new Vector3(0, 5, 11), 10);
-            IncreaseNoise(10f);
+            //IncreaseNoise(10f);
 
         }
     }
