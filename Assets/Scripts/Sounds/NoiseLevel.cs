@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class NoiseLevel : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class NoiseLevel : MonoBehaviour
     {
         Bar.fillAmount = 0f;
         UpdateNoiseLevel();
+        StartCoroutine(UpdateNoiseLevelEverySecond());
     }
 
     public void IncreaseNoise(float amount)
@@ -45,23 +47,27 @@ public class NoiseLevel : MonoBehaviour
     {
         if (VolumeIndicator >= maxNoiseLevel)
         {
-            // Здесь вызовите метод SpawnHand, передавая необходимую позицию
-            HandSpawner.SpawnHandDefault(objectTransform.position); // Пример, предполагает наличие такого метода.
+            HandSpawner.SpawnHandDefault(objectTransform.position); 
         }
 
-        Bar.fillAmount = VolumeIndicator / maxNoiseLevel;
+        // случайное колебание
+        float noiseFluctuation = Random.Range(-1.5f, 1f);
+
+        // показатель для Bar.fillAmount с учетом колебания
+        float displayVolume = VolumeIndicator + noiseFluctuation;
+        displayVolume = Mathf.Clamp(displayVolume, 0, maxNoiseLevel); // Обеспечиваем, чтобы значение не вышло за пределы допустимых
+
+        Bar.fillAmount = displayVolume / maxNoiseLevel;
+
+        //Bar.fillAmount = VolumeIndicator / maxNoiseLevel; старый статичный смособ отображения шума без помех
     }
 
-    void Update()
+    IEnumerator UpdateNoiseLevelEverySecond()
     {
-        if (Input.GetKeyDown(KeyCode.J))
+        while (true)
         {
-            //IncreaseNoise(10f);  
-            // Теперь этот вызов корректен и будет работать с любой точки игры
-            //StartCoroutine(Shake(shakeDuration, shakeMagnitude));
-            //DefaultShake();
-            //HandSpawner.SpawnHand(transform.localPosition + new Vector3(0, 5, 11), 10);
-            //IncreaseNoise(10f);
+            UpdateNoiseLevel(); // Вызываем функцию обновления уровня шума
+            yield return new WaitForSeconds(0.1f); // Ожидаем одну секунду
         }
     }
 }
