@@ -15,8 +15,11 @@ public static class HandSpawner
             return;
         }
 
+        // Устанавливаем z-координату на 0
+        Vector3 adjustedSpawnPosition = new Vector3(spawnPosition.x, spawnPosition.y, 0);
+
         // Создаем экземпляр руки
-        GameObject handInstance = Object.Instantiate(handPrefab, spawnPosition, Quaternion.identity);
+        GameObject handInstance = Object.Instantiate(handPrefab, adjustedSpawnPosition, Quaternion.identity);
 
         // Настройка начальной скорости падения руки
         Rigidbody2D rb = handInstance.GetComponent<Rigidbody2D>();
@@ -32,10 +35,6 @@ public static class HandSpawner
 
     public static void SpawnHandDefault(Vector3 spawnPos)
     {
-        
-        Vector3 spawnPosition = (spawnPos + new Vector3(0, 20, 11));
-
-
-        SpawnHand(spawnPosition, 10);
+        SpawnHand(spawnPos + new Vector3(0, 17, 0), 10); //17 это высота появления руки, 10 это начальная скорость 
     }
 }

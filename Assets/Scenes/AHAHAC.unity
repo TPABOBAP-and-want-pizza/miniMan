@@ -759,6 +759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 157a17017e32bc84f80592f8cb099851, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectTransform: {fileID: 926014229}
   maxNoiseLevel: 100
   Bar: {fileID: 529830777}
 --- !u!1001 &636121536603307892
