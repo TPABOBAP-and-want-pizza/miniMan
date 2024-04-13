@@ -54,7 +54,7 @@ public class NoiseLevel : MonoBehaviour
         }
 
         // случайное колебание
-        float noiseFluctuation = Random.Range(-2f, 2f);
+        float noiseFluctuation = Random.Range(-6f, 6f);
 
         // показатель для Bar.fillAmount с учетом колебания
         float displayVolume = VolumeIndicator + noiseFluctuation;
@@ -68,7 +68,7 @@ public class NoiseLevel : MonoBehaviour
         }
 
         //Bar.fillAmount = VolumeIndicator / maxNoiseLevel; старый статичный смособ отображения шума без помех
-        Debug.Log(Bar.fillAmount);
+
     }
 
     IEnumerator UpdateNoiseLevelEverySecond()
@@ -76,13 +76,13 @@ public class NoiseLevel : MonoBehaviour
         while (true)
         {
             UpdateNoiseLevel(); // Вызываем функцию обновления уровня шума
-            yield return new WaitForSeconds(0.1f); // Ожидаем одну секунду
-            Debug.Log(VolumeIndicator);
+            yield return new WaitForSeconds(0.2f); // Ожидаем одну секунду
+
         }
     }
     bool DisplayNoisePoint(float _health, int pointNumber)
     {
-        return ((pointNumber * 2) >= _health);
+        return ((pointNumber * 10f) >= _health);
     }
 
 }
