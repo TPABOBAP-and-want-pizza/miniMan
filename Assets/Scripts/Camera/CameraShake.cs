@@ -25,17 +25,12 @@ public class CameraShake : MonoBehaviour
 
             //HandSpawner.SpawnHand(transform.localPosition + new Vector3(0, 5, 11), 10);
             //NoiseLevel.IncreaseNoise(10f);
-            NoiseLevel.Instance.DecreaseNoise(5f);
+            NoiseLevel.Instance.DecreaseNoise(20f);
 
         }
         if (Input.GetKeyDown(KeyCode.H))
         {
-            //StartCoroutine(Shake(shakeDuration, shakeMagnitude));
-            //DefaultShake();
-
-            //HandSpawner.SpawnHand(transform.localPosition + new Vector3(0, 5, 11), 10);
-            //NoiseLevel.IncreaseNoise(10f);
-            NoiseLevel.Instance.IncreaseNoise(5f);
+            NoiseLevel.Instance.IncreaseNoise(20f);
 
         }
     }

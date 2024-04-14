@@ -29,7 +29,8 @@ public class NoiseLevel : MonoBehaviour
     {
         Bar.fillAmount = 0f;
         UpdateNoiseLevel();
-        StartCoroutine(UpdateNoiseLevelEverySecond());
+        StartCoroutine(UpdateNoiseLevelEverySecond());//отображение шума
+        StartCoroutine(DecreaseNoiseLevelOverTime());// Уменьшение шума каждую секунду
     }
 
     public void IncreaseNoise(float amount)
@@ -58,11 +59,11 @@ public class NoiseLevel : MonoBehaviour
 
         // показатель для Bar.fillAmount с учетом колебания
         float displayVolume = VolumeIndicator + noiseFluctuation;
-        displayVolume = Mathf.Clamp(displayVolume, 0, maxNoiseLevel); // Обеспечиваем, чтобы значение не вышло за пределы допустимых
+        displayVolume = Mathf.Clamp(displayVolume, 0, maxNoiseLevel); // не вышло за пределы допустимых
 
         Bar.fillAmount = displayVolume / maxNoiseLevel;
-        
-        for(int i = 0; i < noisePoints.Length; i++)
+
+        for (int i = 0; i < noisePoints.Length; i++)
         {
             noisePoints[i].enabled = !DisplayNoisePoint(displayVolume, i);
         }
@@ -75,8 +76,8 @@ public class NoiseLevel : MonoBehaviour
     {
         while (true)
         {
-            UpdateNoiseLevel(); // Вызываем функцию обновления уровня шума
-            yield return new WaitForSeconds(0.2f); // Ожидаем одну секунду
+            UpdateNoiseLevel();
+            yield return new WaitForSeconds(0.2f); 
 
         }
     }
@@ -85,4 +86,12 @@ public class NoiseLevel : MonoBehaviour
         return ((pointNumber * 10f) >= _health);
     }
 
+    private IEnumerator DecreaseNoiseLevelOverTime()
+    {
+        while (true)
+        {
+            DecreaseNoise(8f);
+            yield return new WaitForSeconds(1f);
+        }
+    }
 }
