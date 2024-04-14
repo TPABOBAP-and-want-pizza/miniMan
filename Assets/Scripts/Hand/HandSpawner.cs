@@ -35,6 +35,6 @@ public static class HandSpawner
 
     public static void SpawnHandDefault(Vector3 spawnPos)
     {
-        SpawnHand(spawnPos + new Vector3(0, 17, 0), 10); //17 это высота появления руки, 10 это начальная скорость 
+        SpawnHand(spawnPos + new Vector3(0, 2, 0), 10); //17 это высота появления руки, 10 это начальная скорость 
     }
 }
