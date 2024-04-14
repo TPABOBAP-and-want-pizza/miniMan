@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2026613374433700539}
   - component: {fileID: 605113313731035525}
   - component: {fileID: 6238147785076498331}
+  - component: {fileID: 6933542296657334359}
   m_Layer: 7
   m_Name: player
   m_TagString: Player
@@ -191,10 +192,26 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 8
-  maxXSpeed: 5
+  maxXSpeed: 4
   airSpeed: 2
-  jumpSpeed: 5
+  retardingSlink: 2
+  jumpSpeed: 7
   grounded: 0
+--- !u!114 &6933542296657334359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6238147785076498333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 713f9e0833f73b243ba79d1cabfb6d71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnPoint: {fileID: 0}
+  animator: {fileID: 0}
+  deadScreen: {fileID: 0}
 --- !u!1 &6238147785537261217
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,5 +268,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.47, y: 0.2}
+  m_Size: {x: 0.4, y: 0.2}
   m_EdgeRadius: 0

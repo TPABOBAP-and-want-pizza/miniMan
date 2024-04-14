@@ -73,11 +73,11 @@ public class Movement : MonoBehaviour
         {
             body.velocity = new Vector2(_horizontalInput * maxXSpeed * 50f * Time.deltaTime, body.velocity.y);
         }
-        else if (_horizontalInput > 0 && body.velocity.x < maxXSpeed)
+        else if (_horizontalInput > 0 && body.velocity.x < airSpeed)
         {
             body.velocity += new Vector2(_horizontalInput * airSpeed * 10f * Time.deltaTime, 0);
         }
-        else if (_horizontalInput < 0 && body.velocity.x > -maxXSpeed)
+        else if (_horizontalInput < 0 && body.velocity.x > -airSpeed)
         {
             body.velocity += new Vector2(_horizontalInput * airSpeed * 10f * Time.deltaTime, 0);
         }
