@@ -6,7 +6,7 @@ public class CameraFollow2D : MonoBehaviour
 {
     [SerializeField] Transform objectTransform;
     [SerializeField] string objectTag;
-    [SerializeField] float movingSpeed = 1f; // Змінено швидкість для піксельної точності
+    [SerializeField] float movingSpeed = 1f; // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     [SerializeField] bool arena = false;
     private Vector3 arenaPosition;
     private float yOffset = 2f;
