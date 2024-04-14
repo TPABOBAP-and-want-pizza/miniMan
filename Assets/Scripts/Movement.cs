@@ -66,7 +66,7 @@ public class Movement : MonoBehaviour
         }
         if (MathF.Abs(body.velocity.x) < maxXSpeed && grounded)
         {
-            body.velocity = new Vector2(_horizontalInput * maxXSpeed * 10 * Time.deltaTime, body.velocity.y);
+            body.velocity = new Vector2(_horizontalInput * maxXSpeed * 50 * Time.deltaTime, body.velocity.y + 0.01f);
         }
         else if (_horizontalInput > 0 && body.velocity.x < maxXSpeed)
         {
