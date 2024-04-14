@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    enum PlayerState { Idle, Running, Airborne }
+    enum PlayerState { Idle, Running, Slink, Airborne }
     PlayerState state;
     bool stateComplete = true;
 
@@ -18,6 +18,7 @@ public class Movement : MonoBehaviour
     //movement properties
     public float maxXSpeed;
     [SerializeField] float airSpeed;
+    [SerializeField] float retardingSlink = 2f;
 
     public float jumpSpeed;
 
@@ -64,17 +65,21 @@ public class Movement : MonoBehaviour
         {
             _horizontalInput = 0f;
         }
-        if (MathF.Abs(body.velocity.x) < maxXSpeed && grounded)
+        if (MathF.Abs(body.velocity.x) < maxXSpeed && grounded && Input.GetKey(KeyCode.LeftControl))
         {
-            body.velocity = new Vector2(_horizontalInput * maxXSpeed * 50 * Time.deltaTime, body.velocity.y + 0.01f);
+            body.velocity = new Vector2(_horizontalInput * maxXSpeed * 50f * Time.deltaTime / retardingSlink, body.velocity.y);
+        }
+        else if (MathF.Abs(body.velocity.x) < maxXSpeed && grounded)
+        {
+            body.velocity = new Vector2(_horizontalInput * maxXSpeed * 50f * Time.deltaTime, body.velocity.y);
         }
         else if (_horizontalInput > 0 && body.velocity.x < maxXSpeed)
         {
-            body.velocity += new Vector2(_horizontalInput * airSpeed * 10 * Time.deltaTime, 0);
+            body.velocity += new Vector2(_horizontalInput * airSpeed * 10f * Time.deltaTime, 0);
         }
         else if (_horizontalInput < 0 && body.velocity.x > -maxXSpeed)
         {
-            body.velocity += new Vector2(_horizontalInput * airSpeed * 10 * Time.deltaTime, 0);
+            body.velocity += new Vector2(_horizontalInput * airSpeed * 10f * Time.deltaTime, 0);
         }
         FaceInput();
     }
@@ -88,6 +93,10 @@ public class Movement : MonoBehaviour
             {
                 state = PlayerState.Idle;
                 animator.Play("Idle");
+            }
+            else if (Input.GetKey(KeyCode.LeftControl))
+            {
+                state = PlayerState.Slink;
             }
             else
             {
@@ -107,6 +116,9 @@ public class Movement : MonoBehaviour
             case PlayerState.Running:
                 UpdateRun();
                 break;
+            case PlayerState.Slink:
+                UpdateSlink();
+                break;
             case PlayerState.Airborne:
                 UpdateAirborne();
                 break;
@@ -124,10 +136,17 @@ public class Movement : MonoBehaviour
 
     private void UpdateRun()
     {
-        float velx = body.velocity.x;
-
         animator.Play("Run");
-        if (xInput == 0 || !grounded)
+        if (xInput == 0 || !grounded || Input.GetKey(KeyCode.LeftControl))
+        {
+            stateComplete = true;
+        }
+    }
+
+    private void UpdateSlink()
+    {
+        animator.Play("Slink");
+        if (xInput == 0 || !grounded || Input.GetKeyUp(KeyCode.LeftControl))
         {
             stateComplete = true;
         }
@@ -135,8 +154,11 @@ public class Movement : MonoBehaviour
 
     private void UpdateAirborne()
     {
-        float time = Map(body.velocity.y, jumpSpeed, -jumpSpeed, 0, 1, true);
-        animator.Play("Jump", 0, time);
+        if (body.velocity.y > 0)
+        {
+            animator.Play("Jump");
+        }
+        else animator.Play("Fall");
 
         if (grounded)
         {
