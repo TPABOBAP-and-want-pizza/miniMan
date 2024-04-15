@@ -18,7 +18,7 @@ public class PlayerDeath : MonoBehaviour
     {
         GameObject go = collision?.gameObject;
 
-        if (go.layer == 9 && !isDead)  //9 = player death
+        if ((go.layer == 9 || go.tag == "Hand") && !isDead)  //9 = player death
         {
             isDead = true;
             deathScreen.Die(false);
@@ -26,6 +26,17 @@ public class PlayerDeath : MonoBehaviour
         else if (go.tag == "CheckPoint")
         {
             respawnPoint = go.transform;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        GameObject go = collision?.gameObject;
+
+        if ((go.layer == 9 || go.tag == "Hand") && !isDead)  //9 = player death
+        {
+            isDead = true;
+            deathScreen.Die(false);
         }
     }
 
