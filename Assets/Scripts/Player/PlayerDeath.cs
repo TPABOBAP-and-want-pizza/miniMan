@@ -4,10 +4,15 @@ using UnityEngine.SceneManagement;
 public class PlayerDeath : MonoBehaviour
 {
     [SerializeField] private Transform respawnPoint;
-    [SerializeField] private Animator animator;
-    [SerializeField] private GameObject deadScreen;
+    [SerializeField] private ShowDeathScreen deathScreen;
+    private Movement movement;
 
     private bool isDead = false;
+
+    private void Start()
+    {
+        movement = GetComponent<Movement>();
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -15,8 +20,8 @@ public class PlayerDeath : MonoBehaviour
 
         if (go.layer == 9 && !isDead)  //9 = player death
         {
-            Debug.Log("die");
-            Die(false);
+            isDead = true;
+            deathScreen.Die(false);
         }
         else if (go.tag == "CheckPoint")
         {
@@ -24,25 +29,12 @@ public class PlayerDeath : MonoBehaviour
         }
     }
 
-    private void Die(bool skipAnimation)
-    {
-        GetComponent<Movement>().enabled = false;
-
-        animator.Play("Death");
-
-        if(skipAnimation)
-            ShowDeathScreen();
-    }
-
-    private void ShowDeathScreen()
-    {
-        Debug.Log("You Dead");
-        deadScreen.active = true;
-        isDead = true;
-    }
-
     private void Update()
     {
+        if (isDead && movement.enabled == true)
+        {
+            movement.enabled = false;
+        }
         if (isDead && Input.anyKeyDown)
         {
             Respawn();
@@ -50,7 +42,8 @@ public class PlayerDeath : MonoBehaviour
 
         if (!isDead && transform.position.y < -100)
         {
-            Die(true);
+            isDead = true;
+            deathScreen.Die(true);
         }
     }
 
@@ -61,6 +54,6 @@ public class PlayerDeath : MonoBehaviour
         GetComponent<Movement>().enabled = true;
 
         transform.position = respawnPoint.position;
-        deadScreen.active = false;
+        deathScreen.HideDeath();
     }
 }
