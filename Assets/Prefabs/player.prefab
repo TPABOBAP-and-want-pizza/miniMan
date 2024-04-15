@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 605113313731035525}
   - component: {fileID: 6238147785076498331}
   - component: {fileID: 6933542296657334359}
+  - component: {fileID: 7675997906469788478}
+  - component: {fileID: 6070051453174674762}
   m_Layer: 7
   m_Name: player
   m_TagString: Player
@@ -212,6 +214,35 @@ MonoBehaviour:
   respawnPoint: {fileID: 0}
   animator: {fileID: 605113313731035525}
   deadScreen: {fileID: 0}
+--- !u!114 &7675997906469788478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6238147785076498333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 157a17017e32bc84f80592f8cb099851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxNoiseLevel: 100
+  noisePoints: []
+--- !u!114 &6070051453174674762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6238147785076498333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89fe82b1cda8b0c43b62636ada9ac62e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectTransform: {fileID: 6238147785076498328}
+  shakeDuration: 0.2
+  shakeMagnitude: 0.2
 --- !u!1 &6238147785537261217
 GameObject:
   m_ObjectHideFlags: 0
