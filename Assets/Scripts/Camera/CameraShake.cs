@@ -5,9 +5,10 @@ using UnityEngine.UIElements;
 public class CameraShake : MonoBehaviour
 {
     [SerializeField] Transform objectTransform;
-
-    public float shakeDuration = 0.0f; // Продолжительность тряски
-    public float shakeMagnitude = 10f; // Сила тряски
+    private float shakeDuration = 0.2f; // Продолжительность тряски
+    private float shakeMagnitude = 0.2f; // Сила тряски
+    //public float shakeDuration = 0.0f; // Продолжительность тряски
+    //public float shakeMagnitude = 10f; // Сила тряски
     private Vector3 shakeOffset = Vector3.zero;
     private Transform playerTransform;
 
