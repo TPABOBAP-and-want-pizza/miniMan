@@ -67,7 +67,7 @@ public class Movement : MonoBehaviour
         }
         if (MathF.Abs(body.velocity.x) < maxXSpeed && grounded && Input.GetKey(KeyCode.LeftControl))
         {
-            body.velocity = new Vector2(_horizontalInput * maxXSpeed * 50f * Time.deltaTime / retardingSlink, body.velocity.y);
+            body.velocity = new Vector2(_horizontalInput * maxXSpeed * 70f * Time.deltaTime / retardingSlink, body.velocity.y);
         }
         else if (MathF.Abs(body.velocity.x) < maxXSpeed && grounded)
         {

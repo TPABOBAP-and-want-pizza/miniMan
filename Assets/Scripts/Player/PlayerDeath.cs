@@ -26,10 +26,11 @@ public class PlayerDeath : MonoBehaviour
     private void Die()
     {
         isDead = true;
+        deadScreen.active = true;
 
         GetComponent<Movement>().enabled = false;
 
-        animator.SetTrigger("Death");
+        //animator.Play("Death");
 
         ShowDeathScreen();
     }
@@ -45,6 +46,11 @@ public class PlayerDeath : MonoBehaviour
         if (isDead && Input.anyKeyDown)
         {
             Respawn();
+        }
+
+        if (!isDead && transform.position.y < -100)
+        {
+            Die();
         }
     }
 
