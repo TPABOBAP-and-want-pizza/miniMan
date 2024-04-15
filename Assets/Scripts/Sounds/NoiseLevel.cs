@@ -6,10 +6,9 @@ public class NoiseLevel : MonoBehaviour
 {
     public static NoiseLevel Instance { get; private set; }
 
-    [SerializeField] Transform objectTransform;
     private float VolumeIndicator = 0f;
     public float maxNoiseLevel = 100f;
-    public Image Bar;
+    private float Bar;
     public Image[] noisePoints;
 
     void Awake()
@@ -27,7 +26,7 @@ public class NoiseLevel : MonoBehaviour
 
     void Start()
     {
-        Bar.fillAmount = 0f;
+        Bar = 0f;
         UpdateNoiseLevel();
         StartCoroutine(UpdateNoiseLevelEverySecond());//отображение шума
         StartCoroutine(DecreaseNoiseLevelOverTime());// Уменьшение шума каждую секунду
@@ -61,7 +60,7 @@ public class NoiseLevel : MonoBehaviour
         float displayVolume = VolumeIndicator + noiseFluctuation;
         displayVolume = Mathf.Clamp(displayVolume, 0, maxNoiseLevel); // не вышло за пределы допустимых
 
-        Bar.fillAmount = displayVolume / maxNoiseLevel;
+        Bar = displayVolume / maxNoiseLevel;
 
         for (int i = 0; i < noisePoints.Length; i++)
         {
