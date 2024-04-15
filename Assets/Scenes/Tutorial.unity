@@ -234,42 +234,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 5587534341063020484, guid: 016b71ab4678b7d408e265b740d67720, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5587534341063020484, guid: 016b71ab4678b7d408e265b740d67720, type: 3}
-      propertyPath: m_AssetsPPU
-      value: 32
-      objectReference: {fileID: 0}
-    - target: {fileID: 5587534341063020484, guid: 016b71ab4678b7d408e265b740d67720, type: 3}
-      propertyPath: m_UpscaleRT
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5587534341063020484, guid: 016b71ab4678b7d408e265b740d67720, type: 3}
-      propertyPath: m_CropFrameX
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5587534341063020484, guid: 016b71ab4678b7d408e265b740d67720, type: 3}
-      propertyPath: m_CropFrameY
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5587534341063020484, guid: 016b71ab4678b7d408e265b740d67720, type: 3}
-      propertyPath: m_StretchFill
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5587534341063020484, guid: 016b71ab4678b7d408e265b740d67720, type: 3}
-      propertyPath: m_PixelSnapping
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5587534341063020484, guid: 016b71ab4678b7d408e265b740d67720, type: 3}
-      propertyPath: m_RefResolutionX
-      value: 480
-      objectReference: {fileID: 0}
-    - target: {fileID: 5587534341063020484, guid: 016b71ab4678b7d408e265b740d67720, type: 3}
-      propertyPath: m_RefResolutionY
-      value: 270
-      objectReference: {fileID: 0}
     - target: {fileID: 5587534341063020486, guid: 016b71ab4678b7d408e265b740d67720, type: 3}
       propertyPath: m_RootOrder
       value: 0
