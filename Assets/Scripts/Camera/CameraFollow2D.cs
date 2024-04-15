@@ -9,7 +9,7 @@ public class CameraFollow2D : MonoBehaviour
     [SerializeField] float movingSpeed = 1f; // ������ �������� ��� �������� �������
     [SerializeField] bool arena = false;
     private Vector3 arenaPosition;
-    private float yOffset = 2f;
+    private float yOffset = 1f;
 
     public bool Arena
     {

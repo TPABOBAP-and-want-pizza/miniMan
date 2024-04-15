@@ -194,7 +194,7 @@ MonoBehaviour:
     m_Bits: 8
   maxXSpeed: 4
   airSpeed: 2
-  retardingSlink: 2
+  retardingSlink: 3
   jumpSpeed: 7
   grounded: 0
 --- !u!114 &6933542296657334359
