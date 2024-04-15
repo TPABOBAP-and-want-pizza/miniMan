@@ -195,7 +195,7 @@ MonoBehaviour:
   maxXSpeed: 4
   airSpeed: 2
   retardingSlink: 3
-  jumpSpeed: 7
+  jumpSpeed: 10
   grounded: 0
 --- !u!114 &6933542296657334359
 MonoBehaviour:
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnPoint: {fileID: 0}
-  animator: {fileID: 0}
+  animator: {fileID: 605113313731035525}
   deadScreen: {fileID: 0}
 --- !u!1 &6238147785537261217
 GameObject:

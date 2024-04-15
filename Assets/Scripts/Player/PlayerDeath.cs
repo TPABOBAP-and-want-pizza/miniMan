@@ -15,7 +15,8 @@ public class PlayerDeath : MonoBehaviour
 
         if (go.layer == 9 && !isDead)  //9 = player death
         {
-            Die();
+            Debug.Log("die");
+            Die(false);
         }
         else if (go.tag == "CheckPoint")
         {
@@ -23,22 +24,21 @@ public class PlayerDeath : MonoBehaviour
         }
     }
 
-    private void Die()
+    private void Die(bool skipAnimation)
     {
-        isDead = true;
-        deadScreen.active = true;
-
         GetComponent<Movement>().enabled = false;
 
-        //animator.Play("Death");
+        animator.Play("Death");
 
-        ShowDeathScreen();
+        if(skipAnimation)
+            ShowDeathScreen();
     }
 
     private void ShowDeathScreen()
     {
         Debug.Log("You Dead");
         deadScreen.active = true;
+        isDead = true;
     }
 
     private void Update()
@@ -50,7 +50,7 @@ public class PlayerDeath : MonoBehaviour
 
         if (!isDead && transform.position.y < -100)
         {
-            Die();
+            Die(true);
         }
     }
 

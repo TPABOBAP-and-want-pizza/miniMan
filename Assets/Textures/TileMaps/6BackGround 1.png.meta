@@ -1,0 +1,7130 @@
+fileFormatVersion: 2
+guid: 0bbcb7a8f29cda545b5e565680ff5ddd
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 6BackGround 1_0
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 444
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b206a103104aee74a9ba3821caf9e189
+      internalID: -601703824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_1
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 444
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f68e9ade4d4e249be137f3eaabb10d
+      internalID: -1457188863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_2
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 444
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2162593d46f4f5a4d843af761fb6e24b
+      internalID: -919172082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_3
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 444
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54c1c9f74a1176243bbdae1feeb3da37
+      internalID: -55613756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_4
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 444
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136f02a3edd93194f94c6417e31180c2
+      internalID: -410655290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_5
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 444
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd8ee20289ae9b9449bdca404ca12e2d
+      internalID: 61608283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_6
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 444
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01c3954d262b26498f4db74823be742
+      internalID: -849305268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_7
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 444
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1726140aab81bc14caf65a1baeb9862d
+      internalID: -545769503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_8
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 444
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5531b6265532e4eba81127919f3ef5
+      internalID: -1723654753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_9
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 444
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89e097d0a7c9964686e1c70d72285e3
+      internalID: 1376787420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_10
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 444
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1b849974cb3f24409e174ea72e8ef71
+      internalID: 1457264152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_11
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 444
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60f2ace72a51e0f4b8d866310f6552a4
+      internalID: -1394041477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 444
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f1af75b223d4f740955d96a0813a8f0
+      internalID: -236888570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_13
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 444
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26bd5c609c9885468ea587ece342b7a
+      internalID: 1193098270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_14
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 444
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1334eb30fe4e3734daa7f73d36008d8b
+      internalID: 2016580984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_15
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bf4595c740cd35489ae5b0d12557ffe
+      internalID: 749287311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_16
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f237565d022876143b5665cff33bd2a9
+      internalID: -902426117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_17
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae1fa8890a8ae874a92d3650fbe53be3
+      internalID: 792409727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_18
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f7be2ac539eaf4fb2558524e7fc968
+      internalID: 1339873682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_19
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ba6289684703ce47937ad83aa9cc3db
+      internalID: -391604756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_20
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a61df15a63c869448af96a84f9d54b8
+      internalID: -1444241281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_21
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7f3aaa2497808439984fecf3fd77dc
+      internalID: 1245137931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_22
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdcf1815ecaee00459455110ffacaaf7
+      internalID: -94030697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_23
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d15ea022dc1f0448b7960a5dc2ac05a
+      internalID: -1964513230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_24
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 477b78148de58a442aef155df7a10eba
+      internalID: 339127977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_25
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15898e4c6afa81946b325ecc6f74d369
+      internalID: 523348547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_26
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d3feef24024d243b439aa8206f1f78
+      internalID: 129821205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_27
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd74ed9ee07fb0141a48cc60a5d622b7
+      internalID: -234215582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_28
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb60c02a5fab1524795cddabac47ea9f
+      internalID: 373716315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_29
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c972186d0e757b74eb47b0a9991ae0b2
+      internalID: -409406429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_30
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e742cbde884edd4385580574b414100
+      internalID: 1752424320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_31
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f83afc7c0d15b4fb14f30ebaa66868
+      internalID: 279891953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_32
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ac0392bf88ed7a479b05fb76103e586
+      internalID: -885232950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_33
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd7fb96cf1ac2a1419e8e188e6960fd9
+      internalID: 2002496416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_34
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf2ea8e77993dc544bf5daaa3a38fad6
+      internalID: -1585131124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_35
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f85d077453234c14fa89f8721ef71cc8
+      internalID: -1644036356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_36
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c0b68b33753101439be9bf25e25cc6a
+      internalID: 1425943851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_37
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 428
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8406c7ae061762a479ef8b10f23e8a3d
+      internalID: 282624284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_38
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 412
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5461d97d63205ab40815e9ef11a430c7
+      internalID: -1583111714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_39
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 412
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8aeea66124327d43966d1807cc657fb
+      internalID: -868006331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_40
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 412
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc43b7568df3f44f81317e705923a0e
+      internalID: -1927144483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_41
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 412
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e70acdb8c67d7a94496fc52c86f6c1f2
+      internalID: 1795574902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_42
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 412
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc892fe9deb54045ac733d9214eb7bb
+      internalID: -1973054871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_43
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 412
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 732972469a32bff40a2da54df8a0f3da
+      internalID: -1521287011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_44
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 412
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9da2b651aec128640800b1cfebd0a447
+      internalID: -1725539463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_45
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 412
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe47f71db2bbd0438413d08dc8980a7
+      internalID: 1754968230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_46
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 412
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47aede1109216440b7b074d95b1e9cd
+      internalID: 1145376961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_47
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 412
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e60357a2f58b21345ae7443804939b79
+      internalID: -770940272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_48
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 412
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 637072fda103fdc4ab4aaf7325a11182
+      internalID: -440923324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_49
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 412
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a51c62d9e9d782a448a721fb74b37ae4
+      internalID: 1062052223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_50
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 412
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 066b841cc51c0b148b128f2166207177
+      internalID: -656060990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_51
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 412
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa798f0748ac56f458a1e82b03a037d8
+      internalID: -28292970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_52
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 412
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbba6fdae0654594ca31f3d3a450cf94
+      internalID: 518743441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_53
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 412
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ef465725ec03494eb8b2292268a93bf
+      internalID: 1191798266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_54
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 412
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 203e73fd04417dd4ca1c2cf570cc1313
+      internalID: -1642709983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_55
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 396
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ddd615e912f2324b98295b4251bbef8
+      internalID: 904261444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_56
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 396
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02a369b61c9ca3541acd72d382c9d4f6
+      internalID: 380898420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_57
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 396
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3172045ce81b4ae4797b15b94edbbfcd
+      internalID: -658863634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_58
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 396
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d19261424810b2d48b27ec5e3fbe60c5
+      internalID: -870218082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_59
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 396
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eb31a0a6314e074b99cda00a095cc3a
+      internalID: 1236778854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_60
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 396
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebf32741a2f0c034596ab9de2d1bf605
+      internalID: -1580629849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_61
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 396
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b90d6f3566e552b4a85a380e9092b69e
+      internalID: 1561647274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_62
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 396
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f14f263bf76c744ebcbf2a9c12a44db
+      internalID: -2141600299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_63
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 396
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67915ea156bf012418111e2966212320
+      internalID: -1527785696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_64
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 396
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fca48b5c516053644a3d4aae71367d40
+      internalID: 669315941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_65
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 396
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d14c90f6e73e8d44f98ac0d2c0d9f08d
+      internalID: -1214520584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_66
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 396
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e3a8ec751cd1c9499fed335903b55c3
+      internalID: 1929891934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_67
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 396
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4153d09ea100e4340bef7b7a7f2a7fdc
+      internalID: -1383354039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_68
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 396
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37353e8c31eba24280f235d412ed7b1
+      internalID: 1510966453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_69
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 396
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c7253f0e616bc341b44944707994d62
+      internalID: -1658881845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_70
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 396
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ea186ae7211d54998da73664df24f4
+      internalID: 1213246357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_71
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 396
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e5b08e8f3069d64182292a984a36585
+      internalID: 738366969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_72
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 396
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30cc10a27692b6944a2f1fc81acff88e
+      internalID: -1848923211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_73
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 396
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a35e979183af899478ecfc215f5dbd02
+      internalID: 1214933364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_74
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 396
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c83fd0ed8536349a0f77a0204ea2bd
+      internalID: -353141761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_75
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 396
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc3f86ec6b462ac469b48f122fb07f6c
+      internalID: -379366890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_76
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 396
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a0a292659db64b448880313772fc919
+      internalID: -1866155301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_77
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 396
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23081ee55ab31e748aa7d6cc02d4fd85
+      internalID: -356954769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_78
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 380
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd66149dfcfd04f4287d92c945374e6a
+      internalID: -427316968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_79
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 380
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c570202cf65535f4ab4e3a7807bff672
+      internalID: -576493623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_80
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 380
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74f9080b5badb741b77d3a8c8b96b21
+      internalID: 1217830622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_81
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 380
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba98575cc346baa4487a906d72ec7ee1
+      internalID: 979922672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_82
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 380
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ea52d9aeed03c14db61e379b9385d90
+      internalID: -177083604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_83
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 380
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c794fdb8fdc71dc4f8f3f866aecbaa35
+      internalID: 719309298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_84
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 380
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c59cf54f225aaf540ae6082a0a84a9e5
+      internalID: 2072392766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_85
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 380
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b47a4e05402fd9146a5cb3fb035ac9de
+      internalID: -592849819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_86
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 380
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bda87a986841ea41a0beeb3afd5f1c2
+      internalID: -1638770864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_87
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 380
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7727d846749f6474fa74b483b93543a5
+      internalID: -399419572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_88
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 380
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45927cf7f283c4c4c9748c1481d6bd18
+      internalID: 1561778255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_89
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 380
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fe25b1fc82cb7c46996a8d8ff771616
+      internalID: 342450300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_90
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 380
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e35b0b2d415cbed4fbac86435977998c
+      internalID: -635730268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_91
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 380
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ba3f73ed70992e4481d22bcf2bfcbce
+      internalID: 1957462365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_92
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 380
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5737dcc791b4ca04ab0be6ad2349a8ef
+      internalID: -1852930184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_93
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 380
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4994ae2af819ae044b709d87e5873e72
+      internalID: 1220240545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_94
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 380
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b5f513a9ec21647858e242aad227ea
+      internalID: 1818875452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_95
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 364
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d992ad122d10341ab85d99020d7f42
+      internalID: 257754407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_96
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 364
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 073284366eb958f49842f3703bb0d7da
+      internalID: 1094935256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_97
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 364
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea70b57bedd9534a8e916daca1f9e8d
+      internalID: 176184685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_98
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 364
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d3ff2d3f1c55540b90d8279ecc8732
+      internalID: 1980368978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_99
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 364
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90098900065ff404ab6f3b12df98e372
+      internalID: -1126512686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_100
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 364
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0351d645cf7ffb943b160e52f51361bf
+      internalID: 827179580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_101
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 364
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7436518fe184a445aad472982fe3243
+      internalID: 884026871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_102
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 364
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc4e4dcc34271484185edd8101fd377f
+      internalID: 781364329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_103
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 364
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e60901a9453f3174caac419c379afb68
+      internalID: 2073005197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_104
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 364
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9679e6714d96bd0499c3e7b8c5105a12
+      internalID: 881653080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_105
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 364
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0041b1bf5c3784b4c86456c93d656432
+      internalID: 531337466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_106
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 364
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ff77c912c5861f46b0e8344688256e9
+      internalID: 421868285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_107
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 364
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e032ddbe59f44047938a3a8741e0617
+      internalID: -1095592705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_108
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 364
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca10d201e6f401541a6c62b68730f729
+      internalID: -297446537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_109
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 364
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4912493593100de4e9f51365d8d137fc
+      internalID: 1315513814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_110
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 364
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3d921d18df7c5409f283c3abc786fb
+      internalID: 37969577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_111
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 364
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37a790f6709bedd469e327ffec01b1dc
+      internalID: 505761280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_112
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 348
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a183290ebc45c744ba494c0d8e59391
+      internalID: -1322235047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_113
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 348
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 179635fc0f603b3418107099372fb544
+      internalID: 1457491259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_114
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 348
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14cf32fae0e46f74c8bc01e13bdad415
+      internalID: -553839908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_115
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 348
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 107632b743dea854385793de854378e3
+      internalID: 1595940982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_116
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 348
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd6b8b9141e2ee04c9c28f94571a9bed
+      internalID: 909111553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_117
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 348
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1fecdcbb87acd545a39fa664751cf4a
+      internalID: -7146648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_118
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 348
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2efaf3f667f397443b5da8c2e6790ace
+      internalID: -450656627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_119
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 348
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f252e7e80b37a4383552b708870916
+      internalID: 214399717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_120
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 348
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1e597d3e5e35fa40af1713273742e10
+      internalID: -1812792962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_121
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 348
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc434092b25c0714bb099b6fcd8a088b
+      internalID: 1136531372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_122
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 348
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58573db1e059be843a459902b1c03213
+      internalID: -263072325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_123
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 348
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67133c5af5c03a4e9d281f96720e98c
+      internalID: 115310901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_124
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 348
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ab5030c72b7d045b762f85d2690ddb
+      internalID: 1163969064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_125
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 348
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a1dd2715d5010548ae06c6e4008eead
+      internalID: -307018764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_126
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 332
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab543aa2aba134a4089fe3338ff25bb1
+      internalID: 833998704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_127
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 332
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf79c3731c38964e875e903a7a32130
+      internalID: -1347789769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_128
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 332
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a51809d60db00a4aa4343b66ceb4140
+      internalID: -1422068302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_129
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 332
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2824a899ca409864fb89345038c54090
+      internalID: 1046217486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_130
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 332
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0307536eae824e24cb99136e1c9ab577
+      internalID: -1280532905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_131
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 332
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c0fba16c1214e74cbb8115ca58835d9
+      internalID: -1136203267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_132
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 332
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce50fe53616a2ad42bc2929b8939e3ea
+      internalID: -1598787192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_133
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 332
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53859dc83c542743a86d4064f1cac24
+      internalID: 876158453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_134
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 332
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb5a4f9f4cf2634bb28d6ab42267355
+      internalID: -530682325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_135
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 332
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 963545b8a20ec4a49a6c6133431dc60b
+      internalID: -684834522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_136
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 332
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ee43bb5659c06c43b1897e5de974d72
+      internalID: -1925402059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_137
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 332
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26641f781fa1f494582263c1574d01ea
+      internalID: 689524855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_138
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 332
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c467b4fd164bfd3499f94929a41b4dfd
+      internalID: 1312729290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_139
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 332
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0add1c1a450c794d9db2ddbefc0bb71
+      internalID: -1759672046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_140
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 316
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: febbba2cf602ada41851f385f2ae09ce
+      internalID: -1529718634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_141
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 316
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab44dd2b98d4e944ea31cb344954040e
+      internalID: -1580015543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_142
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 316
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab22da9025d0e3f4dbf499606209001d
+      internalID: 491516895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_143
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 316
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6459b6f9e2322174f9195c0a534749c5
+      internalID: 2057666310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_144
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 316
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f241ac0f958e2d469ed06412796cb6b
+      internalID: 1515255579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_145
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 316
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a844effbf67e1e1429fc0e0bd042f25c
+      internalID: 52145490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_146
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 316
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf3e6ef4b14b49040b5c2b3f60120d42
+      internalID: -1581384686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_147
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 316
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a67024b54dc51ea44b437696c4abc4da
+      internalID: -353624754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_148
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 316
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d32cf0e19e29744b6a0800fe195275
+      internalID: -420696907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_149
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 316
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caec0b51fe6c03643ab202ed268d08fd
+      internalID: 891443302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_150
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 316
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dbb41d62068e2b4ca48c1e821ce1dea
+      internalID: 358622662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_151
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 316
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 144d83704e9bd004d8e05ecb4b6944bf
+      internalID: -604989044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_152
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 316
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4dba544e5b242b419b04fcb5c05f8be
+      internalID: 1038562201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_153
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 316
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33dcefe44f2b3a4d96d42b524695cef
+      internalID: -1948111978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_154
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 316
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84671e3fb8d58ca4cbb646114ef9acd2
+      internalID: 1169420763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_155
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 316
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fc1fe4bcf4857c4e8f18c32cf11e686
+      internalID: 1996420797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_156
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 316
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96ce07c98e5954e4680c75002c851ae7
+      internalID: -1738137135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_157
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ae086db99d3ff44b22c92b8b927909
+      internalID: -1957723935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_158
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bff3139d3040cf47a922ca37ea1c94b
+      internalID: -162703908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_159
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64083ffb48eccc74b849dc39b5144882
+      internalID: 913835950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_160
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 518ccad5f027e1e41aad885690692049
+      internalID: -39383566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_161
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc146abba377c44cab0a3c799a940a7
+      internalID: 1090024637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_162
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad11e670796cd64188a9c5f4d5b1779
+      internalID: 1467918968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_163
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 449adacf0cdcabf4da9b88b2dcf117da
+      internalID: -527015752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_164
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35798cec5b311c44bbc840bccf022308
+      internalID: 1533822033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_165
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4154014392560c347b68febd14433cce
+      internalID: -1326926041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_166
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd671d5f7d5074408bc74152ae3415f
+      internalID: -1261868216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_167
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2fbd219708181a43b2c13ba27c35f22
+      internalID: 1265787401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_168
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f02157b70620841ab3071db6ff948d
+      internalID: -1001053221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_169
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b2e46c0b611b814ca54befc6a3a7a66
+      internalID: 1175927385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_170
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc575ece632de447a15c477564e8da4
+      internalID: -1765432828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_171
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6926349cfde704bbc5b2ad7ab36d61
+      internalID: -1331669776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_172
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f31da679a36645f47bad3634ebdf0bbe
+      internalID: -1200294044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_173
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 300
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 338c4cf89786c3d479225f140613494f
+      internalID: 1147250157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_174
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 284
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b158d0a11451b784da947fb7dc3bd488
+      internalID: -279640606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_175
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 284
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2661faeded6f9545b72a505fdda4c51
+      internalID: 104844257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_176
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 284
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84f3410156b0d234d9d219ccff323428
+      internalID: 2119238939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_177
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 284
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 302c5a934acb794488e66cdd398a97ba
+      internalID: 1597714544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_178
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 284
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830cadaed05518e4da6cb12adf3eea36
+      internalID: 527135281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_179
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 284
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4125e900ac19a54ebdfbd3c8a699a61
+      internalID: -602206008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_180
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 284
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f2c64fd5f13c844a9845709025ce509
+      internalID: -1382762793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_181
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 284
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ee4be3258866741b88f00453a88959
+      internalID: -939182394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_182
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 284
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d82644aa07fa1449b48fd51c471e45
+      internalID: -202019832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_183
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 284
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c58b1b4d42e22604fafd05c4a144748c
+      internalID: -1653044479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_184
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 284
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca8878cf7fce0524da2c5b8b7bddaafc
+      internalID: -785388595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_185
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 284
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f7fc14d138705246a8059ce1a824c31
+      internalID: 1093938702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_186
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 284
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54847fcfb87c7474f8c145fa0c100e26
+      internalID: -1312970391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_187
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 284
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8286e90c145240e42b319bfa9fdc66ee
+      internalID: 1467633058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_188
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 284
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb963cfb331472b4ba48b4403e946a2c
+      internalID: 346962124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_189
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 284
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b527457154360f4991e27d7fc881f62
+      internalID: 1751714006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_190
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 284
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 909dbe649ea951742b4d06b1f7774585
+      internalID: 2142307385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_191
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 284
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3e89232e8ce67440b0f58f9e8cb0caa
+      internalID: 516228775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_192
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 284
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 292079714b04ff64c86146a410fd9098
+      internalID: 1909480515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_193
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 268
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 297e50f346be0ec4f96598b18d75a77e
+      internalID: 1981257549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_194
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 268
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2986944d5576924da4719a2cd2ef796
+      internalID: -1165089305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_195
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 268
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 668d64c5cf189974bb0235f4bf7215d6
+      internalID: 1900055974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_196
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 268
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a42d180ffa30dd045a69ef9f06d47747
+      internalID: -1215471140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_197
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 268
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e36f59f80701d044d85486b81fd7d7c7
+      internalID: -694120250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_198
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 268
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d7c519dd8e0eb6439860b48e8cc6009
+      internalID: -1847296279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_199
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 268
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f53170ad24a831d4d9493aaf2b6c7549
+      internalID: -814605966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_200
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 268
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d9ac1d9b38ad344bb48b25c6882123e
+      internalID: 791205635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_201
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 268
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20606b5bd71b49b4b9032ff663e73961
+      internalID: -2018358634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_202
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 268
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4982eba570b7ee44d81cd3556cebdea1
+      internalID: -510774940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_203
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 268
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd4d973957e0e2448f5a9910f1cea8d
+      internalID: 1422302275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_204
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 268
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4de6f6c5d8491c4fa8295555b6c2fb0
+      internalID: -1813447694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_205
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 268
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b0cbf0f93085e4da2e3b701470e597
+      internalID: 913157289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_206
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 268
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c07a459816b9eb41a98443b73407a87
+      internalID: -1943839986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_207
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 268
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c8c3276fa789b498163541b80f8259
+      internalID: 1335733512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_208
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 268
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a6b66f35c3495f499619a3ca4d0e033
+      internalID: 1211361086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_209
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 252
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d8b6b0c14d745f47bc8add0ec19bcf7
+      internalID: -249327063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_210
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 252
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89e6adfda2b677146af43eec34c8b6d2
+      internalID: -727365857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_211
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 252
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b83b08f241c721419fe4a4fda950bcf
+      internalID: 1789615774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_212
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 252
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64b714be102f55448442e05395ab880
+      internalID: 1675766774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_213
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 252
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e13da65533c466f4eb206886eeb7f3cb
+      internalID: 347013549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_214
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 252
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e21c807d9b505e44ae326917aed6a14
+      internalID: -158926503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_215
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 252
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85973a28a7f27a1488b1be41aa6af977
+      internalID: -1651927360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_216
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 252
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3fbe317cfcba6f4eaa354e51e8ba03d
+      internalID: 1300778983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_217
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 252
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de346dbffc75a5044980ed564b8f5d15
+      internalID: 1855725030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_218
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 252
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b5a9f30056390a4cba1938ae8842ffc
+      internalID: -231335179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_219
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 252
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 718eec4d1afecd042895b11ed4fe5f4f
+      internalID: -1545224883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_220
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 252
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91ccd2f6929238748b011d5955f362b1
+      internalID: -1310148063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_221
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 252
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5844c69a58718d049b087f7319638c96
+      internalID: 129679864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_222
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 252
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2943e939472787843a7e62a719dc55c6
+      internalID: 1059153904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_223
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 252
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe9d8f4d9e020754eb9480d317c02af3
+      internalID: 421152829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_224
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 252
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c34820da78bec45918b6ecc63781ea
+      internalID: -349611646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_225
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 236
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90fcabf081e40054680c63393c993b26
+      internalID: -564424320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_226
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 236
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca391297c9e16b448b3b54d3961c0b05
+      internalID: -1099108015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_227
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 236
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4265acc31b998fb4db35dfd335004d9a
+      internalID: -672064961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_228
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 236
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5cada4ff709a0e4a8e56d04f6bd1cf6
+      internalID: 342320072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_229
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 236
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe27453b3983cd46a5b75648f7cdf8d
+      internalID: -1537415090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_230
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 236
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fcb0aa7c519dab4397c21c355728a51
+      internalID: 280007987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_231
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 236
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0daf01a9b276b0b4db655f3206e52703
+      internalID: -904920518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_232
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 236
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b10ccb9c311fbc4890e75f3da67ee8a
+      internalID: -1344766543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_233
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 236
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a52745e03e0f7b4eb3920feaa65b08c
+      internalID: -967876600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_234
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 236
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701c451216ac90e479639af05b7f06eb
+      internalID: 1694445972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_235
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 220
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68b1cf95fba5f2847ad2b9065e5c51a2
+      internalID: 1607848247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_236
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 220
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6247a5a76e4325b40a365fcef2c72196
+      internalID: -1267014905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_237
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 220
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a8c29d20b3b8347b32004d7a665c56
+      internalID: -1264603119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_238
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 220
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e3d67fcca71e9c489213d74662ee9b0
+      internalID: -139456260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_239
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 220
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac7a626c00e2bb64989249d2b2da77d9
+      internalID: -522155748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_240
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 220
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 368e359a4f383ee42ba5ac68a4dd1bc4
+      internalID: -1609253781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_241
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 220
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d496e8436c82d648ba95db0a5c0c56d
+      internalID: -201352201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_242
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 220
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e393b3480c94e744a4d0487c0e6d7e4
+      internalID: 1123728112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_243
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 220
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b5244777cb815b408d79a75002e20bf
+      internalID: -890932901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_244
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 220
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ab629245197f74e821e3f8cc6b5dbc
+      internalID: 1828132760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_245
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 220
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e19677f4a6eef45ab3b642004359f0
+      internalID: 149329071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_246
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 220
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23bb8a0ad729d82499c8eb8a50021f61
+      internalID: -1574619281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_247
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 220
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5de7932bb6a1f14299bfed2a2df96d7
+      internalID: 1993394161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_248
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 220
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d1943aabd912884aad90476b3a9c870
+      internalID: 589394132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_249
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 220
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19c00c2d242a4034291dca45cf477e80
+      internalID: -330236303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_250
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 220
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b9fc68cc590da43b1bf41599b48b63
+      internalID: 1361363555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_251
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 220
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9dcab59e1c896b4983c39930a77c8ab
+      internalID: 1553841706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_252
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 220
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d803fd3b68901a4db0bb38da21460d5
+      internalID: -65618512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_253
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 220
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd7b1d8ffaf64c42bf9a344d230de31
+      internalID: -739095048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_254
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 220
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86e479fe36214744481c1ebfabd83800
+      internalID: -820375275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_255
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 220
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 856989d66920a59438d439d9da9579dd
+      internalID: 1441470140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_256
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 220
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16eba7340e8257c4c8258fe1da3b8a70
+      internalID: 1594418892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_257
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 220
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c8d823247fb674f93b1f381d5e47fc
+      internalID: -547082565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_258
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f695425a40bb014da602db58b470bd9
+      internalID: 1204244103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_259
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02bdea2a91c33ed44a5632ec12adf97e
+      internalID: -458191380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_260
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f77b9cb716c1db54e816e41faf5080d0
+      internalID: 578600046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_261
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 549ab461a5127c342a58d387c4218f05
+      internalID: -891925931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_262
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 152eade5c07cd544c879eee5ade6ce2f
+      internalID: 1124824647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_263
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8b8cd139c2a18d4c8fa36352f797dcc
+      internalID: -1476619800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_264
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3d556cd3a452d045a7e09e3acffad9e
+      internalID: 965946642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_265
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c46e60553d5a3f498d7434d04c61633
+      internalID: 29227421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_266
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d93045dcdff012242bc40cc120b37066
+      internalID: 1149558092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_267
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 335899ee042194e468f5ce995d28bda1
+      internalID: 1718492892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_268
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beb58381a8d82784f87ad65d1bd303ad
+      internalID: 1721374311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_269
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e2003cd0f8feda4e98bc5b09ccbcab9
+      internalID: -573303873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_270
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d1b466858af1a546b0bd3fc782c7b4f
+      internalID: 2082906276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_271
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 204
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21cf9a01db8e4f941890c0de3be1f75d
+      internalID: 1922530001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_272
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d004a0f315a30334a9288cf8d6747f59
+      internalID: -602065673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_273
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe2a97f2b1fdf6841b462cad661b1fef
+      internalID: 1467516979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_274
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eddad183aae6d8041984d4ae88a11a32
+      internalID: 769825665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_275
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ee5ccc0b4cefd498d4a4516aa65bd5
+      internalID: -1996264015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_276
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e4299632a437c49ae94bb6121fcadd
+      internalID: 725169389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_277
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1a034e31eb66674bb30053447550ba9
+      internalID: 2130296265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_278
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da1237b74efd634f9e594c1b21e08cf
+      internalID: 37218248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_279
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7147bd768867be4fb66859b7a60b232
+      internalID: -1917676802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_280
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bf6c767c8f271f4e90afc3921e531c9
+      internalID: 30259913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_281
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973f8d6262363e44c90fc3531f264d1c
+      internalID: 875780878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_282
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e12bb7a40f7e0945b363c3402f9e99b
+      internalID: -875567900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_283
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 188
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a52cf09fb3f1fcc4b95da38d1b67c17b
+      internalID: -501017721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_284
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 172
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db993bfbbb44ddd42a9b00536054270f
+      internalID: 1348138686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_285
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 172
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5edcf125d0c644688cbebdbbd9b22b
+      internalID: -1600781023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_286
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 172
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3667a1adbe36c42a171e2b28028af0
+      internalID: 133193041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_287
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 172
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f8b8170729aa347a36c83aea3c8394
+      internalID: 1592861858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_288
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 172
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a769f3a8e469d6478e91a21f7135342
+      internalID: -724221519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_289
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 172
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c50a61ffd4392ae4cb6c5b263299fe2e
+      internalID: -1075704386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_290
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 172
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e0789164583f141abd2b012f7f6842
+      internalID: -1725316771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_291
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 172
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97b0a70938c3eb34e81e9fc20ee3593d
+      internalID: -738679040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_292
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 172
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7dccef56b57dc40aed905f7d19e4ca
+      internalID: -1798404250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_293
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 172
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 345464ecd52127741a3b521678f428e5
+      internalID: -1004242000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_294
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 172
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 058aafe73a98e1b4bbc1e338a6e24e26
+      internalID: -761966506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_295
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 172
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f89767ac43bb14bb1867be278c168b
+      internalID: -392594148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_296
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 156
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1067e2f1937cbeb48976e2b5840d686b
+      internalID: -1679369276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_297
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 156
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f24862a984481b947a387da35dacb1c0
+      internalID: 1827587645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_298
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 156
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3be0f59990f9c4b8dcf4fc388b7390
+      internalID: -1526198131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_299
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 156
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e26d18f416b2c48a5bca3c30ef9233
+      internalID: -259115069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_300
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 156
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7913397922b4b814e825f7cd3fd15af2
+      internalID: 452919372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_301
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 156
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7697984f78905874ba8517a60d3db6e6
+      internalID: 2025052971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_302
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 156
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49e9ab6a8dee9f248a0caa37443e82ae
+      internalID: -1575409040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_303
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 156
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dfece0a2b445784c93d28c131650b38
+      internalID: -1280142595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_304
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 156
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf2ac91f4e4017343b2670c4ba6a7a7d
+      internalID: -842394985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_305
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 156
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba29856e3f3f534fa054f623bed849b
+      internalID: 239968887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_306
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 156
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 348673fea854739449fb2fc0b5d4f8ba
+      internalID: 1835457058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_307
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 156
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d8f79ab1eb72c54b8ae1ff4d8ceedee
+      internalID: -2129739435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_308
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 140
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b0fc87384cd6c64e85a9e8bf0237780
+      internalID: -1770497857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_309
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 140
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b8af20d6adb1941bc6d4c6d0520e70
+      internalID: 1778918879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_310
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 140
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3631708f52dadf64da60cc8ff67907e3
+      internalID: 1372209988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_311
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 140
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a002719f3d248874e8e65e3fe53f4d1e
+      internalID: 1323996713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_312
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 140
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 531f0bef8f2984b49921e90c66a151d5
+      internalID: 27944026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_313
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 140
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc903a8c722aab045a2fc34ddf6fe760
+      internalID: -502409740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_314
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 140
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcafaa6e32273ae4dbc55d02a0863c66
+      internalID: 1140862919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_315
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 140
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d44f4b7265e81b47aa3d2cbb01bc1fa
+      internalID: 1872084213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_316
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 140
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58221fa613df0c744b3b7c51e04354d5
+      internalID: 1008892730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6BackGround 1_317
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 140
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 533b53a98f6273144beefd1960332640
+      internalID: -838142325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      6BackGround 1_28: 373716315
+      6BackGround 1_293: -1004242000
+      6BackGround 1_300: 452919372
+      6BackGround 1_140: -1529718634
+      6BackGround 1_119: 214399717
+      6BackGround 1_42: -1973054871
+      6BackGround 1_243: -890932901
+      6BackGround 1_7: -545769503
+      6BackGround 1_6: -849305268
+      6BackGround 1_72: -1848923211
+      6BackGround 1_186: -1312970391
+      6BackGround 1_103: 2073005197
+      6BackGround 1_245: 149329071
+      6BackGround 1_115: 1595940982
+      6BackGround 1_253: -739095048
+      6BackGround 1_98: 1980368978
+      6BackGround 1_297: 1827587645
+      6BackGround 1_244: 1828132760
+      6BackGround 1_78: -427316968
+      6BackGround 1_284: 1348138686
+      6BackGround 1_38: -1583111714
+      6BackGround 1_308: -1770497857
+      6BackGround 1_17: 792409727
+      6BackGround 1_80: 1217830622
+      6BackGround 1_220: -1310148063
+      6BackGround 1_252: -65618512
+      6BackGround 1_275: -1996264015
+      6BackGround 1_150: 358622662
+      6BackGround 1_188: 346962124
+      6BackGround 1_306: 1835457058
+      6BackGround 1_271: 1922530001
+      6BackGround 1_294: -761966506
+      6BackGround 1_312: 27944026
+      6BackGround 1_289: -1075704386
+      6BackGround 1_25: 523348547
+      6BackGround 1_206: -1943839986
+      6BackGround 1_32: -885232950
+      6BackGround 1_303: -1280142595
+      6BackGround 1_88: 1561778255
+      6BackGround 1_171: -1331669776
+      6BackGround 1_235: 1607848247
+      6BackGround 1_114: -553839908
+      6BackGround 1_181: -939182394
+      6BackGround 1_156: -1738137135
+      6BackGround 1_274: 769825665
+      6BackGround 1_16: -902426117
+      6BackGround 1_164: 1533822033
+      6BackGround 1_69: -1658881845
+      6BackGround 1_129: 1046217486
+      6BackGround 1_59: 1236778854
+      6BackGround 1_179: -602206008
+      6BackGround 1_218: -231335179
+      6BackGround 1_53: 1191798266
+      6BackGround 1_49: 1062052223
+      6BackGround 1_304: -842394985
+      6BackGround 1_279: -1917676802
+      6BackGround 1_29: -409406429
+      6BackGround 1_107: -1095592705
+      6BackGround 1_281: 875780878
+      6BackGround 1_161: 1090024637
+      6BackGround 1_199: -814605966
+      6BackGround 1_37: 282624284
+      6BackGround 1_209: -249327063
+      6BackGround 1_146: -1581384686
+      6BackGround 1_66: 1929891934
+      6BackGround 1_81: 979922672
+      6BackGround 1_176: 2119238939
+      6BackGround 1_249: -330236303
+      6BackGround 1_76: -1866155301
+      6BackGround 1_87: -399419572
+      6BackGround 1_257: -547082565
+      6BackGround 1_267: 1718492892
+      6BackGround 1_265: 29227421
+      6BackGround 1_11: -1394041477
+      6BackGround 1_77: -356954769
+      6BackGround 1_268: 1721374311
+      6BackGround 1_51: -28292970
+      6BackGround 1_90: -635730268
+      6BackGround 1_295: -392594148
+      6BackGround 1_134: -530682325
+      6BackGround 1_149: 891443302
+      6BackGround 1_316: 1008892730
+      6BackGround 1_263: -1476619800
+      6BackGround 1_236: -1267014905
+      6BackGround 1_314: 1140862919
+      6BackGround 1_5: 61608283
+      6BackGround 1_52: 518743441
+      6BackGround 1_68: 1510966453
+      6BackGround 1_127: -1347789769
+      6BackGround 1_301: 2025052971
+      6BackGround 1_305: 239968887
+      6BackGround 1_15: 749287311
+      6BackGround 1_270: 2082906276
+      6BackGround 1_70: 1213246357
+      6BackGround 1_211: 1789615774
+      6BackGround 1_139: -1759672046
+      6BackGround 1_20: -1444241281
+      6BackGround 1_153: -1948111978
+      6BackGround 1_225: -564424320
+      6BackGround 1_1: -1457188863
+      6BackGround 1_126: 833998704
+      6BackGround 1_147: -353624754
+      6BackGround 1_261: -891925931
+      6BackGround 1_266: 1149558092
+      6BackGround 1_112: -1322235047
+      6BackGround 1_251: 1553841706
+      6BackGround 1_9: 1376787420
+      6BackGround 1_180: -1382762793
+      6BackGround 1_240: -1609253781
+      6BackGround 1_71: 738366969
+      6BackGround 1_144: 1515255579
+      6BackGround 1_258: 1204244103
+      6BackGround 1_285: -1600781023
+      6BackGround 1_8: -1723654753
+      6BackGround 1_99: -1126512686
+      6BackGround 1_47: -770940272
+      6BackGround 1_160: -39383566
+      6BackGround 1_184: -785388595
+      6BackGround 1_221: 129679864
+      6BackGround 1_63: -1527785696
+      6BackGround 1_282: -875567900
+      6BackGround 1_48: -440923324
+      6BackGround 1_131: -1136203267
+      6BackGround 1_217: 1855725030
+      6BackGround 1_269: -573303873
+      6BackGround 1_64: 669315941
+      6BackGround 1_213: 347013549
+      6BackGround 1_216: 1300778983
+      6BackGround 1_237: -1264603119
+      6BackGround 1_36: 1425943851
+      6BackGround 1_167: 1265787401
+      6BackGround 1_280: 30259913
+      6BackGround 1_54: -1642709983
+      6BackGround 1_231: -904920518
+      6BackGround 1_33: 2002496416
+      6BackGround 1_174: -279640606
+      6BackGround 1_272: -602065673
+      6BackGround 1_41: 1795574902
+      6BackGround 1_106: 421868285
+      6BackGround 1_10: 1457264152
+      6BackGround 1_177: 1597714544
+      6BackGround 1_233: -967876600
+      6BackGround 1_196: -1215471140
+      6BackGround 1_194: -1165089305
+      6BackGround 1_163: -527015752
+      6BackGround 1_238: -139456260
+      6BackGround 1_208: 1211361086
+      6BackGround 1_219: -1545224883
+      6BackGround 1_201: -2018358634
+      6BackGround 1_133: 876158453
+      6BackGround 1_22: -94030697
+      6BackGround 1_67: -1383354039
+      6BackGround 1_228: 342320072
+      6BackGround 1_232: -1344766543
+      6BackGround 1_34: -1585131124
+      6BackGround 1_116: 909111553
+      6BackGround 1_315: 1872084213
+      6BackGround 1_82: -177083604
+      6BackGround 1_95: 257754407
+      6BackGround 1_124: 1163969064
+      6BackGround 1_172: -1200294044
+      6BackGround 1_226: -1099108015
+      6BackGround 1_264: 965946642
+      6BackGround 1_302: -1575409040
+      6BackGround 1_178: 527135281
+      6BackGround 1_197: -694120250
+      6BackGround 1_157: -1957723935
+      6BackGround 1_246: -1574619281
+      6BackGround 1_100: 827179580
+      6BackGround 1_12: -236888570
+      6BackGround 1_60: -1580629849
+      6BackGround 1_86: -1638770864
+      6BackGround 1_298: -1526198131
+      6BackGround 1_183: -1653044479
+      6BackGround 1_117: -7146648
+      6BackGround 1_288: -724221519
+      6BackGround 1_65: -1214520584
+      6BackGround 1_4: -410655290
+      6BackGround 1_85: -592849819
+      6BackGround 1_210: -727365857
+      6BackGround 1_310: 1372209988
+      6BackGround 1_230: 280007987
+      6BackGround 1_104: 881653080
+      6BackGround 1_198: -1847296279
+      6BackGround 1_143: 2057666310
+      6BackGround 1_110: 37969577
+      6BackGround 1_30: 1752424320
+      6BackGround 1_151: -604989044
+      6BackGround 1_155: 1996420797
+      6BackGround 1_223: 421152829
+      6BackGround 1_170: -1765432828
+      6BackGround 1_142: 491516895
+      6BackGround 1_74: -353141761
+      6BackGround 1_259: -458191380
+      6BackGround 1_192: 1909480515
+      6BackGround 1_214: -158926503
+      6BackGround 1_234: 1694445972
+      6BackGround 1_21: 1245137931
+      6BackGround 1_255: 1441470140
+      6BackGround 1_24: 339127977
+      6BackGround 1_250: 1361363555
+      6BackGround 1_40: -1927144483
+      6BackGround 1_46: 1145376961
+      6BackGround 1_128: -1422068302
+      6BackGround 1_14: 2016580984
+      6BackGround 1_125: -307018764
+      6BackGround 1_202: -510774940
+      6BackGround 1_83: 719309298
+      6BackGround 1_122: -263072325
+      6BackGround 1_56: 380898420
+      6BackGround 1_166: -1261868216
+      6BackGround 1_190: 2142307385
+      6BackGround 1_182: -202019832
+      6BackGround 1_132: -1598787192
+      6BackGround 1_241: -201352201
+      6BackGround 1_195: 1900055974
+      6BackGround 1_247: 1993394161
+      6BackGround 1_44: -1725539463
+      6BackGround 1_262: 1124824647
+      6BackGround 1_148: -420696907
+      6BackGround 1_276: 725169389
+      6BackGround 1_18: 1339873682
+      6BackGround 1_96: 1094935256
+      6BackGround 1_108: -297446537
+      6BackGround 1_58: -870218082
+      6BackGround 1_73: 1214933364
+      6BackGround 1_169: 1175927385
+      6BackGround 1_204: -1813447694
+      6BackGround 1_113: 1457491259
+      6BackGround 1_97: 176184685
+      6BackGround 1_93: 1220240545
+      6BackGround 1_189: 1751714006
+      6BackGround 1_222: 1059153904
+      6BackGround 1_121: 1136531372
+      6BackGround 1_158: -162703908
+      6BackGround 1_94: 1818875452
+      6BackGround 1_120: -1812792962
+      6BackGround 1_291: -738679040
+      6BackGround 1_136: -1925402059
+      6BackGround 1_138: 1312729290
+      6BackGround 1_248: 589394132
+      6BackGround 1_31: 279891953
+      6BackGround 1_43: -1521287011
+      6BackGround 1_0: -601703824
+      6BackGround 1_89: 342450300
+      6BackGround 1_205: 913157289
+      6BackGround 1_254: -820375275
+      6BackGround 1_39: -868006331
+      6BackGround 1_229: -1537415090
+      6BackGround 1_141: -1580015543
+      6BackGround 1_23: -1964513230
+      6BackGround 1_256: 1594418892
+      6BackGround 1_154: 1169420763
+      6BackGround 1_105: 531337466
+      6BackGround 1_273: 1467516979
+      6BackGround 1_165: -1326926041
+      6BackGround 1_277: 2130296265
+      6BackGround 1_239: -522155748
+      6BackGround 1_187: 1467633058
+      6BackGround 1_215: -1651927360
+      6BackGround 1_162: 1467918968
+      6BackGround 1_175: 104844257
+      6BackGround 1_317: -838142325
+      6BackGround 1_13: 1193098270
+      6BackGround 1_193: 1981257549
+      6BackGround 1_287: 1592861858
+      6BackGround 1_102: 781364329
+      6BackGround 1_135: -684834522
+      6BackGround 1_3: -55613756
+      6BackGround 1_91: 1957462365
+      6BackGround 1_168: -1001053221
+      6BackGround 1_35: -1644036356
+      6BackGround 1_152: 1038562201
+      6BackGround 1_278: 37218248
+      6BackGround 1_57: -658863634
+      6BackGround 1_286: 133193041
+      6BackGround 1_19: -391604756
+      6BackGround 1_84: 2072392766
+      6BackGround 1_50: -656060990
+      6BackGround 1_224: -349611646
+      6BackGround 1_309: 1778918879
+      6BackGround 1_45: 1754968230
+      6BackGround 1_118: -450656627
+      6BackGround 1_2: -919172082
+      6BackGround 1_137: 689524855
+      6BackGround 1_296: -1679369276
+      6BackGround 1_79: -576493623
+      6BackGround 1_212: 1675766774
+      6BackGround 1_311: 1323996713
+      6BackGround 1_173: 1147250157
+      6BackGround 1_200: 791205635
+      6BackGround 1_145: 52145490
+      6BackGround 1_307: -2129739435
+      6BackGround 1_260: 578600046
+      6BackGround 1_111: 505761280
+      6BackGround 1_123: 115310901
+      6BackGround 1_55: 904261444
+      6BackGround 1_203: 1422302275
+      6BackGround 1_130: -1280532905
+      6BackGround 1_292: -1798404250
+      6BackGround 1_62: -2141600299
+      6BackGround 1_299: -259115069
+      6BackGround 1_159: 913835950
+      6BackGround 1_75: -379366890
+      6BackGround 1_61: 1561647274
+      6BackGround 1_92: -1852930184
+      6BackGround 1_191: 516228775
+      6BackGround 1_207: 1335733512
+      6BackGround 1_227: -672064961
+      6BackGround 1_109: 1315513814
+      6BackGround 1_290: -1725316771
+      6BackGround 1_313: -502409740
+      6BackGround 1_27: -234215582
+      6BackGround 1_185: 1093938702
+      6BackGround 1_283: -501017721
+      6BackGround 1_26: 129821205
+      6BackGround 1_242: 1123728112
+      6BackGround 1_101: 884026871
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
