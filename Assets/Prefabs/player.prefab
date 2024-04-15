@@ -138,9 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnPoint: {fileID: 0}
-  deathScreen: {fileID: 2000}
-  animator: {fileID: 605113313731035525}
-  deadScreen: {fileID: 0}
+  deathScreen: {fileID: 0}
 --- !u!114 &7675997906469788478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,6 +222,7 @@ GameObject:
   - component: {fileID: 4933580014921769297}
   - component: {fileID: 5420837883328477389}
   - component: {fileID: 8939100175814036614}
+  - component: {fileID: 1016916295448067380}
   m_Layer: 7
   m_Name: Animator
   m_TagString: Untagged
@@ -318,3 +317,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1016916295448067380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7568527593156722002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa061f4462bfe494093f07b58a779ab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 8939100175814036614}
+  deadScreen: {fileID: 0}
