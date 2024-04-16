@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Door : MonoBehaviour, Receiver
 {
+    [SerializeField] Animator animator;
+
     [SerializeField] List<Transform> trTransmitters = new List<Transform>();
     private List<Transmitter> transmitters = new List<Transmitter>();
     [SerializeField] int shouldActivates = 1;
@@ -33,8 +35,13 @@ public class Door : MonoBehaviour, Receiver
         if (countActivate >= shouldActivates)
         {
             activate = true;
+            animator.Play("OpenDoor");
         }
-        else activate = false;
+        else 
+        { 
+            activate = false;
+            animator.Play("CloseDoor");
+        }
 
         if (activate)
         {
