@@ -6,7 +6,9 @@ public class NoiseCategory
 {
     public string categoryName;
     public AudioClip[] sounds;
+    public float noiseLevel = 1.0f; // Уровень шума для данной категории
 }
+
 
 public class RandomNoise : MonoBehaviour
 {
@@ -16,11 +18,8 @@ public class RandomNoise : MonoBehaviour
     // Источник аудио для воспроизведения звуков.
     private AudioSource audioSource;
 
-    // Громкость звука, которая будет использоваться для увеличения уровня шума.
-    [SerializeField] private float noiseLevel = 1.0f;
-
     // Словарь для внутреннего использования.
-    private Dictionary<string, AudioClip[]> noiseDictionary = new Dictionary<string, AudioClip[]>();
+    private Dictionary<string, NoiseCategory> noiseDictionary = new Dictionary<string, NoiseCategory>();
 
     void Start()
     {
@@ -34,18 +33,19 @@ public class RandomNoise : MonoBehaviour
         // Заполнение словаря из сериализуемого массива
         foreach (var category in noiseCategories)
         {
-            noiseDictionary[category.categoryName] = category.sounds;
+            noiseDictionary[category.categoryName] = category;
         }
     }
 
     public void PlayRandomNoise(string category)
     {
-        if (noiseDictionary.ContainsKey(category) && noiseDictionary[category].Length > 0)
+        if (noiseDictionary.ContainsKey(category) && noiseDictionary[category].sounds.Length > 0)
         {
-            AudioClip[] sounds = noiseDictionary[category];
+            AudioClip[] sounds = noiseDictionary[category].sounds;
+            float categoryNoiseLevel = noiseDictionary[category].noiseLevel;
             int index = Random.Range(0, sounds.Length);
             audioSource.PlayOneShot(sounds[index]);
-            NoiseLevel.Instance.IncreaseNoise(noiseLevel);
+            NoiseLevel.Instance.IncreaseNoise(categoryNoiseLevel);
         }
         else
         {

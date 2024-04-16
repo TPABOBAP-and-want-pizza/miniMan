@@ -352,10 +352,11 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 4b4202a7fbe869d4699be2f17c41980e, type: 3}
     - {fileID: 8300000, guid: fd7db1fcd4673dd4081889cbcdd5d083, type: 3}
     - {fileID: 8300000, guid: a5a8110809e999645b08f38cf05a3843, type: 3}
+    noiseLevel: 10
   - categoryName: Jump
     sounds:
     - {fileID: 8300000, guid: ec48681f66928684e834377787d1178b, type: 3}
-  noiseLevel: 10
+    noiseLevel: 50
 --- !u!82 &8022580868673869600
 AudioSource:
   m_ObjectHideFlags: 0
