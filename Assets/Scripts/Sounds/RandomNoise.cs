@@ -1,29 +1,55 @@
+using System.Collections.Generic;
 using UnityEngine;
+
+[System.Serializable]
+public class NoiseCategory
+{
+    public string categoryName;
+    public AudioClip[] sounds;
+}
 
 public class RandomNoise : MonoBehaviour
 {
-    public AudioClip[] noises;
+    // Массив для управления категориями и звуками через инспектор Unity.
+    [SerializeField] private NoiseCategory[] noiseCategories;
+
+    // Источник аудио для воспроизведения звуков.
     private AudioSource audioSource;
+
+    // Громкость звука, которая будет использоваться для увеличения уровня шума.
     [SerializeField] private float noiseLevel = 1.0f;
+
+    // Словарь для внутреннего использования.
+    private Dictionary<string, AudioClip[]> noiseDictionary = new Dictionary<string, AudioClip[]>();
 
     void Start()
     {
+        // Инициализация AudioSource
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
             audioSource = gameObject.AddComponent<AudioSource>();
         }
+
+        // Заполнение словаря из сериализуемого массива
+        foreach (var category in noiseCategories)
+        {
+            noiseDictionary[category.categoryName] = category.sounds;
+        }
     }
 
-    // Метод для проигрывания случайного звука и увеличения уровня шума.
-    public void PlayRandomNoise()
+    public void PlayRandomNoise(string category)
     {
-        if (noises.Length > 0)
+        if (noiseDictionary.ContainsKey(category) && noiseDictionary[category].Length > 0)
         {
-            int index = Random.Range(0, noises.Length);
-            audioSource.PlayOneShot(noises[index]);
-            // Увеличиваем уровень шума в зависимости от заданной громкости.
+            AudioClip[] sounds = noiseDictionary[category];
+            int index = Random.Range(0, sounds.Length);
+            audioSource.PlayOneShot(sounds[index]);
             NoiseLevel.Instance.IncreaseNoise(noiseLevel);
+        }
+        else
+        {
+            Debug.LogWarning("Category not found or no sounds in category: " + category);
         }
     }
 }
