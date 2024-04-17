@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+
+    [SerializeField] RandomNoise noise;
     enum PlayerState { Idle, Running, Slink, Airborne }
     PlayerState state;
     bool stateComplete = true;
@@ -87,6 +89,9 @@ public class Movement : MonoBehaviour
     private void SelectState()
     {
         stateComplete = false;
+        if (state == PlayerState.Airborne)
+            noise.PlayRandomNoise("Jump");
+
         if (grounded)
         {
             if (xInput == 0)

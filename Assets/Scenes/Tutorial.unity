@@ -434,6 +434,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6238147785076498331, guid: 00ca6caf25f7ef94083238e0e329ebeb, type: 3}
+      propertyPath: noise
+      value: 
+      objectReference: {fileID: 394234131}
+    - target: {fileID: 6238147785076498331, guid: 00ca6caf25f7ef94083238e0e329ebeb, type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 394234129}
@@ -508,6 +512,17 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 8939100175814036614, guid: 00ca6caf25f7ef94083238e0e329ebeb, type: 3}
   m_PrefabInstance: {fileID: 394234128}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &394234131 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7650260963722422183, guid: 00ca6caf25f7ef94083238e0e329ebeb, type: 3}
+  m_PrefabInstance: {fileID: 394234128}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2be70d1e3b0a2ca409bae698d76cccde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &394234132
 MonoBehaviour:
   m_ObjectHideFlags: 0
