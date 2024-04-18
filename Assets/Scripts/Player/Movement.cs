@@ -67,7 +67,7 @@ public class Movement : MonoBehaviour
         {
             _horizontalInput = 0f;
         }
-        if (MathF.Abs(body.velocity.x) < maxXSpeed && grounded && Input.GetKey(KeyCode.LeftControl))
+        if (MathF.Abs(body.velocity.x) < maxXSpeed && grounded && Input.GetKey(KeyCode.LeftShift))
         {
             body.velocity = new Vector2(_horizontalInput * maxXSpeed * 70f * Time.deltaTime / retardingSlink, body.velocity.y);
         }
@@ -99,7 +99,7 @@ public class Movement : MonoBehaviour
                 state = PlayerState.Idle;
                 animator.Play("Idle");
             }
-            else if (Input.GetKey(KeyCode.LeftControl))
+            else if (Input.GetKey(KeyCode.LeftShift))
             {
                 state = PlayerState.Slink;
             }
@@ -142,7 +142,7 @@ public class Movement : MonoBehaviour
     private void UpdateRun()
     {
         animator.Play("Run");
-        if (xInput == 0 || !grounded || Input.GetKey(KeyCode.LeftControl))
+        if (xInput == 0 || !grounded || Input.GetKey(KeyCode.LeftShift))
         {
             stateComplete = true;
         }
@@ -151,7 +151,7 @@ public class Movement : MonoBehaviour
     private void UpdateSlink()
     {
         animator.Play("Slink");
-        if (xInput == 0 || !grounded || Input.GetKeyUp(KeyCode.LeftControl))
+        if (xInput == 0 || !grounded || Input.GetKeyUp(KeyCode.LeftShift))
         {
             stateComplete = true;
         }
