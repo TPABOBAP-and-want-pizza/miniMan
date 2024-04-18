@@ -114,7 +114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7c1e0022f1b00048917587b34949bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  noise: {fileID: 7650260963722422183}
+  animator: {fileID: 8939100175814036614}
   body: {fileID: 6238147785076498334}
   groundCheck: {fileID: 6238147785537261216}
   groundMask:
