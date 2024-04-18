@@ -8,6 +8,7 @@ public class HandBehavior : MonoBehaviour
     private bool hasCollided = false;
     private bool hasInteracted = false;
     public bool TrackPlayer = false;
+    private bool is_start_falling = false;// имеется введу вызов метода StartFalling(), а не начало паения как таковое
 
     void Start()
     {
@@ -27,8 +28,17 @@ public class HandBehavior : MonoBehaviour
     {
         if (TrackPlayer && player != null)
         {
-            transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
+            if (is_start_falling)
+            {
+                transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
+            }
+            else
+            {
+                transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 2, transform.position.z);
+            }
+            
         }
+        
     }
 
     // Этот метод вызывается анимацией в определенный момент
@@ -36,6 +46,7 @@ public class HandBehavior : MonoBehaviour
     {
         // Убедитесь, что Rigidbody не является кинематическим, чтобы гравитация начала действовать
         rb.isKinematic = false;
+        is_start_falling = true;
 
         // Разблокируем все движения и вращения, позволяя руке начать падение
         rb.constraints = RigidbodyConstraints2D.None;
