@@ -1,49 +1,72 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CockroachAI : MonoBehaviour
 {
-    public float speed = 5f; // Скорость движения врага
-    public float checkDistance = 1f; // Дистанция проверки препятствия перед врагом
-    private bool isMovingRight = true; // Направление движения врага
-
+    public LayerMask groundLayer; //стены
+    public Transform groundDetection; //точка для обнаружения земли впереди
     private Rigidbody2D rb;
-    public LayerMask groundLayer; // Слой, на котором находится земля
+    private Animator animator;
+    public float speed = 5.0f;
+    public float checkDistance = 1.4f;
+    private bool movingRight = true;
+    public bool isDead = false;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
-
-    void Update()
+    private void Update()
     {
-        Move();
-        CheckForObstacle();
-    }
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
 
-    void Move()
-    {
-        float moveDirection = isMovingRight ? 1f : -1f; // Определение направления движения
-        rb.velocity = new Vector2(moveDirection * speed, rb.velocity.y);
-    }
+        // Проверка, заканчивается ли земля перед врагом
+        Vector2 groundDirectionCheck = movingRight ? Vector2.right : Vector2.left;
+        Vector2 groundCheckStart = new Vector2(transform.position.x + (movingRight ? 1.0f : -1.0f), transform.position.y);
+        RaycastHit2D groundInfo = Physics2D.Raycast(groundCheckStart, Vector2.down, checkDistance, groundLayer);
+        Debug.DrawRay(groundCheckStart, Vector2.down * checkDistance, Color.green);
 
-    void CheckForObstacle()
-    {
-        // Направление проверки
-        Vector2 direction = isMovingRight ? Vector2.right : Vector2.left;
-
-        // Позиция для начала рейкаста
-        Vector2 startPosition = new Vector2(transform.position.x, transform.position.y);
-
-        RaycastHit2D hit = Physics2D.Raycast(startPosition, direction, checkDistance, groundLayer);
-        Debug.DrawRay(startPosition, direction * checkDistance, Color.red); // Отображение рейкаста в редакторе
-
-        if (hit.collider != null)
+        if (!groundInfo.collider)
         {
-            // Разворот на 180 градусов при обнаружении препятствия
-            isMovingRight = !isMovingRight;
-            transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y); // Поворот визуальной модели врага
+            Flip();
+        }
+
+        // Проверка на столкновение со стеной перед врагом
+        RaycastHit2D wallInfo = Physics2D.Raycast(transform.position, groundDirectionCheck, checkDistance, groundLayer);
+        Debug.DrawRay(transform.position, groundDirectionCheck * checkDistance, Color.red);
+
+        if (wallInfo.collider)
+        {
+            Flip();
         }
     }
+
+    // Поворот врага
+    private void Flip()
+    {
+        movingRight = !movingRight;
+        transform.eulerAngles = new Vector3(0, movingRight ? 0 : 180, 0);
+    }
+
+    public void Die()
+    {
+        isDead = true;
+        animator.SetTrigger("Die"); // Установка триггера смерти в аниматоре
+        rb.velocity = Vector2.zero; // Остановить движение
+        rb.isKinematic = false; // Включаем физику (если требуется)
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("DeadlyObject"))
+        {
+            float impactForce = collision.relativeVelocity.magnitude * collision.rigidbody.mass;
+
+            if (impactForce > 10) // Предполагаемое значение, необходимое для смерти
+            {
+                Die();
+            }
+        }
+    }
+
 }

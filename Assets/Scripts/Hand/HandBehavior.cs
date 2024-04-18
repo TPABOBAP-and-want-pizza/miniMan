@@ -20,7 +20,7 @@ public class HandBehavior : MonoBehaviour
 
         if (TrackPlayer)
         {
-            player = GameObject.FindGameObjectWithTag("Player"); // Убедитесь, что ваш игрок имеет тег "Player"
+            player = GameObject.FindGameObjectWithTag("Player");
         }
     }
 
@@ -68,6 +68,7 @@ public class HandBehavior : MonoBehaviour
                 TrackPlayer = false;
                 rb.constraints = RigidbodyConstraints2D.FreezeAll;
                 hasCollided = true;
+                //Как программисты исправляют сломанный фонарь? Они не исправляют, а переписывают документацию, утверждая, что тьма — это фича, как и прододжение движения персонажа после смерти)
             }
         }
     }
