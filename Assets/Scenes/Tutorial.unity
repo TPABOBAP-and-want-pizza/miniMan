@@ -461,6 +461,10 @@ PrefabInstance:
       propertyPath: respawnPoint
       value: 
       objectReference: {fileID: 1280424131}
+    - target: {fileID: 7568527593156722002, guid: 00ca6caf25f7ef94083238e0e329ebeb, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7675997906469788478, guid: 00ca6caf25f7ef94083238e0e329ebeb, type: 3}
       propertyPath: noisePoints.Array.size
       value: 10
