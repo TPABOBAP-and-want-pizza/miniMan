@@ -71,7 +71,6 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  groundDetection: {fileID: 0}
   speed: 5
   checkDistance: 1.4
   isDead: 0
@@ -140,8 +139,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.44306165}
-  m_Size: {x: 2.0047412, y: 0.6629748}
+  m_Offset: {x: -0.00000007642808, y: -0.64112526}
+  m_Size: {x: 2.0047414, y: 0.26684764}
   m_Direction: 1
 --- !u!50 &2633054782168756680
 Rigidbody2D:

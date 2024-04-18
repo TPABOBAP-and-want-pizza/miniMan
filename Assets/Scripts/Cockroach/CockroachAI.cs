@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class CockroachAI : MonoBehaviour
 {
-    public LayerMask groundLayer; //стены
-    public Transform groundDetection; //точка для обнаружения земли впереди
+    public LayerMask groundLayer; // Слой, определяющий стены и землю
     private Rigidbody2D rb;
     private Animator animator;
     public float speed = 5.0f;
@@ -16,8 +15,13 @@ public class CockroachAI : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
-    private void Update()
+
+    void Update()
     {
+        // Если таракан мертв, пропускаем обновление позиции и проверки
+        if (isDead) return;
+
+        // Движение
         transform.Translate(Vector2.right * speed * Time.deltaTime);
 
         // Проверка, заканчивается ли земля перед врагом
@@ -58,15 +62,13 @@ public class CockroachAI : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("DeadlyObject"))
+        if (collision.gameObject.CompareTag("InteractableObject"))
         {
             float impactForce = collision.relativeVelocity.magnitude * collision.rigidbody.mass;
-
             if (impactForce > 10) // Предполагаемое значение, необходимое для смерти
             {
                 Die();
             }
         }
     }
-
 }
