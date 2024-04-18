@@ -4,8 +4,10 @@ public class HandBehavior : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator animator;
+    private GameObject player;
     private bool hasCollided = false;
     private bool hasInteracted = false;
+    public bool TrackPlayer = false;
 
     void Start()
     {
@@ -14,6 +16,19 @@ public class HandBehavior : MonoBehaviour
 
         // Изначально блокируем все движения и вращения руки
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
+
+        if (TrackPlayer)
+        {
+            player = GameObject.FindGameObjectWithTag("Player"); // Убедитесь, что ваш игрок имеет тег "Player"
+        }
+    }
+
+    void Update()
+    {
+        if (TrackPlayer && player != null)
+        {
+            transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
+        }
     }
 
     // Этот метод вызывается анимацией в определенный момент
@@ -39,6 +54,7 @@ public class HandBehavior : MonoBehaviour
         {
             if (!hasCollided)
             {
+                TrackPlayer = false;
                 rb.constraints = RigidbodyConstraints2D.FreezeAll;
                 hasCollided = true;
             }

@@ -6,6 +6,9 @@ public class NoiseLevel : MonoBehaviour
 {
     public static NoiseLevel Instance { get; private set; }
 
+    public float CurrentNoise { get; private set; }
+    public GameObject LastNoiseMaker { get; private set; }
+
     private float VolumeIndicator = 0f;
     public float maxNoiseLevel = 100f;
     private float Bar;
@@ -38,6 +41,15 @@ public class NoiseLevel : MonoBehaviour
         UpdateNoiseLevel();
     }
 
+    public void IncreaseNoise(float amount, GameObject noiseMaker)
+    {
+        VolumeIndicator += amount;
+        CurrentNoise += amount;
+        LastNoiseMaker = noiseMaker;
+        UpdateNoiseLevel();
+
+    }
+
     public void DecreaseNoise(float amount)
     {
         VolumeIndicator = Mathf.Max(VolumeIndicator - amount, 0);
@@ -48,7 +60,8 @@ public class NoiseLevel : MonoBehaviour
     {
         if (VolumeIndicator >= maxNoiseLevel)
         {
-            HandSpawner.SpawnHandDefault(transform.localPosition);
+            HandSpawner.SpawnTrackingHand(transform.localPosition);
+            //HandSpawner.SpawnHandDefault(transform.localPosition);
             // HandSpawner.SpawnHand(transform.localPosition + new Vector3(0, 5, 11), 10);
             DecreaseNoise(50f);
         }
@@ -76,7 +89,7 @@ public class NoiseLevel : MonoBehaviour
         while (true)
         {
             UpdateNoiseLevel();
-            yield return new WaitForSeconds(0.2f); 
+            yield return new WaitForSeconds(0.2f);
 
         }
     }
@@ -93,4 +106,6 @@ public class NoiseLevel : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
     }
+
+
 }

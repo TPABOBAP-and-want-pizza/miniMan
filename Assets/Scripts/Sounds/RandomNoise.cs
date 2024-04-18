@@ -45,7 +45,7 @@ public class RandomNoise : MonoBehaviour
             float categoryNoiseLevel = noiseDictionary[category].noiseLevel;
             int index = Random.Range(0, sounds.Length);
             audioSource.PlayOneShot(sounds[index]);
-            NoiseLevel.Instance.IncreaseNoise(categoryNoiseLevel);
+            NoiseLevel.Instance.IncreaseNoise(categoryNoiseLevel, this.gameObject);
         }
         else
         {

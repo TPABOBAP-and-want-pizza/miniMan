@@ -23,7 +23,7 @@ public class SingleRandomNoise : MonoBehaviour
             int index = Random.Range(0, noises.Length);
             audioSource.PlayOneShot(noises[index]);
             // Увеличиваем уровень шума в зависимости от заданной громкости.
-            NoiseLevel.Instance.IncreaseNoise(noiseLevel);
+            NoiseLevel.Instance.IncreaseNoise(noiseLevel, this.gameObject);
         }
     }
 }

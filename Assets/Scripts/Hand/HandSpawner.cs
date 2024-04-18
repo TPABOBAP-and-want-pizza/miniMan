@@ -37,4 +37,24 @@ public static class HandSpawner
     {
         SpawnHand(spawnPos + new Vector3(0, 2, 0), 10); //17 это высота появления руки, 10 это начальная скорость 
     }
+
+    public static void SpawnTrackingHand(Vector3 playerPosition)
+    {
+        if (handPrefab == null)
+        {
+            Debug.LogError("HandPrefab not found in Resources folder!");
+            return;
+        }
+
+        GameObject handInstance = Object.Instantiate(handPrefab, new Vector3(playerPosition.x, playerPosition.y + 2, 0), Quaternion.identity);//2 высота спайна прямоугольника убивающего игрока
+        HandBehavior handBehavior = handInstance.GetComponent<HandBehavior>();
+        if (handBehavior != null)
+        {
+            handBehavior.TrackPlayer = true;
+        }
+        else
+        {
+            Debug.LogError("HandPrefab missing HandBehavior component!");
+        }
+    }
 }
