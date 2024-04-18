@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Hand
+  - InteractableObject
   layers:
   - Default
   - TransparentFX

@@ -5,11 +5,12 @@ public class Movement : MonoBehaviour
 {
 
     [SerializeField] RandomNoise noise;
-    enum PlayerState { Idle, Running, Slink, Airborne }
+    enum PlayerState { Idle, Running, Slink, Airborne, Interaction }
     PlayerState state;
     bool stateComplete = true;
 
     [SerializeField] Animator animator;
+    private Rigidbody2D bodyInteraction;
 
     //scene instanced objects
     public Rigidbody2D body;
@@ -21,6 +22,7 @@ public class Movement : MonoBehaviour
     public float maxXSpeed;
     [SerializeField] float airSpeed;
     [SerializeField] float retardingSlink = 2f;
+    [SerializeField] float interactionSpeed;
 
     public float jumpSpeed;
 
@@ -60,14 +62,19 @@ public class Movement : MonoBehaviour
 
         float _horizontalInput = xInput;
 
-        RaycastHit2D hit = Physics2D.BoxCast(transform.position, boxCollider2DSize, 0f, Vector2.right * Mathf.Sign(_horizontalInput), 0.02f, groundMask);
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position, boxCollider2DSize, 0f, Vector2.right * Mathf.Sign(_horizontalInput), 0.05f, groundMask);
         //Debug.Log($"hit collider - {hit.collider.gameObject}");
 
-        if (hit.collider != null)
+        if (hit.collider != null && bodyInteraction == null)
         {
             _horizontalInput = 0f;
         }
-        if (MathF.Abs(body.velocity.x) < maxXSpeed && grounded && Input.GetKey(KeyCode.LeftShift))
+        if (bodyInteraction != null && Input.GetKey(KeyCode.E) && grounded)
+        {
+            body.velocity = new Vector2(_horizontalInput * interactionSpeed * 70f * Time.deltaTime, body.velocity.y);
+            bodyInteraction.velocity = new Vector2(body.velocity.x, bodyInteraction.velocity.y);
+        }
+        else if (MathF.Abs(body.velocity.x) < maxXSpeed && grounded && Input.GetKey(KeyCode.LeftShift))
         {
             body.velocity = new Vector2(_horizontalInput * maxXSpeed * 70f * Time.deltaTime / retardingSlink, body.velocity.y);
         }
@@ -94,7 +101,13 @@ public class Movement : MonoBehaviour
 
         if (grounded)
         {
-            if (xInput == 0)
+            if(Input.GetKey(KeyCode.E))
+            {
+                SetInteractableObject();
+                if(bodyInteraction != null)
+                    state = PlayerState.Interaction;
+            }
+            else if (xInput == 0)
             {
                 state = PlayerState.Idle;
                 animator.Play("Idle");
@@ -107,6 +120,7 @@ public class Movement : MonoBehaviour
             {
                 state = PlayerState.Running;
             }
+
         }
         else state = PlayerState.Airborne;
     }
@@ -127,6 +141,9 @@ public class Movement : MonoBehaviour
             case PlayerState.Airborne:
                 UpdateAirborne();
                 break;
+            case PlayerState.Interaction:
+                UpdateInteraction();
+                break;
 
         }
     }
@@ -142,7 +159,7 @@ public class Movement : MonoBehaviour
     private void UpdateRun()
     {
         animator.Play("Run");
-        if (xInput == 0 || !grounded || Input.GetKey(KeyCode.LeftShift))
+        if (xInput == 0 || !grounded || Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.E))
         {
             stateComplete = true;
         }
@@ -151,7 +168,7 @@ public class Movement : MonoBehaviour
     private void UpdateSlink()
     {
         animator.Play("Slink");
-        if (xInput == 0 || !grounded || Input.GetKeyUp(KeyCode.LeftShift))
+        if (xInput == 0 || !grounded || Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKey(KeyCode.E))
         {
             stateComplete = true;
         }
@@ -167,6 +184,15 @@ public class Movement : MonoBehaviour
 
         if (grounded)
         {
+            stateComplete = true;
+        }
+    }
+
+    private void UpdateInteraction()
+    {
+        if(!Input.GetKey(KeyCode.E) || !grounded)
+        {
+            bodyInteraction = null;
             stateComplete = true;
         }
     }
@@ -194,6 +220,30 @@ public class Movement : MonoBehaviour
     void CheckGround()
     {
         grounded = Physics2D.OverlapAreaAll(groundCheck.bounds.min, groundCheck.bounds.max, groundMask).Length > 0;
+    }
+
+    void SetInteractableObject()
+    {
+        float _horizontalInput = xInput;
+
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position, boxCollider2DSize, 0f, Vector2.right, 0.05f, groundMask);
+
+        if (hit.collider?.tag == "InteractableObject")
+        {
+            Rigidbody2D rb2 = hit.collider.GetComponent<Rigidbody2D>();
+            interactionSpeed = -body.mass / (rb2.mass / 100f) + maxXSpeed ;
+            bodyInteraction = rb2;
+            return;
+        }
+
+        hit = Physics2D.BoxCast(transform.position, boxCollider2DSize, 0f, Vector2.left, 0.05f, groundMask);
+
+        if (hit.collider?.tag == "InteractableObject")
+        {
+            Rigidbody2D rb2 = hit.collider.GetComponent<Rigidbody2D>();
+            interactionSpeed = -body.mass / (rb2.mass / 100f) + maxXSpeed;
+            bodyInteraction = rb2;
+        }
     }
 
     public static float Map(float value, float min1, float max1, float min2, float max2, bool clamp = false)

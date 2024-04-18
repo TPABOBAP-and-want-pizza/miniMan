@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5651647154495050176}
   m_Layer: 3
   m_Name: GroutRed
-  m_TagString: Untagged
+  m_TagString: InteractableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
