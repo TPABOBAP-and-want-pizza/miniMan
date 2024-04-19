@@ -257,18 +257,15 @@ public class Movement : MonoBehaviour
 
     void CheckForObjectInFront()
     {
-        bool movingRight = xInput > 0;  // Определение направления движения персонажа
-        float checkDistance = 0.1f;     // Расстояние проверки перед персонажем
-        Vector2 directionCheck = movingRight ? Vector2.right : Vector2.left;  // Направление проверки
+        bool movingRight = xInput > 0; 
+        float checkDistance = 0.1f; 
+        Vector2 directionCheck = movingRight ? Vector2.right : Vector2.left;
 
-        // Изменяем размеры BoxCast для лучшего обнаружения объектов разных размеров
-        Vector2 boxSize = new Vector2(0.2f, boxCollider2DSize.y); // Уменьшенная ширина и использование высоты персонажа
-        Vector2 checkStartPoint = new Vector2(transform.position.x + (movingRight ? 0.5f : -0.5f), transform.position.y); // Стартовая точка BoxCast чуть впереди персонажа
+        Vector2 boxSize = new Vector2(0.2f, boxCollider2DSize.y); 
+        Vector2 checkStartPoint = new Vector2(transform.position.x + (movingRight ? 0.5f : -0.5f), transform.position.y); 
 
-        // Выполнение BoxCast
         RaycastHit2D hitInfo = Physics2D.BoxCast(checkStartPoint, boxSize, 0, directionCheck, checkDistance, groundMask);
 
-        // Визуализация BoxCast в редакторе Unity
         Debug.DrawRay(checkStartPoint, directionCheck * checkDistance, Color.red);
 
         if (hitInfo.collider != null && hitInfo.collider.CompareTag("InteractableObject"))
