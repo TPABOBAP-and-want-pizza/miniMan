@@ -234,7 +234,7 @@ public class Movement : MonoBehaviour
         if (hit.collider?.tag == "InteractableObject")
         {
             Rigidbody2D rb2 = hit.collider.GetComponent<Rigidbody2D>();
-            interactionSpeed = -body.mass * rb2.mass / 100f + maxXSpeed;
+            interactionSpeed = -rb2.mass + maxXSpeed;
             bodyInteraction = rb2;
             return;
         }
@@ -244,7 +244,7 @@ public class Movement : MonoBehaviour
         if (hit.collider?.tag == "InteractableObject")
         {
             Rigidbody2D rb2 = hit.collider.GetComponent<Rigidbody2D>();
-            interactionSpeed = -body.mass * rb2.mass / 100f + maxXSpeed;
+            interactionSpeed = -rb2.mass + maxXSpeed;
             bodyInteraction = rb2;
         }
     }
