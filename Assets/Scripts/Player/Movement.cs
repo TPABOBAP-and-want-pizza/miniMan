@@ -30,7 +30,7 @@ public class Movement : MonoBehaviour
     public bool grounded;
     float xInput;
     float yInput;
-    bool interactive_object_detected_in_front_of_character = false;
+    public bool interactive_object_detected_in_front_of_character = false;
 
     private void Start()
     {
@@ -258,10 +258,10 @@ public class Movement : MonoBehaviour
     void CheckForObjectInFront()
     {
         bool movingRight = xInput > 0; 
-        float checkDistance = 0.1f; 
+        float checkDistance = 0.05f; 
         Vector2 directionCheck = movingRight ? Vector2.right : Vector2.left;
 
-        Vector2 boxSize = new Vector2(0.2f, boxCollider2DSize.y); 
+        Vector2 boxSize = new Vector2(0.1f, boxCollider2DSize.y); 
         Vector2 checkStartPoint = new Vector2(transform.position.x + (movingRight ? 0.5f : -0.5f), transform.position.y); 
 
         RaycastHit2D hitInfo = Physics2D.BoxCast(checkStartPoint, boxSize, 0, directionCheck, checkDistance, groundMask);
