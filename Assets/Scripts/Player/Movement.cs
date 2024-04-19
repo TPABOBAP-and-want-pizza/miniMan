@@ -30,6 +30,7 @@ public class Movement : MonoBehaviour
     public bool grounded;
     float xInput;
     float yInput;
+    bool interactive_object_detected_in_front_of_character = false;
 
     private void Start()
     {
@@ -47,6 +48,7 @@ public class Movement : MonoBehaviour
             SelectState();
         }
         UpdateState();
+        CheckForObjectInFront();
     }
 
     void FixedUpdate()
@@ -69,7 +71,7 @@ public class Movement : MonoBehaviour
         {
             _horizontalInput = 0f;
         }
-        if (bodyInteraction != null && Input.GetKey(KeyCode.E) && grounded)
+        if (bodyInteraction != null && (Input.GetKey(KeyCode.E)|| interactive_object_detected_in_front_of_character) && grounded)
         {
             body.velocity = new Vector2(_horizontalInput * interactionSpeed * 70f * Time.deltaTime, body.velocity.y);
             bodyInteraction.velocity = new Vector2(body.velocity.x, bodyInteraction.velocity.y);
@@ -101,10 +103,10 @@ public class Movement : MonoBehaviour
 
         if (grounded)
         {
-            if(Input.GetKey(KeyCode.E))
+            if (Input.GetKey(KeyCode.E) || interactive_object_detected_in_front_of_character)
             {
                 SetInteractableObject();
-                if(bodyInteraction != null)
+                if (bodyInteraction != null)
                     state = PlayerState.Interaction;
             }
             else if (xInput == 0)
@@ -159,7 +161,7 @@ public class Movement : MonoBehaviour
     private void UpdateRun()
     {
         animator.Play("Run");
-        if (xInput == 0 || !grounded || Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.E))
+        if (xInput == 0 || !grounded || Input.GetKey(KeyCode.LeftShift) || (Input.GetKey(KeyCode.E) || interactive_object_detected_in_front_of_character))
         {
             stateComplete = true;
         }
@@ -168,7 +170,7 @@ public class Movement : MonoBehaviour
     private void UpdateSlink()
     {
         animator.Play("Slink");
-        if (xInput == 0 || !grounded || Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKey(KeyCode.E))
+        if (xInput == 0 || !grounded || Input.GetKeyUp(KeyCode.LeftShift) || (Input.GetKey(KeyCode.E) || interactive_object_detected_in_front_of_character))
         {
             stateComplete = true;
         }
@@ -190,7 +192,7 @@ public class Movement : MonoBehaviour
 
     private void UpdateInteraction()
     {
-        if(!Input.GetKey(KeyCode.E) || !grounded)
+        if ((!Input.GetKey(KeyCode.E) && !interactive_object_detected_in_front_of_character) || !grounded)
         {
             bodyInteraction = null;
             stateComplete = true;
@@ -224,6 +226,7 @@ public class Movement : MonoBehaviour
 
     void SetInteractableObject()
     {
+        Debug.Log("22");
         float _horizontalInput = xInput;
 
         RaycastHit2D hit = Physics2D.BoxCast(transform.position, boxCollider2DSize, 0f, Vector2.right, 0.05f, groundMask);
@@ -231,7 +234,7 @@ public class Movement : MonoBehaviour
         if (hit.collider?.tag == "InteractableObject")
         {
             Rigidbody2D rb2 = hit.collider.GetComponent<Rigidbody2D>();
-            interactionSpeed = -body.mass * rb2.mass / 100f + maxXSpeed ;
+            interactionSpeed = -body.mass * rb2.mass / 100f + maxXSpeed;
             bodyInteraction = rb2;
             return;
         }
@@ -251,4 +254,34 @@ public class Movement : MonoBehaviour
         float val = min2 + (max2 - min2) * ((value - min1) / (max1 - min1));
         return clamp ? Mathf.Clamp(val, Mathf.Min(min2, max2), Mathf.Max(min2, max2)) : val;
     }
+
+    void CheckForObjectInFront()
+    {
+        bool movingRight = xInput > 0;  // Определение направления движения персонажа
+        float checkDistance = 0.1f;     // Расстояние проверки перед персонажем
+        Vector2 directionCheck = movingRight ? Vector2.right : Vector2.left;  // Направление проверки
+
+        // Изменяем размеры BoxCast для лучшего обнаружения объектов разных размеров
+        Vector2 boxSize = new Vector2(0.2f, boxCollider2DSize.y); // Уменьшенная ширина и использование высоты персонажа
+        Vector2 checkStartPoint = new Vector2(transform.position.x + (movingRight ? 0.5f : -0.5f), transform.position.y); // Стартовая точка BoxCast чуть впереди персонажа
+
+        // Выполнение BoxCast
+        RaycastHit2D hitInfo = Physics2D.BoxCast(checkStartPoint, boxSize, 0, directionCheck, checkDistance, groundMask);
+
+        // Визуализация BoxCast в редакторе Unity
+        Debug.DrawRay(checkStartPoint, directionCheck * checkDistance, Color.red);
+
+        if (hitInfo.collider != null && hitInfo.collider.CompareTag("InteractableObject"))
+        {
+            interactive_object_detected_in_front_of_character = true;
+            Debug.Log("TRUE");
+        }
+        else
+        {
+            interactive_object_detected_in_front_of_character = false;
+            Debug.Log("FALSE");
+        }
+    }
+
+
 }
