@@ -103,7 +103,7 @@ public class Movement : MonoBehaviour
 
         if (grounded)
         {
-            if (Input.GetKey(KeyCode.E) || interactive_object_detected_in_front_of_character)
+            if ((Input.GetKey(KeyCode.E) || interactive_object_detected_in_front_of_character) && CheckGroundIsInteractableObject())
             {
                 SetInteractableObject();
                 if (bodyInteraction != null)
@@ -280,5 +280,14 @@ public class Movement : MonoBehaviour
         }
     }
 
-
+    bool CheckGroundIsInteractableObject()
+    {
+        Collider2D[] colliders = Physics2D.OverlapAreaAll(groundCheck.bounds.min, groundCheck.bounds.max, groundMask);
+        foreach(Collider2D i in colliders)
+        {
+            if (i.tag == "InteractableObject")
+                return false;
+        }
+        return true;
+    }
 }
