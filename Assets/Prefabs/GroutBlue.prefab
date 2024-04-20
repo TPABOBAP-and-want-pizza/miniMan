@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7558490694885985656}
   - component: {fileID: 7558490694885985657}
   - component: {fileID: 1825945471603818050}
+  - component: {fileID: 8634826774009822999}
   m_Layer: 3
   m_Name: GroutBlue
   m_TagString: InteractableObject
@@ -112,6 +113,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDeath: {fileID: 0}
+  body: {fileID: 7558490694885985607}
+--- !u!114 &8634826774009822999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7558490694885985658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d3b300d1a613048b3a2f5c4e11cd43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  impactSounds: []
+  minImpactVolume: 0.1
+  maxImpactVolume: 1
+  minForce: 10
+  soundDelay: 0.5
 --- !u!1 &7558490696324721008
 GameObject:
   m_ObjectHideFlags: 0
