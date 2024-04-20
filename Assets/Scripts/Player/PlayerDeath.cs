@@ -1,8 +1,10 @@
 using UnityEngine;
+using System;
 using UnityEngine.SceneManagement;
 
 public class PlayerDeath : MonoBehaviour
 {
+    public event Action respawn;   
     [SerializeField] private Transform respawnPoint;
     [SerializeField] private ShowDeathScreen deathScreen;
     private Movement movement;
@@ -38,6 +40,10 @@ public class PlayerDeath : MonoBehaviour
             isDead = true;
             deathScreen.Die(false);
         }
+        else if(go.tag == "Checkpoint")
+        {
+            respawnPoint = go.transform;
+        }
     }
 
     private void Update()
@@ -65,6 +71,7 @@ public class PlayerDeath : MonoBehaviour
         GetComponent<Movement>().enabled = true;
 
         transform.position = respawnPoint.position;
+        respawn.Invoke();
         deathScreen.HideDeath();
     }
 }

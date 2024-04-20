@@ -8,6 +8,7 @@ TagManager:
   - Hand
   - InteractableObject
   - DeadlyObject
+  - Checkpoint
   - Throwing
   layers:
   - Default
