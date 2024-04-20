@@ -45,21 +45,19 @@ public class Movement : MonoBehaviour
         CheckInput();
         HandleJump();
 
-        if (Input.GetMouseButtonDown(0))  // Левая кнопка мыши
-        {
-            if (heldObject != null)
-            {
-                ThrowHeldObject();
-            }
-        }
-
         if (stateComplete)
         {
             SelectState();
         }
         UpdateState();
         CheckForObjectInFront();
+
+        if (Input.GetMouseButtonUp(0) && heldObject != null) // Обработка броска предмета
+        {
+            ThrowHeldObject();
+        }
     }
+
 
     void FixedUpdate()
     {
@@ -215,13 +213,13 @@ public class Movement : MonoBehaviour
         yInput = Input.GetAxis("Vertical");
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            if (heldObject == null)
+            if (heldObject != null)
             {
-                TryPickUpObject();
+                DropHeldObject(); // Отпускаем объект
             }
             else
             {
-                ThrowHeldObject();
+                TryPickUpObject(); // Пытаемся поднять объект
             }
         }
     }
@@ -324,9 +322,10 @@ public class Movement : MonoBehaviour
         if (hit.collider != null && hit.collider.CompareTag("Throwing"))
         {
             heldObject = hit.collider.gameObject;
-            heldObject.GetComponent<Rigidbody2D>().isKinematic = true;
+            Rigidbody2D rb = heldObject.GetComponent<Rigidbody2D>();
+            rb.isKinematic = true; // Останавливаем все физические взаимодействия
             heldObject.transform.SetParent(transform);
-            heldObject.transform.localPosition = Vector2.right * 1f;
+            heldObject.transform.localPosition = Vector2.right * 1f; // Позиция у персонажа в руках
             Debug.Log("Object picked up: " + heldObject.name);
         }
         else
@@ -338,6 +337,7 @@ public class Movement : MonoBehaviour
 
 
 
+
     private void ThrowHeldObject()
     {
         if (heldObject != null)
@@ -345,7 +345,8 @@ public class Movement : MonoBehaviour
             heldObject.transform.SetParent(null);
             Rigidbody2D rb = heldObject.GetComponent<Rigidbody2D>();
             rb.isKinematic = false;
-            Vector2 throwDirection = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized;
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 throwDirection = (mousePosition - new Vector2(transform.position.x, transform.position.y)).normalized;
             rb.velocity = throwDirection * throwForce;
             Debug.Log("Object thrown: " + heldObject.name + " at velocity: " + rb.velocity);
             heldObject = null;
@@ -355,6 +356,19 @@ public class Movement : MonoBehaviour
             Debug.Log("No object held to throw.");
         }
     }
+
+    void DropHeldObject()
+    {
+        if (heldObject != null)
+        {
+            heldObject.transform.SetParent(null);
+            Rigidbody2D rb = heldObject.GetComponent<Rigidbody2D>();
+            rb.isKinematic = false;
+            heldObject = null;
+            Debug.Log("Object dropped.");
+        }
+    }
+
 
 
 }
