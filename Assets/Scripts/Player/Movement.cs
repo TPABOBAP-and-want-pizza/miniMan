@@ -290,7 +290,7 @@ public class Movement : MonoBehaviour
         Vector2 directionCheck = movingRight ? Vector2.right : Vector2.left;
 
         Vector2 boxSize = new Vector2(0.1f, boxCollider2DSize.y);
-        Vector2 checkStartPoint = new Vector2(transform.position.x + (movingRight ? 0.5f : -0.5f), transform.position.y);
+        Vector2 checkStartPoint = new Vector2(transform.position.x + (movingRight ? 0.2f : -0.2f), transform.position.y);
 
         RaycastHit2D hitInfo = Physics2D.BoxCast(checkStartPoint, boxSize, 0, directionCheck, checkDistance, groundMask);
 
