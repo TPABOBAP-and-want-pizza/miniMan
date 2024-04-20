@@ -89,6 +89,10 @@ public class Movement : MonoBehaviour
         }
         if (bodyInteraction != null && (Input.GetKey(KeyCode.E) || interactive_object_detected_in_front_of_character) && grounded)
         {
+            if (interactive_object_detected_in_front_of_character)
+                animator.Play("Push");
+            else animator.Play("Pull");
+
             body.velocity = new Vector2(_horizontalInput * interactionSpeed * 70f * Time.deltaTime, body.velocity.y);
             bodyInteraction.velocity = new Vector2(body.velocity.x, bodyInteraction.velocity.y);
         }
@@ -297,7 +301,7 @@ public class Movement : MonoBehaviour
         Vector2 directionCheck = movingRight ? Vector2.right : Vector2.left;
 
         Vector2 boxSize = new Vector2(0.1f, boxCollider2DSize.y);
-        Vector2 checkStartPoint = new Vector2(transform.position.x + (movingRight ? 0.5f : -0.5f), transform.position.y);
+        Vector2 checkStartPoint = new Vector2(transform.position.x + (movingRight ? 0.2f : -0.2f), transform.position.y);
 
         RaycastHit2D hitInfo = Physics2D.BoxCast(checkStartPoint, boxSize, 0, directionCheck, checkDistance, groundMask);
 
@@ -354,10 +358,6 @@ public class Movement : MonoBehaviour
         }
     }
 
-
-
-
-
     private void ThrowHeldObject()
     {
         if (heldObject != null)
@@ -392,9 +392,7 @@ public class Movement : MonoBehaviour
             Debug.Log("No object held to throw.");
         }
     }
-
-
-
+    
     void DropHeldObject()
     {
         if (heldObject != null)
