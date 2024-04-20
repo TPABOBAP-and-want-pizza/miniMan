@@ -9,6 +9,7 @@ TagManager:
   - InteractableObject
   - DeadlyObject
   - Checkpoint
+  - Throwing
   layers:
   - Default
   - TransparentFX
