@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class PlayerDeath : MonoBehaviour
 {
@@ -9,7 +10,9 @@ public class PlayerDeath : MonoBehaviour
     [SerializeField] private ShowDeathScreen deathScreen;
     private Movement movement;
 
+    [SerializeField] float respawnDelay = 0.5f;
     private bool isDead = false;
+    private bool canResapwn = false;
 
     private void Start()
     {
@@ -23,6 +26,7 @@ public class PlayerDeath : MonoBehaviour
         if ((go.layer == 9 || go.tag == "Hand") && !isDead)  //9 = player death
         {
             isDead = true;
+            StartCoroutine(CallMethodAfterDelay(respawnDelay));
             deathScreen.Die(false);
         }
         else if (go.tag == "CheckPoint")
@@ -38,6 +42,7 @@ public class PlayerDeath : MonoBehaviour
         if ((go.layer == 9 || go.tag == "Hand") && !isDead)  //9 = player death
         {
             isDead = true;
+            StartCoroutine(CallMethodAfterDelay(respawnDelay));
             deathScreen.Die(false);
         }
         else if(go.tag == "Checkpoint")
@@ -52,8 +57,9 @@ public class PlayerDeath : MonoBehaviour
         {
             movement.enabled = false;
         }
-        if (isDead && Input.anyKeyDown)
+        if (isDead && Input.anyKeyDown && canResapwn)
         {
+            canResapwn = false;
             Respawn();
         }
 
@@ -73,5 +79,17 @@ public class PlayerDeath : MonoBehaviour
         transform.position = respawnPoint.position;
         respawn.Invoke();
         deathScreen.HideDeath();
+    }
+
+    IEnumerator CallMethodAfterDelay(float delayInSeconds)
+    {
+        yield return new WaitForSeconds(delayInSeconds);
+        deathScreen.ShowPressKey();
+        SetCanRespawnTrue();
+    }
+
+    void SetCanRespawnTrue()
+    {
+        canResapwn = true;
     }
 }

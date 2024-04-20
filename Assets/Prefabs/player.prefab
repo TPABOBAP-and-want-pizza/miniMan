@@ -124,8 +124,11 @@ MonoBehaviour:
   maxXSpeed: 4
   airSpeed: 2
   retardingSlink: 3
+  interactionSpeed: 0
+  throwForce: 10
   jumpSpeed: 10
   grounded: 0
+  interactive_object_detected_in_front_of_character: 0
 --- !u!114 &6933542296657334359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,7 +142,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnPoint: {fileID: 0}
-  deathScreen: {fileID: 0}
+  deathScreen: {fileID: 1016916295448067380}
+  respawnDelay: 0.5
 --- !u!114 &7675997906469788478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,6 +338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 8939100175814036614}
   deadScreen: {fileID: 0}
+  pressKey: {fileID: 0}
 --- !u!114 &7650260963722422183
 MonoBehaviour:
   m_ObjectHideFlags: 0
