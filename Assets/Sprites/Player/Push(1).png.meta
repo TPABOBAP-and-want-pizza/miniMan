@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9cab91cd10d35c44eab663e14bddd850
+guid: 8e03780a058f64346810e2950aad8440
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Push_0
+      name: Push(1)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -130,14 +130,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0727acbd56868d247b6320fefb3afc9a
-      internalID: 938405905
+      spriteID: 953a190be672589499bf6afab3ab84ac
+      internalID: -670198587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Push_1
+      name: Push(1)_1
       rect:
         serializedVersion: 2
         x: 41
@@ -151,14 +151,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0162ce9d293a5fc40a23186a60848bad
-      internalID: 1097710772
+      spriteID: 5823ef07796c1ff408472cd7749cba01
+      internalID: 1312897921
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Push_2
+      name: Push(1)_2
       rect:
         serializedVersion: 2
         x: 82
@@ -172,14 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75f2f8ba52be67c4e9a47201612b5898
-      internalID: -1358828322
+      spriteID: 2c13af89096f1bf43ba6d7746df9db9b
+      internalID: -1297150485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Push_3
+      name: Push(1)_3
       rect:
         serializedVersion: 2
         x: 123
@@ -193,14 +193,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b76976eff03e85d4da53cdc6744ff59d
-      internalID: -351044994
+      spriteID: e1d0d85e4a252d44c9883bdaffd16644
+      internalID: -60748271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Push_4
+      name: Push(1)_4
       rect:
         serializedVersion: 2
         x: 164
@@ -214,14 +214,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32595b9b1db51fc488f78d4fe76619e6
-      internalID: 995538784
+      spriteID: 0ec48355f1f116045b71b3b93ee44ecf
+      internalID: -397195923
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Push_5
+      name: Push(1)_5
       rect:
         serializedVersion: 2
         x: 205
@@ -235,8 +235,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a9790609db5dbc41b367d43f8dc0455
-      internalID: 1350076762
+      spriteID: 76ef5bce69b0fe6419dfa7d2783dc424
+      internalID: 1957594623
       vertices: []
       indices: 
       edges: []
@@ -252,12 +252,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Push_0: 938405905
-      Push_4: 995538784
-      Push_3: -351044994
-      Push_5: 1350076762
-      Push_2: -1358828322
-      Push_1: 1097710772
+      Push(1)_5: 1957594623
+      Push(1)_2: -1297150485
+      Push(1)_4: -397195923
+      Push(1)_0: -670198587
+      Push(1)_1: 1312897921
+      Push(1)_3: -60748271
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
