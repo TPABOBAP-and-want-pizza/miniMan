@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 2250186621617838841}
   - component: {fileID: 2250186621617838842}
   - component: {fileID: 3920465767063149666}
+  - component: {fileID: 3814845557221324227}
   m_Layer: 3
   m_Name: Pencil
   m_TagString: InteractableObject
@@ -201,3 +202,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDeath: {fileID: 0}
+  body: {fileID: 2250186621617838840}
+--- !u!114 &3814845557221324227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2250186621617838847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d3b300d1a613048b3a2f5c4e11cd43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  impactSounds: []
+  minImpactVolume: 0.1
+  maxImpactVolume: 1
+  minForce: 10
+  soundDelay: 0.5

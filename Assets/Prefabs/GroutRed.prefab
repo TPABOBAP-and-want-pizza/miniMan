@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5651647154495050177}
   - component: {fileID: 5651647154495050176}
   - component: {fileID: 8307888534840839561}
+  - component: {fileID: 1292268847163955194}
   m_Layer: 3
   m_Name: GroutRed
   m_TagString: InteractableObject
@@ -112,6 +113,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDeath: {fileID: 0}
+  body: {fileID: 5651647154495050181}
+--- !u!114 &1292268847163955194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5651647154495050182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d3b300d1a613048b3a2f5c4e11cd43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  impactSounds: []
+  minImpactVolume: 0.1
+  maxImpactVolume: 1
+  minForce: 10
+  soundDelay: 0.5
 --- !u!1 &5651647155045297718
 GameObject:
   m_ObjectHideFlags: 0
