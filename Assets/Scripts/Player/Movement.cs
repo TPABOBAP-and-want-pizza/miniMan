@@ -23,6 +23,7 @@ public class Movement : MonoBehaviour
     [SerializeField] float airSpeed;
     [SerializeField] float retardingSlink = 2f;
     [SerializeField] float interactionSpeed;
+    [SerializeField] private float throwForce = 10f; // Сила броска
 
     public float jumpSpeed;
 
@@ -31,6 +32,7 @@ public class Movement : MonoBehaviour
     float xInput;
     float yInput;
     public bool interactive_object_detected_in_front_of_character = false;
+    private GameObject heldObject; // Ссылка на поднятый объект
 
     private void Start()
     {
@@ -49,6 +51,7 @@ public class Movement : MonoBehaviour
         }
         UpdateState();
         CheckForObjectInFront();
+        //HandlePickupAndThrow();
     }
 
     void FixedUpdate()
@@ -71,7 +74,7 @@ public class Movement : MonoBehaviour
         {
             _horizontalInput = 0f;
         }
-        if (bodyInteraction != null && (Input.GetKey(KeyCode.E)|| interactive_object_detected_in_front_of_character) && grounded)
+        if (bodyInteraction != null && (Input.GetKey(KeyCode.E) || interactive_object_detected_in_front_of_character) && grounded)
         {
             body.velocity = new Vector2(_horizontalInput * interactionSpeed * 70f * Time.deltaTime, body.velocity.y);
             bodyInteraction.velocity = new Vector2(body.velocity.x, bodyInteraction.velocity.y);
@@ -203,6 +206,17 @@ public class Movement : MonoBehaviour
     {
         xInput = Input.GetAxis("Horizontal");
         yInput = Input.GetAxis("Vertical");
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (heldObject == null)
+            {
+                TryPickUpObject();
+            }
+            else
+            {
+                ThrowHeldObject();
+            }
+        }
     }
 
     void FaceInput()
@@ -257,12 +271,12 @@ public class Movement : MonoBehaviour
 
     void CheckForObjectInFront()
     {
-        bool movingRight = xInput > 0; 
-        float checkDistance = 0.05f; 
+        bool movingRight = xInput > 0;
+        float checkDistance = 0.05f;
         Vector2 directionCheck = movingRight ? Vector2.right : Vector2.left;
 
-        Vector2 boxSize = new Vector2(0.1f, boxCollider2DSize.y); 
-        Vector2 checkStartPoint = new Vector2(transform.position.x + (movingRight ? 0.5f : -0.5f), transform.position.y); 
+        Vector2 boxSize = new Vector2(0.1f, boxCollider2DSize.y);
+        Vector2 checkStartPoint = new Vector2(transform.position.x + (movingRight ? 0.5f : -0.5f), transform.position.y);
 
         RaycastHit2D hitInfo = Physics2D.BoxCast(checkStartPoint, boxSize, 0, directionCheck, checkDistance, groundMask);
 
@@ -271,23 +285,69 @@ public class Movement : MonoBehaviour
         if (hitInfo.collider != null && hitInfo.collider.CompareTag("InteractableObject"))
         {
             interactive_object_detected_in_front_of_character = true;
-            Debug.Log("TRUE");
+            //Debug.Log("TRUE");
         }
         else
         {
             interactive_object_detected_in_front_of_character = false;
-            Debug.Log("FALSE");
+            //Debug.Log("FALSE");
         }
     }
 
     bool CheckGroundIsInteractableObject()
     {
         Collider2D[] colliders = Physics2D.OverlapAreaAll(groundCheck.bounds.min, groundCheck.bounds.max, groundMask);
-        foreach(Collider2D i in colliders)
+        foreach (Collider2D i in colliders)
         {
             if (i.tag == "InteractableObject")
                 return false;
         }
         return true;
     }
+
+    private void TryPickUpObject()
+    {
+        float checkDistance = 1f; // Расстояние проверки
+        Vector2 boxSize = new Vector2(0.1f, 1f); // Размер box cast
+        Vector2 direction = transform.right * Mathf.Sign(transform.localScale.x); // Направление в зависимости от ориентации персонажа
+        Vector2 startPoint = (Vector2)transform.position + direction * 0.5f; // Стартовая точка впереди игрока
+
+        RaycastHit2D hit = Physics2D.BoxCast(startPoint, boxSize, 0, direction, checkDistance);
+
+        if (hit.collider != null && hit.collider.CompareTag("Throwing"))
+        {
+            heldObject = hit.collider.gameObject;
+            heldObject.GetComponent<Rigidbody2D>().isKinematic = true;
+            heldObject.transform.SetParent(transform);
+            heldObject.transform.localPosition = Vector2.right * 1f;
+            Debug.Log("Object picked up: " + heldObject.name);
+        }
+        else
+        {
+            Debug.Log("No throwable object in range to pick up.");
+        }
+    }
+
+
+
+
+    private void ThrowHeldObject()
+    {
+        if (heldObject != null)
+        {
+            heldObject.transform.SetParent(null);
+            Rigidbody2D rb = heldObject.GetComponent<Rigidbody2D>();
+            rb.isKinematic = false;
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 throwDirection = (mousePosition - new Vector2(transform.position.x, transform.position.y)).normalized;
+            rb.velocity = throwDirection * throwForce;
+            Debug.Log("Object thrown: " + heldObject.name + " at velocity: " + rb.velocity);
+            heldObject = null;
+        }
+        else
+        {
+            Debug.Log("No object held to throw.");
+        }
+    }
+
 }
