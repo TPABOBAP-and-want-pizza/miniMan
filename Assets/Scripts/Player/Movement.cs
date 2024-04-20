@@ -86,6 +86,10 @@ public class Movement : MonoBehaviour
         }
         if (bodyInteraction != null && (Input.GetKey(KeyCode.E) || interactive_object_detected_in_front_of_character) && grounded)
         {
+            if (interactive_object_detected_in_front_of_character)
+                animator.Play("Push");
+            else animator.Play("Pull");
+
             body.velocity = new Vector2(_horizontalInput * interactionSpeed * 70f * Time.deltaTime, body.velocity.y);
             bodyInteraction.velocity = new Vector2(body.velocity.x, bodyInteraction.velocity.y);
         }
