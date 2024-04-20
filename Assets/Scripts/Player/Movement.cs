@@ -119,7 +119,10 @@ public class Movement : MonoBehaviour
     {
         stateComplete = false;
         if (state == PlayerState.Airborne)
+        {
             noise.PlayRandomNoise("Jump");
+            dust.Play();
+        }
 
         if (grounded)
         {

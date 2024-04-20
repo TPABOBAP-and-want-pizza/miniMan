@@ -6,6 +6,7 @@ public class ShowDeathScreen : MonoBehaviour
 {
     [SerializeField] private Animator animator;
     [SerializeField] private GameObject deadScreen;
+    [SerializeField] private GameObject pressKey;
 
 
     public void Die(bool skipAnimation)
@@ -19,11 +20,21 @@ public class ShowDeathScreen : MonoBehaviour
     public void ShowDeath()
     {
         Debug.Log("You Dead");
-        deadScreen.active = true;
+        deadScreen.SetActive(true);
+    }
+
+    public void ShowPressKey()
+    {
+        if (pressKey == null)
+        {
+            Debug.LogError("PressKey is not assigned in the inspector!");
+        }
+        pressKey.SetActive(true);
     }
 
     public void HideDeath()
     {
-        deadScreen.active = false;
+        pressKey.SetActive(false);
+        deadScreen.SetActive(false);
     }
 }
