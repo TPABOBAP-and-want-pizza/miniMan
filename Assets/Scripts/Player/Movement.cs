@@ -35,6 +35,9 @@ public class Movement : MonoBehaviour
     private GameObject heldObject; // Ссылка на поднятый объект
     private bool isHoldingObject = false;
 
+    public ParticleSystem dust;
+    private float lastDirection = 1;
+
     private void Start()
     {
         boxCollider2DSize = transform.GetComponent<BoxCollider2D>().size;
@@ -233,17 +236,25 @@ public class Movement : MonoBehaviour
         }
     }
 
+
     void FaceInput()
     {
         float direction = Mathf.Sign(xInput);
+        if (xInput != 0 && direction != lastDirection)
+        {
+            dust.Play();  // Активация системы частиц при повороте
+            lastDirection = direction;  // Обновляем последнее направление
+        }
         transform.localScale = new Vector3(direction, 1, 1);
     }
+
 
     void HandleJump()
     {
         if (Input.GetButtonDown("Jump") && grounded)
         {
             body.velocity = new Vector2(body.velocity.x, jumpSpeed);
+            dust.Play();
         }
     }
 
