@@ -343,10 +343,6 @@ public class Movement : MonoBehaviour
         }
     }
 
-
-
-
-
     private void ThrowHeldObject()
     {
         if (heldObject != null)
@@ -378,7 +374,6 @@ public class Movement : MonoBehaviour
             Debug.Log("No object held to throw.");
         }
     }
-
 
     void DropHeldObject()
     {
