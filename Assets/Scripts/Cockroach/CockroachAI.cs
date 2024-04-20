@@ -9,6 +9,7 @@ public class CockroachAI : MonoBehaviour
     public float checkDistance = 1.4f;
     private bool movingRight = true;
     public bool isDead = false;
+    
 
     void Start()
     {

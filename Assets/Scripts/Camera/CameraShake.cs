@@ -38,7 +38,7 @@ public class CameraShake : MonoBehaviour
 
     public void DefaultShake()
     {
-        StartCoroutine(Shake(0.2f, 0.2f));
+        StartCoroutine(Shake(0.25f, 0.4f));
     }
 
     public IEnumerator Shake(float duration, float magnitude)

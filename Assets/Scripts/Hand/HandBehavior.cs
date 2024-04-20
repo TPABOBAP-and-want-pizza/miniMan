@@ -12,6 +12,7 @@ public class HandBehavior : MonoBehaviour
 
     public float shockwaveRadius = 5f; // Радиус действия волны
     public float shockwaveForce = 10f; // Сила, с которой объекты будут отталкиваться
+    public ParticleSystem dust_hand;
 
     void Start()
     {
@@ -50,7 +51,7 @@ public class HandBehavior : MonoBehaviour
     {
         if (!collider.CompareTag("Ground"))
         {
-            Camera.main.GetComponent<CameraShake>().DefaultShake();
+            //Camera.main.GetComponent<CameraShake>().DefaultShake();
             hasInteracted = true;
         }
         else if (collider.CompareTag("Ground") && hasInteracted)
@@ -61,6 +62,8 @@ public class HandBehavior : MonoBehaviour
                 rb.constraints = RigidbodyConstraints2D.FreezeAll;
                 hasCollided = true;
                 CauseShockwave();
+                dust_hand.Play();
+                Camera.main.GetComponent<CameraShake>().DefaultShake();
             }
         }
     }
