@@ -71,12 +71,21 @@ public class HandBehavior : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(explosionPos, shockwaveRadius);
         foreach (Collider2D hit in colliders)
         {
+            if (hit.CompareTag("Player"))
+            {
+                continue; // Пропускаем игрока
+            }
+
             Rigidbody2D rb = hit.GetComponent<Rigidbody2D>();
             if (rb != null && rb != this.rb) // Убедитесь, что это не Rigidbody самой руки
             {
-                Vector2 direction = hit.transform.position - transform.position;
-                rb.AddForce(direction.normalized * shockwaveForce + Vector2.up * shockwaveForce, ForceMode2D.Impulse);
+                Vector2 direction = (hit.transform.position - transform.position).normalized;
+                // Увеличиваем вертикальную составляющую силы в 3 раза
+                Vector2 force = new Vector2(direction.x * shockwaveForce, (direction.y + 2) * shockwaveForce);
+                rb.AddForce(force, ForceMode2D.Impulse);
             }
         }
     }
+
+
 }
