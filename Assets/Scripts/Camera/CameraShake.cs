@@ -31,7 +31,7 @@ public class CameraShake : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.H))
         {
-            NoiseLevel.Instance.IncreaseNoise(20f);
+            //NoiseLevel.Instance.IncreaseNoise(20f);
 
         }
     }

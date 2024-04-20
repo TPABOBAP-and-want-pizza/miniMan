@@ -13,6 +13,7 @@ public class NoiseLevel : MonoBehaviour
     public float maxNoiseLevel = 100f;
     private float Bar;
     public Image[] noisePoints;
+    private GameObject LastNoiseObject;
 
     void Awake()
     {
@@ -35,20 +36,16 @@ public class NoiseLevel : MonoBehaviour
         StartCoroutine(DecreaseNoiseLevelOverTime());// Уменьшение шума каждую секунду
     }
 
-    public void IncreaseNoise(float amount)
-    {
-        VolumeIndicator += amount;
-        UpdateNoiseLevel();
-    }
-
     public void IncreaseNoise(float amount, GameObject noiseMaker)
     {
         VolumeIndicator += amount;
         CurrentNoise += amount;
         LastNoiseMaker = noiseMaker;
+        LastNoiseObject = noiseMaker;  // Обеспечиваем, что LastNoiseObject всегда обновляется с последним объектом, создающим шум
         UpdateNoiseLevel();
-
     }
+
+
 
     public void DecreaseNoise(float amount)
     {
@@ -56,16 +53,27 @@ public class NoiseLevel : MonoBehaviour
         UpdateNoiseLevel();
     }
 
+
     void UpdateNoiseLevel()
     {
+
         if (VolumeIndicator >= maxNoiseLevel)
         {
-            HandSpawner.SpawnTrackingHand(transform.localPosition);
-            //HandSpawner.SpawnHandDefault(transform.localPosition);
-            // HandSpawner.SpawnHand(transform.localPosition + new Vector3(0, 5, 11), 10);
-            DecreaseNoise(50f);
-        }
+            if (LastNoiseObject != null)
+            {
+                // Проверка, является ли LastNoiseObject игроком
+                if (LastNoiseObject.CompareTag("Player"))
+                {
+                    HandSpawner.SpawnTrackingHand(LastNoiseObject.transform.position);
+                }
+                else
+                {
+                    HandSpawner.SpawnHandDefault(LastNoiseObject.transform.position);
+                }
+            }
 
+            DecreaseNoise(50f); // Уменьшение уровня шума после реакции
+        }
         // случайное колебание
         float noiseFluctuation = Random.Range(-6f, 6f);
 
@@ -73,15 +81,12 @@ public class NoiseLevel : MonoBehaviour
         float displayVolume = VolumeIndicator + noiseFluctuation;
         displayVolume = Mathf.Clamp(displayVolume, 0, maxNoiseLevel); // не вышло за пределы допустимых
 
-        Bar = displayVolume / maxNoiseLevel;
-
         for (int i = 0; i < noisePoints.Length; i++)
         {
             noisePoints[i].enabled = !DisplayNoisePoint(displayVolume, i);
         }
 
-        //Bar.fillAmount = VolumeIndicator / maxNoiseLevel; старый статичный смособ отображения шума без помех
-
+        //Bar.fillAmount = VolumeIndicator / maxNoiseLevel; // старый статичный способ отображения шума без помех
     }
 
     IEnumerator UpdateNoiseLevelEverySecond()
