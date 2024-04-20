@@ -56,6 +56,7 @@ public class Movement : MonoBehaviour
         {
             ThrowHeldObject();
         }
+
     }
 
 
@@ -327,6 +328,9 @@ public class Movement : MonoBehaviour
             heldObject.transform.SetParent(transform);
             heldObject.transform.localPosition = Vector2.right * 1f; // Позиция у персонажа в руках
             Debug.Log("Object picked up: " + heldObject.name);
+
+            Collider2D collider = heldObject.GetComponent<Collider2D>();
+            collider.enabled = false;
         }
         else
         {
@@ -342,13 +346,24 @@ public class Movement : MonoBehaviour
     {
         if (heldObject != null)
         {
-            heldObject.transform.SetParent(null);
+            // Возвращаем объекту физическое поведение
             Rigidbody2D rb = heldObject.GetComponent<Rigidbody2D>();
             rb.isKinematic = false;
+
+            // Вычисляем направление курсора относительно позиции персонажа
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 throwDirection = (mousePosition - new Vector2(transform.position.x, transform.position.y)).normalized;
+
+            // Придаем скорость брошенному объекту
             rb.velocity = throwDirection * throwForce;
             Debug.Log("Object thrown: " + heldObject.name + " at velocity: " + rb.velocity);
+
+            // Позволяем объекту вновь взаимодействовать с другими объектами в игре
+            Collider2D collider = heldObject.GetComponent<Collider2D>();
+            collider.enabled = true;
+
+            // Отвязываем объект от персонажа
+            heldObject.transform.SetParent(null);
             heldObject = null;
         }
         else
@@ -357,15 +372,19 @@ public class Movement : MonoBehaviour
         }
     }
 
+
     void DropHeldObject()
     {
         if (heldObject != null)
         {
+            Collider2D collider = heldObject.GetComponent<Collider2D>();
+            collider.enabled = true; // Включаем коллайдер обратно
+
             heldObject.transform.SetParent(null);
             Rigidbody2D rb = heldObject.GetComponent<Rigidbody2D>();
             rb.isKinematic = false;
-            heldObject = null;
             Debug.Log("Object dropped.");
+            heldObject = null;
         }
     }
 
