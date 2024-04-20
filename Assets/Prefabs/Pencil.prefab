@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 2250186621617838840}
   - component: {fileID: 2250186621617838841}
   - component: {fileID: 2250186621617838842}
+  - component: {fileID: 3920465767063149666}
   m_Layer: 3
   m_Name: Pencil
   m_TagString: InteractableObject
@@ -187,3 +188,16 @@ PolygonCollider2D:
       - {x: -0.18726239, y: -0.7136535}
       - {x: -0.0034627914, y: -1.171396}
       - {x: 0.21676439, y: -0.6541441}
+--- !u!114 &3920465767063149666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2250186621617838847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d34c838f45f624a4eac00515d8ff06e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerDeath: {fileID: 0}

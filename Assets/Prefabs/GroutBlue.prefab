@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7558490694885985607}
   - component: {fileID: 7558490694885985656}
   - component: {fileID: 7558490694885985657}
+  - component: {fileID: 1825945471603818050}
   m_Layer: 3
   m_Name: GroutBlue
   m_TagString: InteractableObject
@@ -98,6 +99,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.47, y: 1.42}
   m_EdgeRadius: 0
+--- !u!114 &1825945471603818050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7558490694885985658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d34c838f45f624a4eac00515d8ff06e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerDeath: {fileID: 0}
 --- !u!1 &7558490696324721008
 GameObject:
   m_ObjectHideFlags: 0

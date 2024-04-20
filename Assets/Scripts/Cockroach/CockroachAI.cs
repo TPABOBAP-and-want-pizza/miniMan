@@ -55,7 +55,15 @@ public class CockroachAI : MonoBehaviour
     public void Die()
     {
         isDead = true;
-        animator.SetTrigger("Die"); // Установка триггера смерти в аниматоре
+        animator.Play("Die"); // Установка триггера смерти в аниматоре
+        rb.velocity = Vector2.zero; // Остановить движение
+        rb.isKinematic = false; // Включаем физику (если требуется)
+    }
+
+    public void Alive()
+    {
+        isDead = false;
+        animator.Play("Run"); // Установка триггера смерти в аниматоре
         rb.velocity = Vector2.zero; // Остановить движение
         rb.isKinematic = false; // Включаем физику (если требуется)
     }
