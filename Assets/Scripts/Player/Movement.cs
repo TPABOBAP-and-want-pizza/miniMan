@@ -33,6 +33,7 @@ public class Movement : MonoBehaviour
     float yInput;
     public bool interactive_object_detected_in_front_of_character = false;
     private GameObject heldObject; // Ссылка на поднятый объект
+    private bool isHoldingObject = false;
 
     private void Start()
     {
@@ -52,11 +53,14 @@ public class Movement : MonoBehaviour
         UpdateState();
         CheckForObjectInFront();
 
-        if (Input.GetMouseButtonUp(0) && heldObject != null) // Обработка броска предмета
+        if (Input.GetMouseButtonUp(0) && heldObject != null)
         {
             ThrowHeldObject();
         }
-
+        if (heldObject != null)
+        {
+            UpdateHeldObjectPosition();
+        }
     }
 
 
@@ -331,6 +335,7 @@ public class Movement : MonoBehaviour
 
             Collider2D collider = heldObject.GetComponent<Collider2D>();
             collider.enabled = false;
+            isHoldingObject = true;
         }
         else
         {
@@ -365,6 +370,8 @@ public class Movement : MonoBehaviour
             // Отвязываем объект от персонажа
             heldObject.transform.SetParent(null);
             heldObject = null;
+
+            isHoldingObject = false;
         }
         else
         {
@@ -385,9 +392,40 @@ public class Movement : MonoBehaviour
             rb.isKinematic = false;
             Debug.Log("Object dropped.");
             heldObject = null;
+
+            isHoldingObject = false;
         }
     }
 
+    private Vector3 GetNewPositionBasedOnInput()
+    {
+        // Предполагаем, что нужно использовать текущий ввод пользователя для определения позиции
+        // Например, перемещать объект вместе с игроком
+        return transform.position + new Vector3(xInput, 0, 0);
+    }
 
+    void UpdateHeldObjectPosition()
+    {
+        if (heldObject != null)
+        {
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 directionToMouse = (mousePosition - (Vector2)transform.position).normalized;
+
+            // Устанавливаем расстояние от игрока до объекта
+            float heldDistance = 1.5f; // Расстояние от игрока до объекта
+            Vector2 targetPosition = (Vector2)transform.position + directionToMouse * heldDistance;
+
+            // Проверяем, нет ли препятствий между персонажем и новой позицией
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, directionToMouse, heldDistance, groundMask);
+            if (hit.collider != null)
+            {
+                // Если есть препятствие, остановить объект на границе препятствия до столкновения
+                targetPosition = hit.point - directionToMouse * 0.1f; // небольшое смещение от препятствия
+            }
+
+            // Обновляем позицию объекта
+            heldObject.transform.position = targetPosition;
+        }
+    }
 
 }
