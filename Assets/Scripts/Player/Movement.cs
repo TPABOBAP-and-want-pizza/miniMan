@@ -57,10 +57,10 @@ public class Movement : MonoBehaviour
         {
             ThrowHeldObject();
         }
-        if (heldObject != null)
-        {
-            UpdateHeldObjectPosition();
-        }
+        // (heldObject != null)
+        //{
+        //    UpdateHeldObjectPosition();
+        //}
     }
 
 
@@ -330,7 +330,7 @@ public class Movement : MonoBehaviour
             Rigidbody2D rb = heldObject.GetComponent<Rigidbody2D>();
             rb.isKinematic = true; // Останавливаем все физические взаимодействия
             heldObject.transform.SetParent(transform);
-            heldObject.transform.localPosition = Vector2.right * 1f; // Позиция у персонажа в руках
+            heldObject.transform.localPosition = Vector2.right * 0.5f; // Позиция у персонажа в руках
             Debug.Log("Object picked up: " + heldObject.name);
 
             Collider2D collider = heldObject.GetComponent<Collider2D>();
@@ -351,8 +351,11 @@ public class Movement : MonoBehaviour
             Rigidbody2D rb = heldObject.GetComponent<Rigidbody2D>();
             rb.isKinematic = false;
 
+            // Находим камеру с тегом "Camera_Aiming"
+            Camera aimingCamera = GameObject.FindGameObjectWithTag("Camera_Aiming").GetComponent<Camera>();
+
             // Вычисляем направление курсора относительно позиции персонажа
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 mousePosition = aimingCamera.ScreenToWorldPoint(Input.mousePosition);
             Vector2 throwDirection = (mousePosition - new Vector2(transform.position.x, transform.position.y)).normalized;
 
             // Придаем скорость брошенному объекту
@@ -374,7 +377,7 @@ public class Movement : MonoBehaviour
             Debug.Log("No object held to throw.");
         }
     }
-
+    
     void DropHeldObject()
     {
         if (heldObject != null)

@@ -10,6 +10,7 @@ TagManager:
   - DeadlyObject
   - Checkpoint
   - Throwing
+  - Camera_Aiming
   layers:
   - Default
   - TransparentFX
