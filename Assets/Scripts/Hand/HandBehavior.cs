@@ -8,16 +8,16 @@ public class HandBehavior : MonoBehaviour
     private bool hasCollided = false;
     private bool hasInteracted = false;
     public bool TrackPlayer = false;
-    private bool is_start_falling = false;// имеется введу вызов метода StartFalling(), а не начало паения как таковое
+    private bool is_start_falling = false;
+
+    public float shockwaveRadius = 5f; // Радиус действия волны
+    public float shockwaveForce = 10f; // Сила, с которой объекты будут отталкиваться
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>(); // Убедитесь, что компонент Animator присутствует на этом же объекте
-
-        // Изначально блокируем все движения и вращения руки
+        animator = GetComponent<Animator>();
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
-
         if (TrackPlayer)
         {
             player = GameObject.FindGameObjectWithTag("Player");
@@ -36,28 +36,20 @@ public class HandBehavior : MonoBehaviour
             {
                 transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 2, transform.position.z);
             }
-            
         }
-        
     }
 
-    // Этот метод вызывается анимацией в определенный момент
     public void StartFalling()
     {
-        // Убедитесь, что Rigidbody не является кинематическим, чтобы гравитация начала действовать
         rb.isKinematic = false;
         is_start_falling = true;
-
-        // Разблокируем все движения и вращения, позволяя руке начать падение
         rb.constraints = RigidbodyConstraints2D.None;
-        Debug.Log("StartFalling вызван.");
     }
 
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (!collider.CompareTag("Ground"))
         {
-            Debug.Log(collider);
             Camera.main.GetComponent<CameraShake>().DefaultShake();
             hasInteracted = true;
         }
@@ -68,7 +60,22 @@ public class HandBehavior : MonoBehaviour
                 TrackPlayer = false;
                 rb.constraints = RigidbodyConstraints2D.FreezeAll;
                 hasCollided = true;
-                //Как программисты исправляют сломанный фонарь? Они не исправляют, а переписывают документацию, утверждая, что тьма — это фича, как и прододжение движения персонажа после смерти)
+                CauseShockwave();
+            }
+        }
+    }
+
+    void CauseShockwave()
+    {
+        Vector2 explosionPos = transform.position;
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(explosionPos, shockwaveRadius);
+        foreach (Collider2D hit in colliders)
+        {
+            Rigidbody2D rb = hit.GetComponent<Rigidbody2D>();
+            if (rb != null && rb != this.rb) // Убедитесь, что это не Rigidbody самой руки
+            {
+                Vector2 direction = hit.transform.position - transform.position;
+                rb.AddForce(direction.normalized * shockwaveForce + Vector2.up * shockwaveForce, ForceMode2D.Impulse);
             }
         }
     }
