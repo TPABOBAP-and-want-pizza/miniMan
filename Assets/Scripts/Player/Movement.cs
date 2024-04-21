@@ -254,7 +254,12 @@ public class Movement : MonoBehaviour
 
     private void UpdateSlink()
     {
-        animator.Play("Slink");
+        if (!isHoldingObject)
+        {
+            animator.Play("Slink");
+        }
+ 
+
         if (xInput == 0 || !grounded || Input.GetKeyUp(KeyCode.LeftShift) || (Input.GetKey(KeyCode.E) || interactive_object_detected_in_front_of_character))
         {
             stateComplete = true;
@@ -529,5 +534,7 @@ public class Movement : MonoBehaviour
             stateComplete = true;
         }
     }
+
+
 
 }
