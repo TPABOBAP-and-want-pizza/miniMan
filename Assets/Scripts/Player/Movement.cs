@@ -79,7 +79,7 @@ public class Movement : MonoBehaviour
 
         // Получаем угол в градусах и применяем ограничение
         float angle = Mathf.Atan2(directionToMouse.y, directionToMouse.x) * Mathf.Rad2Deg;
-        Debug.Log(angle);
+        //Debug.Log(angle);
         float clampedAngle = ClampAngleBasedOnDirection(angle);
 
         powerIndicator.transform.rotation = Quaternion.Euler(0, 0, clampedAngle);
