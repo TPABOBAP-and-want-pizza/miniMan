@@ -1,27 +1,35 @@
 using UnityEngine;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public static class HandSpawner
 {
-    // Загружаем префаб руки
     private static GameObject handPrefab = Resources.Load<GameObject>("HandPrefab");
+    private static float lastSpawnTime = 0f;
+    public static float spawnDelay = 2f;
 
-    // Метод для спауна руки
+    // Метод для проверки, можно ли спаунить руку
+    private static bool CanSpawn()
+    {
+        return Time.time - lastSpawnTime >= spawnDelay;
+    }
+
+    // Обновленный метод для спауна руки
     public static void SpawnHand(Vector3 spawnPosition, float fallSpeed)
     {
+        if (!CanSpawn())
+        {
+            Debug.Log("Hand spawn is on cooldown!");
+            return;
+        }
+
         if (handPrefab == null)
         {
             Debug.LogError("HandPrefab not found in Resources folder!");
             return;
         }
 
-        // Устанавливаем z-координату на 0
         Vector3 adjustedSpawnPosition = new Vector3(spawnPosition.x, spawnPosition.y, 0);
-
-        // Создаем экземпляр руки
         GameObject handInstance = Object.Instantiate(handPrefab, adjustedSpawnPosition, Quaternion.identity);
 
-        // Настройка начальной скорости падения руки
         Rigidbody2D rb = handInstance.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
@@ -31,22 +39,35 @@ public static class HandSpawner
         {
             Debug.LogError("HandPrefab missing Rigidbody2D component!");
         }
+
+        lastSpawnTime = Time.time;  // Обновляем время последнего спавна
     }
 
     public static void SpawnHandDefault(Vector3 spawnPos)
     {
-        SpawnHand(spawnPos + new Vector3(0, 2, 0), 10); //17 это высота появления руки, 10 это начальная скорость 
+        if (!CanSpawn())
+        {
+            Debug.Log("Hand spawn is on cooldown!");
+            return;
+        }
+        SpawnHand(spawnPos + new Vector3(0, 2, 0), 10);
     }
 
     public static void SpawnTrackingHand(Vector3 playerPosition)
     {
+        if (!CanSpawn())
+        {
+            Debug.Log("Hand spawn is on cooldown!");
+            return;
+        }
+
         if (handPrefab == null)
         {
             Debug.LogError("HandPrefab not found in Resources folder!");
             return;
         }
 
-        GameObject handInstance = Object.Instantiate(handPrefab, new Vector3(playerPosition.x, playerPosition.y + 2, 0), Quaternion.identity);//2 высота спайна прямоугольника убивающего игрока
+        GameObject handInstance = Object.Instantiate(handPrefab, new Vector3(playerPosition.x, playerPosition.y + 2, 0), Quaternion.identity);
         HandBehavior handBehavior = handInstance.GetComponent<HandBehavior>();
         if (handBehavior != null)
         {
@@ -56,5 +77,7 @@ public static class HandSpawner
         {
             Debug.LogError("HandPrefab missing HandBehavior component!");
         }
+
+        lastSpawnTime = Time.time;  // Обновляем время последнего спавна
     }
 }

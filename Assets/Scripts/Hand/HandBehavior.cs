@@ -5,13 +5,14 @@ public class HandBehavior : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private GameObject player;
+    private GameObject firstInteractor; // Объект, который первым столкнулся с рукой
     private bool hasCollided = false;
     private bool hasInteracted = false;
     public bool TrackPlayer = false;
     private bool is_start_falling = false;
 
-    public float shockwaveRadius = 5f; // Радиус действия волны
-    public float shockwaveForce = 10f; // Сила, с которой объекты будут отталкиваться
+    public float shockwaveRadius = 5f;
+    public float shockwaveForce = 10f;
     public ParticleSystem dust_hand;
 
     void Start()
@@ -51,8 +52,12 @@ public class HandBehavior : MonoBehaviour
     {
         if (!collider.CompareTag("Ground"))
         {
-            //Camera.main.GetComponent<CameraShake>().DefaultShake();
+            if (!hasInteracted) // Сохраняем первый объект, который столкнулся с рукой
+            {
+                firstInteractor = collider.gameObject;
+            }
             hasInteracted = true;
+            //Camera.main.GetComponent<CameraShake>().DefaultShake();
         }
         else if (collider.CompareTag("Ground") && hasInteracted)
         {
@@ -74,21 +79,18 @@ public class HandBehavior : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(explosionPos, shockwaveRadius);
         foreach (Collider2D hit in colliders)
         {
-            if (hit.CompareTag("Player"))
+            if (hit.gameObject == firstInteractor) // Игнорируем первый объект, который столкнулся с рукой
             {
-                continue; // Пропускаем игрока
+                continue;
             }
 
             Rigidbody2D rb = hit.GetComponent<Rigidbody2D>();
             if (rb != null && rb != this.rb) // Убедитесь, что это не Rigidbody самой руки
             {
                 Vector2 direction = (hit.transform.position - transform.position).normalized;
-                // Увеличиваем вертикальную составляющую силы в 3 раза
                 Vector2 force = new Vector2(direction.x * shockwaveForce, (direction.y + 2) * shockwaveForce);
                 rb.AddForce(force, ForceMode2D.Impulse);
             }
         }
     }
-
-
 }
