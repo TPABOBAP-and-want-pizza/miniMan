@@ -7,21 +7,7 @@ public class MusicManager : MonoBehaviour
     public AudioClip[] musicTracks;
     private AudioSource audioSource;
     private bool isMusicPlaying = true;
-
-    private void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-
-        // ��������, �� ���������� ��-������ ������� �����
-        if (musicTracks.Length > 0)
-        {
-            StartCoroutine(PlayMusic());
-        }
-        else
-        {
-            Debug.LogError("no music for MusicManager.");
-        }
-    }
+    private Coroutine musicCoroutine;  // Ссылка на корутину
 
     private void Awake()
     {
@@ -34,6 +20,19 @@ public class MusicManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    private void Start()
+    {
+        if (musicTracks.Length > 0)
+        {
+            musicCoroutine = StartCoroutine(PlayMusic());
+        }
+        else
+        {
+            Debug.LogError("No music tracks found for MusicManager.");
+        }
     }
 
     private IEnumerator PlayMusic()
@@ -43,8 +42,6 @@ public class MusicManager : MonoBehaviour
             AudioClip randomTrack = musicTracks[Random.Range(0, musicTracks.Length)];
             audioSource.clip = randomTrack;
             audioSource.Play();
-
-            //Debug.Log($"randomTrack.length = {randomTrack.length}");
             yield return new WaitForSeconds(randomTrack.length);
         }
     }
@@ -54,11 +51,25 @@ public class MusicManager : MonoBehaviour
         isMusicPlaying = isMusicOn;
         if (!isMusicOn)
         {
+            if (musicCoroutine != null)
+            {
+                StopCoroutine(musicCoroutine);
+                musicCoroutine = null;
+            }
             audioSource.Stop();
         }
         else
         {
-            StartCoroutine(PlayMusic());
+            if (musicCoroutine == null)
+            {
+                musicCoroutine = StartCoroutine(PlayMusic());
+            }
         }
+    }
+
+    // Добавленный метод для проверки состояния музыки
+    public bool IsMusicPlaying()
+    {
+        return isMusicPlaying;
     }
 }
