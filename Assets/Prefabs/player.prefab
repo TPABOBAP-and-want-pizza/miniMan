@@ -131,6 +131,7 @@ MonoBehaviour:
   grounded: 0
   interactive_object_detected_in_front_of_character: 0
   dust: {fileID: 7789747591298373700}
+  powerIndicator: {fileID: 0}
 --- !u!114 &6933542296657334359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,7 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   respawnPoint: {fileID: 0}
   deathScreen: {fileID: 1016916295448067380}
-  respawnDelay: 0.5
+  respawnDelay: 1
 --- !u!114 &7675997906469788478
 MonoBehaviour:
   m_ObjectHideFlags: 0

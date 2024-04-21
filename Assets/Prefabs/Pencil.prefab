@@ -215,7 +215,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d3b300d1a613048b3a2f5c4e11cd43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactSounds: []
+  impactSounds:
+  - {fileID: 8300000, guid: ec48681f66928684e834377787d1178b, type: 3}
   minImpactVolume: 0.1
   maxImpactVolume: 1
   minForce: 10
