@@ -470,7 +470,16 @@ public class Movement : MonoBehaviour
             collider.enabled = true;
             heldObject.transform.SetParent(null);
             heldObject = null;
-            isHoldingObject = false;
+
+            isHoldingObject = false;  // Устанавливаем флаг в false после броска
+            if (xInput == 0 && grounded)  // Проверяем, стоит ли персонаж на земле и не двигается
+            {
+                animator.Play("Idle");  // Переключаемся на анимацию Idle
+            }
+            else
+            {
+                stateComplete = true;  // Обновляем состояние, если персонаж все еще двигается
+            }
         }
     }
 
