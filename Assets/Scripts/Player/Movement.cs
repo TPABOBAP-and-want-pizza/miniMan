@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class Movement : MonoBehaviour
 {
@@ -46,6 +47,7 @@ public class Movement : MonoBehaviour
     private const float maxChargeTime = 1f; // Максимальное время зарядки
     private float throwForceMin = 5f; // Минимальная сила броска
     private float throwForceMax = 20f; // Максимальная сила броска
+    private bool isThrowingObject = false;
 
     private void Start()
     {
@@ -93,16 +95,42 @@ public class Movement : MonoBehaviour
             isCharging = false;
             powerIndicator.fillAmount = 0;
         }
-    
 
-    // (heldObject != null)
-    //{
-    //    UpdateHeldObjectPosition();
-    //}
-}
+        bool isRunning = Mathf.Abs(xInput) > 0.1f; // Проверяем, двигается ли персонаж
+        if (isHoldingObject && isRunning && grounded)
+        {
+            animator.Play("running_with_object_anim");
+            animator.speed = 1; // Устанавливаем нормальную скорость анимации
+        }
+        else if (isHoldingObject && !isRunning)
+        {
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("running_with_object_anim"))
+            {
+                animator.speed = 0; // Останавливаем анимацию на текущем кадре
+            }
+        }
+
+        if (!isHoldingObject)
+        {
+            animator.speed = 1;
+        }
+
+        // Проверка бросания объекта
+        if (isThrowingObject)
+        {
+            animator.Play("throwing_anim");
+            StartCoroutine(StopThrowAnimation());
+        }
 
 
-void FixedUpdate()
+        // (heldObject != null)
+        //{
+        //    UpdateHeldObjectPosition();
+        //}
+    }
+
+
+    void FixedUpdate()
     {
         CheckGround();
         Move();
@@ -193,7 +221,7 @@ void FixedUpdate()
                 UpdateIdle();
                 break;
             case PlayerState.Running:
-                UpdateRun();
+                UpdateRunning(); // Обновленный метод для управления бегом
                 break;
             case PlayerState.Slink:
                 UpdateSlink();
@@ -204,7 +232,6 @@ void FixedUpdate()
             case PlayerState.Interaction:
                 UpdateInteraction();
                 break;
-
         }
     }
 
@@ -399,6 +426,7 @@ void FixedUpdate()
     {
         if (heldObject != null)
         {
+            isThrowingObject = true;
             Rigidbody2D rb = heldObject.GetComponent<Rigidbody2D>();
             rb.isKinematic = false;
 
@@ -467,6 +495,38 @@ void FixedUpdate()
 
             // Обновляем позицию объекта
             heldObject.transform.position = targetPosition;
+        }
+    }
+
+    IEnumerator StopThrowAnimation()
+    {
+        yield return new WaitForSeconds(0.5f);
+        isThrowingObject = false;
+        // Вернуться к другой релевантной анимации, в зависимости от состояния игрока
+        if (Mathf.Abs(xInput) > 0.1f && grounded)
+        {
+            animator.Play("running_with_object_anim");
+        }
+        else
+        {
+            animator.Play("idle_anim");
+        }
+    }
+
+    private void UpdateRunning()
+    {
+        if (isHoldingObject)
+        {
+            animator.Play("running_with_object_anim");
+        }
+        else
+        {
+            animator.Play("Run");
+        }
+
+        if (xInput == 0 || !grounded || Input.GetKey(KeyCode.LeftShift) || (Input.GetKey(KeyCode.E) || interactive_object_detected_in_front_of_character))
+        {
+            stateComplete = true;
         }
     }
 
