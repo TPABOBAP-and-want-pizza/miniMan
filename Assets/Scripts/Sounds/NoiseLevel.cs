@@ -30,10 +30,16 @@ public class NoiseLevel : MonoBehaviour
 
     void Start()
     {
-        Bar = 0f;
+        Reset();
         UpdateNoiseLevel();
         StartCoroutine(UpdateNoiseLevelEverySecond());//отображение шума
-        StartCoroutine(DecreaseNoiseLevelOverTime());// Уменьшение шума каждую секунду
+        StartCoroutine(DecreaseNoiseLevelOverTime());
+    }
+
+    public void Reset()
+    {
+        VolumeIndicator = 0;
+        CurrentNoise = 0;
     }
 
     public void IncreaseNoise(float amount, GameObject noiseMaker)
