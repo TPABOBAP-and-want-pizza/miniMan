@@ -243,7 +243,7 @@ public class Movement : MonoBehaviour
     void FaceInput()
     {
         float direction = Mathf.Sign(xInput);
-        if (xInput != 0 && direction != lastDirection)
+        if (xInput != 0 && direction != lastDirection && grounded) // Добавили проверку, что персонаж на земле
         {
             dust.Play();  // Активация системы частиц при повороте
             lastDirection = direction;  // Обновляем последнее направление
@@ -268,7 +268,6 @@ public class Movement : MonoBehaviour
 
     void SetInteractableObject()
     {
-        Debug.Log("22");
         float _horizontalInput = xInput;
 
         RaycastHit2D hit = Physics2D.BoxCast(transform.position, boxCollider2DSize, 0f, Vector2.right, 0.05f, groundMask);
