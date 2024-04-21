@@ -97,6 +97,7 @@ public class Movement : MonoBehaviour
         }
 
         bool isRunning = Mathf.Abs(xInput) > 0.1f; // Проверяем, двигается ли персонаж
+       // if (isHoldingObject && isRunning && grounded)
         if (isHoldingObject && isRunning && grounded)
         {
             animator.Play("running_with_object_anim");
@@ -106,6 +107,7 @@ public class Movement : MonoBehaviour
         {
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("running_with_object_anim"))
             {
+
                 animator.speed = 0; // Останавливаем анимацию на текущем кадре
             }
         }
@@ -242,7 +244,7 @@ public class Movement : MonoBehaviour
 
     private void UpdateIdle()
     {
-        if (xInput != 0 || !grounded)
+        if ((xInput != 0 || !grounded) && !isHoldingObject)
         {
             stateComplete = true;
         }
@@ -419,7 +421,7 @@ public class Movement : MonoBehaviour
             Rigidbody2D rb = heldObject.GetComponent<Rigidbody2D>();
             rb.isKinematic = true; // Останавливаем все физические взаимодействия
             heldObject.transform.SetParent(transform);
-            heldObject.transform.localPosition = Vector2.right * 0.5f; // Позиция у персонажа в руках
+            heldObject.transform.localPosition = Vector2.right * 0.5f + Vector2.down * 0.2f; // Позиция у персонажа в руках
             Debug.Log("Object picked up: " + heldObject.name);
 
             Collider2D collider = heldObject.GetComponent<Collider2D>();
