@@ -7,4 +7,9 @@ public class HandDestroyer : MonoBehaviour
         Destroy(gameObject, 2f);
     }
 
+    public void DestroyHand()
+    {
+        Destroy(gameObject);
+    }
+
 }
