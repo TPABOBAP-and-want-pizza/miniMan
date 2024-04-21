@@ -26,7 +26,7 @@ public class CameraShake : MonoBehaviour
 
             //HandSpawner.SpawnHand(transform.localPosition + new Vector3(0, 5, 11), 10);
             //NoiseLevel.IncreaseNoise(10f);
-            NoiseLevel.Instance.DecreaseNoise(20f);
+            //NoiseLevel.Instance.DecreaseNoise(20f);
 
         }
         if (Input.GetKeyDown(KeyCode.H))

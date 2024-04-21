@@ -8,4 +8,9 @@ public class AnimationEventRedirector : MonoBehaviour
     {
         parentScript.StartFalling();
     }
+
+    public void EnableCollider()
+    {
+        parentScript.EnableCollider();
+    }
 }

@@ -5,7 +5,8 @@ public class HandBehavior : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private GameObject player;
-    private GameObject firstInteractor; // Объект, который первым столкнулся с рукой
+    private Collider2D handCollider;  // Добавляем ссылку на Collider
+    private GameObject firstInteractor;
     private bool hasCollided = false;
     private bool hasInteracted = false;
     public bool TrackPlayer = false;
@@ -19,11 +20,27 @@ public class HandBehavior : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        handCollider = GetComponent<Collider2D>();  // Получаем Collider
+        handCollider.enabled = false;  // Отключаем Collider в начале
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
         if (TrackPlayer)
         {
             player = GameObject.FindGameObjectWithTag("Player");
         }
+    }
+
+    // Метод для включения Collider
+    public void EnableCollider()
+    {
+        handCollider.enabled = true;
+    }
+
+    public void StartFalling()
+    {
+        rb.isKinematic = false;
+        is_start_falling = true;
+        rb.constraints = RigidbodyConstraints2D.None;
+        EnableCollider();  // Активируем коллайдер сразу при падении
     }
 
     void Update()
@@ -41,12 +58,6 @@ public class HandBehavior : MonoBehaviour
         }
     }
 
-    public void StartFalling()
-    {
-        rb.isKinematic = false;
-        is_start_falling = true;
-        rb.constraints = RigidbodyConstraints2D.None;
-    }
 
     void OnTriggerEnter2D(Collider2D collider)
     {
