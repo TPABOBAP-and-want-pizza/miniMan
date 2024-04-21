@@ -97,7 +97,7 @@ public class Movement : MonoBehaviour
         }
 
         bool isRunning = Mathf.Abs(xInput) > 0.1f; // Проверяем, двигается ли персонаж
-       // if (isHoldingObject && isRunning && grounded)
+                                                   // if (isHoldingObject && isRunning && grounded)
         if (isHoldingObject && isRunning && grounded)
         {
             animator.Play("running_with_object_anim");
@@ -124,7 +124,10 @@ public class Movement : MonoBehaviour
             StartCoroutine(StopThrowAnimation());
         }
 
-
+        if (isHoldingObject && heldObject != null)
+        {
+            UpdateHeldObjectPosition();
+        }
         // (heldObject != null)
         //{
         //    UpdateHeldObjectPosition();
@@ -265,7 +268,7 @@ public class Movement : MonoBehaviour
         {
             animator.Play("Slink");
         }
- 
+
 
         if (xInput == 0 || !grounded || Input.GetKeyUp(KeyCode.LeftShift) || (Input.GetKey(KeyCode.E) || interactive_object_detected_in_front_of_character))
         {
@@ -419,9 +422,9 @@ public class Movement : MonoBehaviour
         {
             heldObject = hit.collider.gameObject;
             Rigidbody2D rb = heldObject.GetComponent<Rigidbody2D>();
-            rb.isKinematic = true; // Останавливаем все физические взаимодействия
+            rb.bodyType = RigidbodyType2D.Static; // Изменяем тип на Static
             heldObject.transform.SetParent(transform);
-            heldObject.transform.localPosition = Vector2.right * 0.5f + Vector2.down * 0.2f; // Позиция у персонажа в руках
+            heldObject.transform.localPosition = Vector2.right * 0.5f + Vector2.down * 0.2f;
             Debug.Log("Object picked up: " + heldObject.name);
 
             Collider2D collider = heldObject.GetComponent<Collider2D>();
@@ -434,12 +437,15 @@ public class Movement : MonoBehaviour
         }
     }
 
+
     private void ThrowHeldObject(float force)
     {
         if (heldObject != null)
         {
-            isThrowingObject = true;
             Rigidbody2D rb = heldObject.GetComponent<Rigidbody2D>();
+            rb.bodyType = RigidbodyType2D.Dynamic; // Возвращаем тип на Dynamic
+
+            isThrowingObject = true;
             rb.isKinematic = false;
 
             Camera aimingCamera = GameObject.FindGameObjectWithTag("Camera_Aiming").GetComponent<Camera>();
@@ -458,6 +464,7 @@ public class Movement : MonoBehaviour
             heldObject.transform.SetParent(null);
             heldObject = null;
             isHoldingObject = false;
+
         }
     }
 
@@ -465,12 +472,14 @@ public class Movement : MonoBehaviour
     void DropHeldObject()
     {
         if (heldObject != null)
+
         {
+            Rigidbody2D rb = heldObject.GetComponent<Rigidbody2D>();
+            rb.bodyType = RigidbodyType2D.Dynamic; // Возвращаем тип на Dynamic
             Collider2D collider = heldObject.GetComponent<Collider2D>();
             collider.enabled = true; // Включаем коллайдер обратно
 
             heldObject.transform.SetParent(null);
-            Rigidbody2D rb = heldObject.GetComponent<Rigidbody2D>();
             rb.isKinematic = false;
             Debug.Log("Object dropped.");
             heldObject = null;
@@ -486,29 +495,29 @@ public class Movement : MonoBehaviour
         return transform.position + new Vector3(xInput, 0, 0);
     }
 
-    void UpdateHeldObjectPosition()
-    {
-        if (heldObject != null)
-        {
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 directionToMouse = (mousePosition - (Vector2)transform.position).normalized;
-
-            // Устанавливаем расстояние от игрока до объекта
-            float heldDistance = 1.5f; // Расстояние от игрока до объекта
-            Vector2 targetPosition = (Vector2)transform.position + directionToMouse * heldDistance;
-
-            // Проверяем, нет ли препятствий между персонажем и новой позицией
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, directionToMouse, heldDistance, groundMask);
-            if (hit.collider != null)
-            {
-                // Если есть препятствие, остановить объект на границе препятствия до столкновения
-                targetPosition = hit.point - directionToMouse * 0.1f; // небольшое смещение от препятствия
-            }
-
-            // Обновляем позицию объекта
-            heldObject.transform.position = targetPosition;
-        }
-    }
+ //   void UpdateHeldObjectPosition()
+ //   {
+ //       if (heldObject != null)
+ //       {
+ //           Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+ //           Vector2 directionToMouse = (mousePosition - (Vector2)transform.position).normalized;
+//
+ //           // Устанавливаем расстояние от игрока до объекта
+ //           float heldDistance = 1.5f; // Расстояние от игрока до объекта
+ //           Vector2 targetPosition = (Vector2)transform.position + directionToMouse * heldDistance;
+ //
+ //           // Проверяем, нет ли препятствий между персонажем и новой позицией
+ //           RaycastHit2D hit = Physics2D.Raycast(transform.position, directionToMouse, heldDistance, groundMask);
+  //          if (hit.collider != null)
+ //           {
+ //               // Если есть препятствие, остановить объект на границе препятствия до столкновения
+ //               targetPosition = hit.point - directionToMouse * 0.1f; // небольшое смещение от препятствия
+ //           }
+//
+ //           // Обновляем позицию объекта
+//            heldObject.transform.position = targetPosition;
+//        }
+//    }
 
     IEnumerator StopThrowAnimation()
     {
@@ -541,6 +550,19 @@ public class Movement : MonoBehaviour
             stateComplete = true;
         }
     }
+
+    void UpdateHeldObjectPosition()
+    {
+        if (heldObject != null)
+        {
+            // Смещение объекта в зависимости от направления взгляда персонажа
+            float horizontalOffset = 0.5f * Mathf.Sign(transform.localScale.x);
+            // Установка позиции удерживаемого объекта относительно игрока с учетом направления взгляда
+            // Изменил значение вертикального смещения с 0.2f на -0.4f для позиционирования объекта ниже
+            heldObject.transform.position = transform.position + new Vector3(horizontalOffset, -0.2f, 0);
+        }
+    }
+
 
 
 
