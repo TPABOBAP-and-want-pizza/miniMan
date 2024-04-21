@@ -74,9 +74,14 @@ public class Movement : MonoBehaviour
             return;
         }
         Vector2 mousePosition = aimingCamera.ScreenToWorldPoint(Input.mousePosition);
-
         Vector2 directionToMouse = (mousePosition - (Vector2)transform.position).normalized;
-        powerIndicator.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(directionToMouse.y, directionToMouse.x) * Mathf.Rad2Deg);
+
+        // Получаем угол в градусах и применяем ограничение
+        float angle = Mathf.Atan2(directionToMouse.y, directionToMouse.x) * Mathf.Rad2Deg;
+        Debug.Log(angle);
+        float clampedAngle = ClampAngleBasedOnDirection(angle);
+
+        powerIndicator.transform.rotation = Quaternion.Euler(0, 0, clampedAngle);
 
         if (Input.GetMouseButtonDown(0) && heldObject != null)
         {
@@ -445,9 +450,6 @@ public class Movement : MonoBehaviour
             Rigidbody2D rb = heldObject.GetComponent<Rigidbody2D>();
             rb.bodyType = RigidbodyType2D.Dynamic; // Возвращаем тип на Dynamic
 
-            isThrowingObject = true;
-            rb.isKinematic = false;
-
             Camera aimingCamera = GameObject.FindGameObjectWithTag("Camera_Aiming").GetComponent<Camera>();
             if (aimingCamera == null)
             {
@@ -455,7 +457,12 @@ public class Movement : MonoBehaviour
                 return;
             }
             Vector2 mousePosition = aimingCamera.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 throwDirection = (mousePosition - new Vector2(transform.position.x, transform.position.y)).normalized;
+            Vector2 directionToMouse = (mousePosition - new Vector2(transform.position.x, transform.position.y)).normalized;
+            float angle = Mathf.Atan2(directionToMouse.y, directionToMouse.x) * Mathf.Rad2Deg;
+            float clampedAngle = ClampAngleBasedOnDirection(angle);
+
+            Vector2 throwDirection = new Vector2(Mathf.Cos(clampedAngle * Mathf.Deg2Rad), Mathf.Sin(clampedAngle * Mathf.Deg2Rad));
+
             rb.velocity = throwDirection * force;
             Debug.Log("Object thrown: " + heldObject.name + " at velocity: " + rb.velocity);
 
@@ -464,7 +471,6 @@ public class Movement : MonoBehaviour
             heldObject.transform.SetParent(null);
             heldObject = null;
             isHoldingObject = false;
-
         }
     }
 
@@ -495,29 +501,29 @@ public class Movement : MonoBehaviour
         return transform.position + new Vector3(xInput, 0, 0);
     }
 
- //   void UpdateHeldObjectPosition()
- //   {
- //       if (heldObject != null)
- //       {
- //           Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
- //           Vector2 directionToMouse = (mousePosition - (Vector2)transform.position).normalized;
-//
- //           // Устанавливаем расстояние от игрока до объекта
- //           float heldDistance = 1.5f; // Расстояние от игрока до объекта
- //           Vector2 targetPosition = (Vector2)transform.position + directionToMouse * heldDistance;
- //
- //           // Проверяем, нет ли препятствий между персонажем и новой позицией
- //           RaycastHit2D hit = Physics2D.Raycast(transform.position, directionToMouse, heldDistance, groundMask);
-  //          if (hit.collider != null)
- //           {
- //               // Если есть препятствие, остановить объект на границе препятствия до столкновения
- //               targetPosition = hit.point - directionToMouse * 0.1f; // небольшое смещение от препятствия
- //           }
-//
- //           // Обновляем позицию объекта
-//            heldObject.transform.position = targetPosition;
-//        }
-//    }
+    //   void UpdateHeldObjectPosition()
+    //   {
+    //       if (heldObject != null)
+    //       {
+    //           Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    //           Vector2 directionToMouse = (mousePosition - (Vector2)transform.position).normalized;
+    //
+    //           // Устанавливаем расстояние от игрока до объекта
+    //           float heldDistance = 1.5f; // Расстояние от игрока до объекта
+    //           Vector2 targetPosition = (Vector2)transform.position + directionToMouse * heldDistance;
+    //
+    //           // Проверяем, нет ли препятствий между персонажем и новой позицией
+    //           RaycastHit2D hit = Physics2D.Raycast(transform.position, directionToMouse, heldDistance, groundMask);
+    //          if (hit.collider != null)
+    //           {
+    //               // Если есть препятствие, остановить объект на границе препятствия до столкновения
+    //               targetPosition = hit.point - directionToMouse * 0.1f; // небольшое смещение от препятствия
+    //           }
+    //
+    //           // Обновляем позицию объекта
+    //            heldObject.transform.position = targetPosition;
+    //        }
+    //    }
 
     IEnumerator StopThrowAnimation()
     {
@@ -562,6 +568,49 @@ public class Movement : MonoBehaviour
             heldObject.transform.position = transform.position + new Vector3(horizontalOffset, -0.2f, 0);
         }
     }
+
+    float ClampAngleBasedOnDirection(float angle)
+    {
+        float minAngle = 0, maxAngle = 0; // Инициализация переменных
+                                          // Нормализуем угол в диапазон от -180 до 180 для удобства расчетов
+        angle = (angle + 180) % 360 - 180;
+
+        if (transform.localScale.x > 0) // Смотрим вправо
+        {
+            minAngle = -20;
+            maxAngle = 80;
+        }
+        else // Смотрим влево
+        {
+            // Разрешаем углы от 100 до 180 градусов и от -180 до -160 градусов
+            if (angle >= 100 && angle <= 180)
+            {
+                return angle; // Угол уже в пределах допустимого диапазона
+            }
+            else if (angle >= -180 && angle <= -160)
+            {
+                return angle; // Угол уже в пределах допустимого диапазона
+            }
+            else if (angle > -160 && angle < 100) // Угол за пределами обоих диапазонов
+            {
+                // Выбираем ближайший допустимый угол
+                float distanceToLower = 100 - angle;
+                float distanceToUpper = angle + 160;
+                if (distanceToLower < distanceToUpper)
+                {
+                    return 100; // Ближе к нижней границе диапазона
+                }
+                else
+                {
+                    return -160; // Ближе к верхней границе диапазона
+                }
+            }
+        }
+
+        // Дополнительное условие на случай, если никакие ветви выше не выполнятся
+        return Mathf.Clamp(angle, minAngle, maxAngle);
+    }
+
 
 
 
