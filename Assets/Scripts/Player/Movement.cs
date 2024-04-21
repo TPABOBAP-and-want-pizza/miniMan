@@ -48,6 +48,7 @@ public class Movement : MonoBehaviour
     private float throwForceMin = 5f; // Минимальная сила броска
     private float throwForceMax = 20f; // Максимальная сила броска
     private bool isThrowingObject = false;
+    private bool throwAnimationComplete = true;
 
     private void Start()
     {
@@ -125,7 +126,9 @@ public class Movement : MonoBehaviour
         // Проверка бросания объекта
         if (isThrowingObject)
         {
+            animator.speed = 1;
             animator.Play("throwing_anim");
+            throwAnimationComplete = false;
             StartCoroutine(StopThrowAnimation());
         }
 
@@ -212,8 +215,12 @@ public class Movement : MonoBehaviour
             }
             else if (xInput == 0)
             {
+                if (!isThrowingObject)
+                {
+                    animator.Play("Idle");
+                }
                 state = PlayerState.Idle;
-                animator.Play("Idle");
+                
             }
             else if (Input.GetKey(KeyCode.LeftShift))
             {
@@ -480,6 +487,7 @@ public class Movement : MonoBehaviour
             {
                 stateComplete = true;  // Обновляем состояние, если персонаж все еще двигается
             }
+            isThrowingObject = true;
         }
     }
 
@@ -537,11 +545,12 @@ public class Movement : MonoBehaviour
     IEnumerator StopThrowAnimation()
     {
         yield return new WaitForSeconds(0.2f);
+        throwAnimationComplete = true; // Анимация броска завершена
         isThrowingObject = false;
-        // Вернуться к другой релевантной анимации, в зависимости от состояния игрока
+
         if (Mathf.Abs(xInput) > 0.1f && grounded)
         {
-            animator.Play("running_with_object_anim");
+            animator.Play("Run");
         }
         else
         {
@@ -549,16 +558,18 @@ public class Movement : MonoBehaviour
         }
     }
 
+
     private void UpdateRunning()
     {
         if (isHoldingObject)
         {
             animator.Play("running_with_object_anim");
         }
-        else
+        else if (throwAnimationComplete)
         {
             animator.Play("Run");
         }
+    
 
         if (xInput == 0 || !grounded || Input.GetKey(KeyCode.LeftShift) || (Input.GetKey(KeyCode.E) || interactive_object_detected_in_front_of_character))
         {
