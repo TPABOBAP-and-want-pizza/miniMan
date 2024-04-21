@@ -144,39 +144,44 @@ public class Movement : MonoBehaviour
         float _horizontalInput = xInput;
 
         RaycastHit2D hit = Physics2D.BoxCast(transform.position, boxCollider2DSize, 0f, Vector2.right * Mathf.Sign(_horizontalInput), 0.05f, groundMask);
-        //Debug.Log($"hit collider - {hit.collider.gameObject}");
 
         if (hit.collider != null && bodyInteraction == null)
         {
             _horizontalInput = 0f;
         }
+
+        float speedModifier = isHoldingObject ? 0.5f : 1f;  // Уменьшаем скорость в 2 раза, если персонаж несет предмет.
+
         if (bodyInteraction != null && (Input.GetKey(KeyCode.E) || interactive_object_detected_in_front_of_character) && grounded)
         {
             if (interactive_object_detected_in_front_of_character)
                 animator.Play("Push");
-            else animator.Play("Pull");
+            else
+                animator.Play("Pull");
 
-            body.velocity = new Vector2(_horizontalInput * interactionSpeed * 70f * Time.deltaTime, body.velocity.y);
+            body.velocity = new Vector2(_horizontalInput * interactionSpeed * speedModifier * 70f * Time.deltaTime, body.velocity.y);
             bodyInteraction.velocity = new Vector2(body.velocity.x, bodyInteraction.velocity.y);
         }
         else if (MathF.Abs(body.velocity.x) < maxXSpeed && grounded && Input.GetKey(KeyCode.LeftShift))
         {
-            body.velocity = new Vector2(_horizontalInput * maxXSpeed * 70f * Time.deltaTime / retardingSlink, body.velocity.y);
+            body.velocity = new Vector2(_horizontalInput * maxXSpeed * 70f * Time.deltaTime / retardingSlink * speedModifier, body.velocity.y);
         }
         else if (MathF.Abs(body.velocity.x) < maxXSpeed && grounded)
         {
-            body.velocity = new Vector2(_horizontalInput * maxXSpeed * 50f * Time.deltaTime, body.velocity.y);
+            body.velocity = new Vector2(_horizontalInput * maxXSpeed * 50f * Time.deltaTime * speedModifier, body.velocity.y);
         }
         else if (_horizontalInput > 0 && body.velocity.x < airSpeed)
         {
-            body.velocity += new Vector2(_horizontalInput * airSpeed * 10f * Time.deltaTime, 0);
+            body.velocity += new Vector2(_horizontalInput * airSpeed * 10f * Time.deltaTime * speedModifier, 0);
         }
         else if (_horizontalInput < 0 && body.velocity.x > -airSpeed)
         {
-            body.velocity += new Vector2(_horizontalInput * airSpeed * 10f * Time.deltaTime, 0);
+            body.velocity += new Vector2(_horizontalInput * airSpeed * 10f * Time.deltaTime * speedModifier, 0);
         }
+
         FaceInput();
     }
+
 
     private void SelectState()
     {
@@ -254,7 +259,12 @@ public class Movement : MonoBehaviour
 
     private void UpdateSlink()
     {
-        animator.Play("Slink");
+        if (!isHoldingObject)
+        {
+            animator.Play("Slink");
+        }
+ 
+
         if (xInput == 0 || !grounded || Input.GetKeyUp(KeyCode.LeftShift) || (Input.GetKey(KeyCode.E) || interactive_object_detected_in_front_of_character))
         {
             stateComplete = true;
@@ -500,7 +510,7 @@ public class Movement : MonoBehaviour
 
     IEnumerator StopThrowAnimation()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
         isThrowingObject = false;
         // Вернуться к другой релевантной анимации, в зависимости от состояния игрока
         if (Mathf.Abs(xInput) > 0.1f && grounded)
@@ -529,5 +539,7 @@ public class Movement : MonoBehaviour
             stateComplete = true;
         }
     }
+
+
 
 }
