@@ -53,6 +53,10 @@ public class PlayerDeath : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Respawn();
+        }
         if (isDead && movement.enabled == true)
         {
             movement.enabled = false;
@@ -77,6 +81,7 @@ public class PlayerDeath : MonoBehaviour
         GetComponent<Movement>().enabled = true;
 
         transform.position = respawnPoint.position;
+        NoiseLevel.Instance.Reset();
         respawn.Invoke();
         deathScreen.HideDeath();
     }
