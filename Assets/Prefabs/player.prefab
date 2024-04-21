@@ -355,17 +355,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noiseCategories:
-  - categoryName: Run
-    sounds:
-    - {fileID: 8300000, guid: fd7db1fcd4673dd4081889cbcdd5d083, type: 3}
-    - {fileID: 8300000, guid: 4b4202a7fbe869d4699be2f17c41980e, type: 3}
-    - {fileID: 8300000, guid: fd7db1fcd4673dd4081889cbcdd5d083, type: 3}
-    - {fileID: 8300000, guid: a5a8110809e999645b08f38cf05a3843, type: 3}
-    noiseLevel: 10
   - categoryName: Jump
     sounds:
     - {fileID: 8300000, guid: ec48681f66928684e834377787d1178b, type: 3}
     noiseLevel: 50
+  - categoryName: Run
+    sounds:
+    - {fileID: 8300000, guid: 79aec4e8b7604224bbad4813db17fb83, type: 3}
+    - {fileID: 8300000, guid: cea12286d9e83d54aaebd1f9ed197383, type: 3}
+    - {fileID: 8300000, guid: 1f9477ca38cf3334aa492ec67b510d6d, type: 3}
+    - {fileID: 8300000, guid: 6ce9ebf2d2ca3f347825652f540ff9c6, type: 3}
+    - {fileID: 8300000, guid: 4f386275507c481499a3d1fd24af3bc9, type: 3}
+    - {fileID: 8300000, guid: f60d6a7a22c763742b53d99b8220bf61, type: 3}
+    - {fileID: 8300000, guid: 7031a9731c9d4994faee5e1234d7198c, type: 3}
+    - {fileID: 8300000, guid: 10aadcda27f47254788e5805dd0960ed, type: 3}
+    - {fileID: 8300000, guid: fda0365712ffca6438fa63664406840c, type: 3}
+    - {fileID: 8300000, guid: 3d8d0b1c57cfa804f9ce57000c2c731f, type: 3}
+    noiseLevel: 5
 --- !u!82 &8022580868673869600
 AudioSource:
   m_ObjectHideFlags: 0
