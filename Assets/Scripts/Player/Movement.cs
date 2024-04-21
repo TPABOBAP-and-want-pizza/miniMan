@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Movement : MonoBehaviour
 {
@@ -38,6 +39,14 @@ public class Movement : MonoBehaviour
     public ParticleSystem dust;
     private float lastDirection = 1;
 
+    //GOLF
+    public Image powerIndicator; // Ссылка на UI индикатор
+    private bool isCharging = false; // Проверка, идет ли зарядка
+    private float chargeTime = 0f; // Текущее время зарядки
+    private const float maxChargeTime = 1f; // Максимальное время зарядки
+    private float throwForceMin = 5f; // Минимальная сила броска
+    private float throwForceMax = 20f; // Максимальная сила броска
+
     private void Start()
     {
         boxCollider2DSize = transform.GetComponent<BoxCollider2D>().size;
@@ -56,18 +65,44 @@ public class Movement : MonoBehaviour
         UpdateState();
         CheckForObjectInFront();
 
-        if (Input.GetMouseButtonUp(0) && heldObject != null)
+        Camera aimingCamera = GameObject.FindGameObjectWithTag("Camera_Aiming").GetComponent<Camera>();
+        if (aimingCamera == null)
         {
-            ThrowHeldObject();
+            Debug.LogError("Aiming camera not found!");
+            return;
         }
-        // (heldObject != null)
-        //{
-        //    UpdateHeldObjectPosition();
-        //}
-    }
+        Vector2 mousePosition = aimingCamera.ScreenToWorldPoint(Input.mousePosition);
+
+        Vector2 directionToMouse = (mousePosition - (Vector2)transform.position).normalized;
+        powerIndicator.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(directionToMouse.y, directionToMouse.x) * Mathf.Rad2Deg);
+
+        if (Input.GetMouseButtonDown(0) && heldObject != null)
+        {
+            isCharging = true;
+            chargeTime = 0;
+        }
+        if (isCharging)
+        {
+            chargeTime += Time.deltaTime;
+            float pingPong = Mathf.PingPong(chargeTime, maxChargeTime);
+            powerIndicator.fillAmount = pingPong / maxChargeTime;
+        }
+        if (Input.GetMouseButtonUp(0) && heldObject != null && isCharging)
+        {
+            ThrowHeldObject(Map(powerIndicator.fillAmount, 0, 1, throwForceMin, throwForceMax));
+            isCharging = false;
+            powerIndicator.fillAmount = 0;
+        }
+    
+
+    // (heldObject != null)
+    //{
+    //    UpdateHeldObjectPosition();
+    //}
+}
 
 
-    void FixedUpdate()
+void FixedUpdate()
     {
         CheckGround();
         Move();
@@ -360,41 +395,33 @@ public class Movement : MonoBehaviour
         }
     }
 
-    private void ThrowHeldObject()
+    private void ThrowHeldObject(float force)
     {
         if (heldObject != null)
         {
-            // Возвращаем объекту физическое поведение
             Rigidbody2D rb = heldObject.GetComponent<Rigidbody2D>();
             rb.isKinematic = false;
 
-            // Находим камеру с тегом "Camera_Aiming"
             Camera aimingCamera = GameObject.FindGameObjectWithTag("Camera_Aiming").GetComponent<Camera>();
-
-            // Вычисляем направление курсора относительно позиции персонажа
+            if (aimingCamera == null)
+            {
+                Debug.LogError("Aiming camera not found!");
+                return;
+            }
             Vector2 mousePosition = aimingCamera.ScreenToWorldPoint(Input.mousePosition);
             Vector2 throwDirection = (mousePosition - new Vector2(transform.position.x, transform.position.y)).normalized;
-
-            // Придаем скорость брошенному объекту
-            rb.velocity = throwDirection * throwForce;
+            rb.velocity = throwDirection * force;
             Debug.Log("Object thrown: " + heldObject.name + " at velocity: " + rb.velocity);
 
-            // Позволяем объекту вновь взаимодействовать с другими объектами в игре
             Collider2D collider = heldObject.GetComponent<Collider2D>();
             collider.enabled = true;
-
-            // Отвязываем объект от персонажа
             heldObject.transform.SetParent(null);
             heldObject = null;
-
             isHoldingObject = false;
         }
-        else
-        {
-            Debug.Log("No object held to throw.");
-        }
     }
-    
+
+
     void DropHeldObject()
     {
         if (heldObject != null)
