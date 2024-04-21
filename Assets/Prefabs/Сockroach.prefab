@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 2633054782168756680}
   - component: {fileID: 2633054782168756682}
   - component: {fileID: 512017564953154532}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "\u0421ockroach"
-  m_TagString: Hand
+  m_TagString: Cockroach
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,3 +177,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDeath: {fileID: 0}
+  body: {fileID: 2633054782168756680}

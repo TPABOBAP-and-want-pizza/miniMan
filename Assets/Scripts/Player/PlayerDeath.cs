@@ -10,6 +10,8 @@ public class PlayerDeath : MonoBehaviour
     [SerializeField] private ShowDeathScreen deathScreen;
     private Movement movement;
 
+    private Rigidbody2D body;
+
     [SerializeField] float respawnDelay = 0.5f;
     private bool isDead = false;
     private bool canResapwn = false;
@@ -17,13 +19,14 @@ public class PlayerDeath : MonoBehaviour
     private void Start()
     {
         movement = GetComponent<Movement>();
+        body = transform.GetComponent<Rigidbody2D>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject go = collision?.gameObject;
 
-        if ((go.layer == 9 || go.tag == "Hand") && !isDead)  //9 = player death
+        if ((go.layer == 9 || go.tag == "Hand" ||(go.tag == "Cockroach" && !go.GetComponent<CockroachAI>().isDead)) && !isDead)  //9 = player death
         {
             isDead = true;
             StartCoroutine(CallMethodAfterDelay(respawnDelay));
@@ -39,7 +42,7 @@ public class PlayerDeath : MonoBehaviour
     {
         GameObject go = collision?.gameObject;
 
-        if ((go.layer == 9 || go.tag == "Hand") && !isDead)  //9 = player death
+        if ((go.layer == 9 || go.tag == "Hand" || (go.tag == "Cockroach" && !go.GetComponent<CockroachAI>().isDead)) && !isDead)  //9 = player death
         {
             isDead = true;
             StartCoroutine(CallMethodAfterDelay(respawnDelay));
@@ -83,7 +86,18 @@ public class PlayerDeath : MonoBehaviour
         transform.position = respawnPoint.position;
         NoiseLevel.Instance.Reset();
         respawn.Invoke();
+        DestroyHands();
         deathScreen.HideDeath();
+    }
+
+    private void DestroyHands()
+    {
+        HandDestroyer[] hands = FindObjectsOfType<HandDestroyer>();
+
+        foreach(HandDestroyer i in hands)
+        {
+            i.DestroyHand();
+        }
     }
 
     IEnumerator CallMethodAfterDelay(float delayInSeconds)
