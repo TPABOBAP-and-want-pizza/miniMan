@@ -353,7 +353,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.795, y: 2}
+  m_Size: {x: 0.795, y: 3.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -425,6 +425,10 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 22a3c964e6a099c4b9c602c20e613632, type: 3}
     - {fileID: 8300000, guid: 85f46aa8af1098c478767ab353e5a7e5, type: 3}
     - {fileID: 8300000, guid: fedde193f95ada846a9cdf992f284d2d, type: 3}
+    noiseLevel: 0
+  - categoryName: Paw_Fall
+    sounds:
+    - {fileID: 8300000, guid: e847d510d3d9d3c419dd44b80caada03, type: 3}
     noiseLevel: 0
 --- !u!1001 &1420340944384192189
 PrefabInstance:
