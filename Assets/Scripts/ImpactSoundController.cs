@@ -19,7 +19,7 @@ public class ImpactSoundController : MonoBehaviour
             {
                 float volume = Mathf.Clamp(impactForce/10, minImpactVolume, maxImpactVolume);
                 AudioClip randomImpactSound = impactSounds[Random.Range(0, impactSounds.Length)];
-                NoiseLevel.Instance.IncreaseNoise(volume*100, gameObject);
+                NoiseLevel.Instance.IncreaseNoise(volume*20, gameObject);
                 AudioSource.PlayClipAtPoint(randomImpactSound, transform.position, volume);
                 lastSoundTime = currentTime;
             }
