@@ -372,6 +372,18 @@ MonoBehaviour:
     sounds:
     - {fileID: 8300000, guid: ec48681f66928684e834377787d1178b, type: 3}
     noiseLevel: 10
+  - categoryName: Jump_Start
+    sounds:
+    - {fileID: 8300000, guid: c532b1dccc9c53445ae90bd2688d9f95, type: 3}
+    noiseLevel: 1
+  - categoryName: Taskaem
+    sounds:
+    - {fileID: 8300000, guid: 9e24ef32c82aea04cbdf7ece57bcc313, type: 3}
+    noiseLevel: 15
+  - categoryName: Tolkaem
+    sounds:
+    - {fileID: 8300000, guid: 9e24ef32c82aea04cbdf7ece57bcc313, type: 3}
+    noiseLevel: 15
 --- !u!82 &8022580868673869600
 AudioSource:
   m_ObjectHideFlags: 0
