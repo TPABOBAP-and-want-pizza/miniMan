@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impactSounds:
-  - {fileID: 8300000, guid: ec48681f66928684e834377787d1178b, type: 3}
+  - {fileID: 8300000, guid: b3cfdedea9bddb842b950474ae382e71, type: 3}
   minImpactVolume: 0.1
   maxImpactVolume: 1
   minForce: 10

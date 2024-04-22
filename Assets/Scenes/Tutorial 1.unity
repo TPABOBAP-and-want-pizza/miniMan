@@ -2671,6 +2671,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kidabelni_predmet
       objectReference: {fileID: 0}
+    - target: {fileID: 6376257589798670045, guid: ea1a089ebe8586146bb1eae1af23f748, type: 3}
+      propertyPath: m_TagString
+      value: InteractableObject
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea1a089ebe8586146bb1eae1af23f748, type: 3}
 --- !u!1001 &6599717080277536933
