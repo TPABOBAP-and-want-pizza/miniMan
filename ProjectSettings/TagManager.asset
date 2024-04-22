@@ -12,6 +12,9 @@ TagManager:
   - Throwing
   - Camera_Aiming
   - Music
+  - New tag
+  - Door
+  - Cockroach
   layers:
   - Default
   - TransparentFX

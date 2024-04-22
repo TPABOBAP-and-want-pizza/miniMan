@@ -19,13 +19,10 @@ public class CockroachAI : MonoBehaviour
 
     void Update()
     {
-        // Если таракан мертв, пропускаем обновление позиции и проверки
         if (isDead) return;
 
-        // Движение
         transform.Translate(Vector2.right * speed * Time.deltaTime);
 
-        // Проверка, заканчивается ли земля перед врагом
         Vector2 groundDirectionCheck = movingRight ? Vector2.right : Vector2.left;
         Vector2 groundCheckStart = new Vector2(transform.position.x + (movingRight ? 1.0f : -1.0f), transform.position.y);
         RaycastHit2D groundInfo = Physics2D.Raycast(groundCheckStart, Vector2.down, checkDistance, groundLayer);
@@ -36,15 +33,16 @@ public class CockroachAI : MonoBehaviour
             Flip();
         }
 
-        // Проверка на столкновение со стеной перед врагом
         RaycastHit2D wallInfo = Physics2D.Raycast(transform.position, groundDirectionCheck, checkDistance, groundLayer);
         Debug.DrawRay(transform.position, groundDirectionCheck * checkDistance, Color.red);
 
-        if (wallInfo.collider)
+        // Проверка на столкновение со стеной или дверью (если у дверей тег "Door")
+        if (wallInfo.collider && (wallInfo.collider.CompareTag("Door") || wallInfo.collider.CompareTag("Ground")))
         {
             Flip();
         }
     }
+
 
     // Поворот врага
     private void Flip()
