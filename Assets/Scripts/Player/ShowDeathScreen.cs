@@ -13,7 +13,7 @@ public class ShowDeathScreen : MonoBehaviour
     {
         animator.Play("Death");
 
-        if(skipAnimation)
+        //if(skipAnimation)
             ShowDeath();
     }
 

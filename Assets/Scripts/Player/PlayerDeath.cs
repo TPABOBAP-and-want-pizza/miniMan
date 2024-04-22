@@ -77,7 +77,7 @@ public class PlayerDeath : MonoBehaviour
         }
     }
 
-    private void Respawn()
+    public void Respawn()
     {
         isDead = false;
 

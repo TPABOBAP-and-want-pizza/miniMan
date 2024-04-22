@@ -24,7 +24,7 @@ public class NoiseLevel : MonoBehaviour
         else
         {
             Instance = this;
-            DontDestroyOnLoad(this.gameObject);  // Это делает объект постоянным при загрузке новых сцен.
+            //DontDestroyOnLoad(this.gameObject);  // Это делает объект постоянным при загрузке новых сцен.
         }
     }
 
