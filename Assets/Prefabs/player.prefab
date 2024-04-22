@@ -355,10 +355,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noiseCategories:
-  - categoryName: Jump
-    sounds:
-    - {fileID: 8300000, guid: ec48681f66928684e834377787d1178b, type: 3}
-    noiseLevel: 50
   - categoryName: Run
     sounds:
     - {fileID: 8300000, guid: 79aec4e8b7604224bbad4813db17fb83, type: 3}
@@ -372,6 +368,10 @@ MonoBehaviour:
     - {fileID: 8300000, guid: fda0365712ffca6438fa63664406840c, type: 3}
     - {fileID: 8300000, guid: 3d8d0b1c57cfa804f9ce57000c2c731f, type: 3}
     noiseLevel: 5
+  - categoryName: Jump
+    sounds:
+    - {fileID: 8300000, guid: ec48681f66928684e834377787d1178b, type: 3}
+    noiseLevel: 10
 --- !u!82 &8022580868673869600
 AudioSource:
   m_ObjectHideFlags: 0
