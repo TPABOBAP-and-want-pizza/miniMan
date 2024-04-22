@@ -5,15 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GoToScene : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
+    [SerializeField] string sceneName;
 
     // Метод для перехода на сцену Tutorial
     public void LoadTutorialScene()
@@ -21,7 +13,14 @@ public class GoToScene : MonoBehaviour
         SceneManager.LoadScene("Tutorial");
     }
 
-    // Метод для перехода на сцену, имя которой передается как аргумент
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Player")
+        {
+            LoadSceneByName(sceneName);
+        }
+    }
+
     public void LoadSceneByName(string sceneName)
     {
         // Проверяем, существует ли сцена с таким именем
@@ -35,7 +34,6 @@ public class GoToScene : MonoBehaviour
         }
     }
 
-    // Вспомогательный метод для проверки существования сцены
     private bool SceneExists(string sceneName)
     {
         if (string.IsNullOrEmpty(sceneName))
